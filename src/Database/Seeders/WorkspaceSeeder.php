@@ -1,0 +1,158 @@
+<?php
+
+namespace Hanafalah\KlinikStarterpack\Database\Seeders;
+
+use Hanafalah\LaravelSupport\Concerns\Support\HasRequestData;
+use Hanafalah\MicroTenant\Contracts\Data\TenantData;
+use Hanafalah\MicroTenant\Facades\MicroTenant;
+use Hanafalah\ModuleRegional\Data\AddressData;
+use Hanafalah\ModuleWorkspace\Data\{
+    WorkspaceData,
+    WorkspacePropsData,
+    WorkspaceSettingData
+};
+use Hanafalah\ModuleWorkspace\Enums\Workspace\Status;
+use Hanafalah\KlinikStarterpack\Concerns\HasComposer;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+
+class WorkspaceSeeder extends Seeder{
+    use HasRequestData, HasComposer;
+
+    /**
+     * Seed the application's database.
+     */
+    public function run(): void
+    {
+        $workspace = app(config('database.models.Workspace'))->uuid('9e7ff0f6-7679-46c8-ac3e-71da818160dd')->first();        
+        $generator_config = config('laravel-package-generator');
+        if (!isset($workspace)){
+            $project_namespace = 'Projects';
+            $group_namespace   = 'Klinik';
+            $tenant_namespace  = 'GroupInitialKlinik';
+
+            $tenant_schema  = app(config('app.contracts.Tenant'));
+            $tenant_model   = app(config('database.models.Tenant'));
+            $project_tenant = $tenant_schema->prepareStoreTenant($this->requestDTO(TenantData::class,[
+                'parent_id'      => null,
+                'name'           => 'Klinik',
+                'flag'           => $tenant_model::FLAG_APP_TENANT,
+                'reference_id'   => null,
+                'reference_type' => null
+            ]));
+            $project_tenant->provider = $project_namespace.'\\Klinik\\Providers\\KlinikServiceProvider';
+            $project_tenant->path     = $generator_config['patterns']['project']['published_at'];
+            $project_tenant->packages = [];
+            $project_tenant->config   = $generator_config['patterns']['project'];
+            // $project_tenant->tenancy_db_username = 'root';
+            // $project_tenant->tenancy_db_password = Hash::make(env('DB_PASSWORD'));
+            $project_tenant->save();
+
+            $group_tenant = $tenant_schema->prepareStoreTenant($this->requestDTO(TenantData::class,[
+                'parent_id'      => $project_tenant->getKey(),
+                'name'           => 'Group Initial Klinik',
+                'flag'           => $tenant_model::FLAG_CENTRAL_TENANT,
+                'reference_id'   => null,
+                'reference_type' => null
+            ]));
+            $group_tenant->provider     = $group_namespace.'\\GroupInitialKlinik\\Providers\\GroupInitialKlinikServiceProvider';
+            $group_tenant->app          = ['provider' => $project_tenant->provider];
+            $group_tenant->path         = $generator_config['patterns']['group']['published_at'];
+            $group_tenant->packages     = [];
+            $group_tenant->config       = $generator_config['patterns']['group'];
+            // // $group_tenant->tenancy_db_username = $project_tenant->tenancy_db_username;
+            // // $group_tenant->tenancy_db_password = $project_tenant->tenancy_db_password;
+            $group_tenant->save();
+
+            $workspace = app(config('app.contracts.Workspace'))->prepareStoreWorkspace(WorkspaceData::from([
+                'uuid'    => '9e7ff0f6-7679-46c8-ac3e-71da818160dd',
+                'name'    => 'Klinik',
+                'status'  => Status::ACTIVE->value,
+                'props'   => WorkspacePropsData::from([
+                    'setting' => WorkspaceSettingData::from([
+                        'address' => AddressData::from([
+                            'name'           => 'sangkuriang',
+                            'province_id'    => null,
+                            'district_id'    => null,
+                            'subdistrict_id' => null,
+                            'village_id'     => null
+                        ]),
+                        'email'   => 'hamzahnuralfalah@gmail.com',
+                        'phone'   => '0819-0652-1808',
+                        'owner_id' => null,
+                        'owner' => [
+                            'id' => null,
+                            'name' => null
+                        ]
+                    ])
+                ])
+            ]));
+
+            $tenant = $tenant_schema->prepareStoreTenant($this->requestDTO(TenantData::class,[
+                'parent_id'      => $group_tenant->getKey(),
+                'name'           => 'Tenant Klinik',
+                'flag'           => $tenant_model::FLAG_TENANT,
+                'reference_id'   => $workspace->getKey(),
+                'reference_type' => $workspace->getMorphClass()
+            ]));
+
+            $tenant->provider = $tenant_namespace.'\\TenantKlinik\\Providers\\TenantKlinikServiceProvider';
+            $tenant->path     = $generator_config['patterns']['tenant']['published_at'];
+            $tenant->app      = ['provider' => $project_tenant->provider];
+            $tenant->group    = ['provider' => $group_tenant->provider];
+            $tenant->packages = [];
+            $tenant->config   = $generator_config['patterns']['tenant'];
+            // // $tenant->tenancy_db_username = $project_tenant->tenancy_db_username;
+            // // $tenant->tenancy_db_password = $project_tenant->tenancy_db_password;
+            $tenant->save();
+        }else{
+            $tenant         = $workspace->tenant;
+            $group_tenant   = $tenant->parent;
+            $project_tenant = $group_tenant->parent;
+        }
+
+        $tenant_path = $generator_config['patterns']['tenant']['published_at'];
+
+        $providers = config('klinik-starterpack.packages');
+        $providers = array_keys($providers);
+        $package_providers = [];
+        $requires = [
+            'require' => []
+        ];
+        $repositories = [
+            'repositories' => []
+        ];
+        foreach ($providers as $provider) {
+            $original    = $provider;
+            $provider    = explode("/", $provider);
+            $provider[0] = Str::studly($provider[0]);
+            $provider[1] = Str::studly($provider[1]);
+            $provider    = implode('\\',$provider).'\\'.$provider[1].'ServiceProvider';
+            $package_providers[$original] = [
+                'provider' => $provider
+            ];
+
+            $repositories['repositories'][Str::kebab($original)] = [
+                'type' => 'path',
+                'url'  => '../../../repositories/'.Str::afterLast($original,'/'),
+                'options' => [
+                    'symlink' => true
+                ]
+            ];
+            $requires['require'][Str::kebab($original)] = '1.x-dev as 1.0'; 
+        }
+        $project_tenant->setAttribute('packages',$package_providers);
+        $project_tenant->save();
+
+        file_put_contents(__DIR__.'/../../../tenant-repositories.json', json_encode($repositories, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+        $this->updateComposer($tenant_path.'/'.Str::kebab($tenant->name).'/composer.json', __DIR__.'/../../../tenant-repositories.json','repositories');
+        
+        file_put_contents(__DIR__.'/../../../project-requirements.json', json_encode($requires, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+        $this->updateComposer($project_tenant->path.'/'.Str::kebab($project_tenant->name).'/composer.json', __DIR__.'/../../../project-requirements.json','require');
+
+        shell_exec("cd $tenant_path/".Str::kebab($tenant->name)." && rm -rf composer.lock && composer install");
+        tenancy()->initialize($tenant->getKey());
+        MicroTenant::tenantImpersonate($tenant);
+    }
+}

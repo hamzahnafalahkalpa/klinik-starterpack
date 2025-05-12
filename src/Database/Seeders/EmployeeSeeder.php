@@ -1,0 +1,84 @@
+<?php
+
+namespace Hanafalah\KlinikStarterpack\Database\Seeders;
+
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use Hanafalah\LaravelSupport\Concerns\Support\HasRequest;
+use Hanafalah\ModuleEmployee\Data\EmployeeData;
+use Illuminate\Database\Seeder;
+
+class EmployeeSeeder extends Seeder
+{
+    use HasRequest;
+
+    /**
+     * Seed the application's database.
+     */
+    public function run(): void
+    {
+        $user = app(config('database.models.User'))->where('username','admin')->first();
+        if (!isset($user)){
+            request()->merge([
+                "card_identity" => [ // Informasi identitas kartu
+                    "nip" => null,
+                    "bpjs_ketenagakerjaan" => null,
+                ],
+                "profession_id" => null, // ID profesi (null jika tidak ada)
+                "hired_at" => "2025-03-25", // Tanggal mulai bekerja
+                "people" => [ // Informasi individu
+                    "id" => null,
+                    "name" => "Hamzah",
+                    "sex" => "Male", // Pilihan: Male, Female
+                    "dob" => "1996-01-01", // Tanggal lahir
+                    "pob" => "Pandeglang", // Tempat lahir
+                    "last_education" => null, // Pendidikan terakhir
+                    "marital_status" => "Kawin", // Pilihan: Kawin, Belum Kawin
+                    "total_children" => 10, // Jumlah anak
+                    "country_id" => null, // ID negara
+                    "address" => [ // Alamat
+                        "residence_same_as_ktp" => true, // Apakah domisili sama dengan KTP
+                        "ktp" => [
+                            "id" => null,
+                            "name" => "Banten ya",
+                        ],
+                        "residence" => [
+                            "id" => null,
+                            "name" => "Banten ya 2",
+                        ],
+                    ],
+                    "card_identity" => [ // Identitas kartu lainnya
+                        "nik" => null,
+                        "npwp" => null,
+                    ],
+                    "family_relationship" => [ // Hubungan keluarga
+                        "people_id" => null,
+                        "role" => "Anak", // Contoh: Anak, Suami, Istri, dll.
+                        "name" => "Fathan",
+                        "phone" => "081906521808",
+                    ],
+                    "phones" => [ // Daftar nomor telepon
+                        "08129283746",
+                    ]
+    
+                ],
+                "user_reference" => [ // Referensi user
+                    "role_ids" => [9], // Daftar role ID
+                    "workspace_type" => 'Workspace',
+                    "workspace_id" => 1,
+                    "user" => [ // Informasi akun user (boleh null untuk tidak update akun user)
+                        "id" => null,
+                        "username" => "admin",
+                        "password" => "password",
+                        "password_confirmation" => "password", // Konfirmasi password
+                        "email" => "hamzah@dev.com",
+                        "email_verified_at" => now(),
+                    ]
+                ],
+                "profile" => null // Profil (bisa berupa file upload atau path string)
+            ]);
+            app(config('app.contracts.Employee'))
+                ->prepareStoreEmployee($this->requestDTO(EmployeeData::class));
+        }
+    }
+}

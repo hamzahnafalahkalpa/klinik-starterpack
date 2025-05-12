@@ -1,0 +1,32 @@
+<?php
+
+use Zahzah\LaravelPermission\Enums\Permission\Type;
+
+$examination = json_encode(include(__DIR__.'/waiting-list/examination.php'));
+$examination = str_replace("{{dir-waiting-list}}",'radiology-waiting-list',$examination);
+$examination = str_replace("{{waiting-list}}",'radiology-waiting-list',$examination);
+$examination = json_decode($examination,true);
+
+$prefix = 'patient-management.';
+$prefix_directory = 'patient-management';
+
+return [
+    'name'            => 'Radiology Waiting List', 
+    'alias'           => $prefix.'radiology-waiting-list.index',
+    'props'           => [
+        'icon'            => 'healthicons:radiology',
+        'directory'   => "$prefix_directory/radiology-waiting-list",
+        'show_in_acl' => true
+    ], 
+    'type'  => Type::MENU->value,
+    'guard_name' => 'api',
+    'childs'     => [
+        [
+            'name'       => 'Detail Patient',
+            'alias'      => $prefix.'radiology-waiting-list.show',
+            'type'  => Type::PERMISSION->value,
+            'guard_name' => 'api'
+        ],
+        $examination
+    ]
+];
