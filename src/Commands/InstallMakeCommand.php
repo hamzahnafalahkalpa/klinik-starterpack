@@ -33,8 +33,10 @@ class InstallMakeCommand extends EnvironmentCommand
      */
     public function handle()
     {
-        $provider = 'Hanafalah\KlinikStarterpack\KlinikStarterpackServiceProvider';
+        $this->call('support:install');
+        $this->call('micro:install');
 
+        $provider = 'Hanafalah\KlinikStarterpack\KlinikStarterpackServiceProvider';
         $this->comment('Installing Module...');
         $this->callSilent('vendor:publish', [
             '--provider' => $provider,
@@ -52,11 +54,12 @@ class InstallMakeCommand extends EnvironmentCommand
             "--skip-generate" => true
         ]);
 
-        // $this->call('klinik-starterpack:install-submodule');
-        // $this->info('✔️  Submodule installed');
+        $this->call('klinik-starterpack:install-submodule');
+        $this->info('✔️  Submodule installed');
 
         $username = env('DB_USERNAME');
         $password = env('DB_PASSWORD');
+        $database = env('DB_DATABASE');
 
         putenv("DB_USERNAME=root");
         putenv("DB_PASSWORD=".env('DB_ROOT_PASSWORD'));
@@ -65,9 +68,22 @@ class InstallMakeCommand extends EnvironmentCommand
         config(['database.connections.mysql.password' => env('DB_ROOT_PASSWORD')]);
     
         // Jalankan perintah CREATE USER
-        DB::statement("CREATE USER IF NOT EXISTS '$username'@'%' IDENTIFIED BY '$password'");
-        DB::statement("GRANT ALL PRIVILEGES ON *.* TO '$username'@'%' WITH GRANT OPTION");
-        DB::statement("FLUSH PRIVILEGES");
+        // DB::statement("CREATE USER IF NOT EXISTS '$username'@'%' IDENTIFIED BY '$password'");
+        // DB::statement("GRANT ALL PRIVILEGES ON *.* TO '$username'@'%' WITH GRANT OPTION");
+        // DB::statement("FLUSH PRIVILEGES");
+        DB::statement(<<<SQL
+            DO \$\$
+            BEGIN
+            IF NOT EXISTS (
+                SELECT FROM pg_catalog.pg_roles WHERE rolname = '$username'
+            ) THEN
+                EXECUTE format('CREATE ROLE %I LOGIN PASSWORD %L', '$username', '$password');
+            END IF;
+            END
+            \$\$;
+        SQL);
+        DB::statement("GRANT ALL PRIVILEGES ON DATABASE \"$database\" TO \"$username\";");
+
 
         $this->call('down');
         $this->call('migrate');

@@ -34,7 +34,7 @@ class InstallSubmoduleCommand extends EnvironmentCommand
             shell_exec("git submodule add -f https://gitlab.com/{$module}.git repositories/{$module_name}");
         }
 
-        $this->updateComposer(base_path('composer.json'), __DIR__.'/../../repositories.json');
+        $this->updateComposer(base_path('composer.json'), __DIR__.'/../../repositories.json', 'repositories');
 
         shell_exec('rm -rf composer.lock');
         shell_exec('composer install');

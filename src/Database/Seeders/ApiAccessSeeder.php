@@ -11,14 +11,14 @@ class ApiAccessSeeder extends Seeder{
      */
     public function run(): void
     {
-        $workspace  = app(config('database.models.Workspace'))->uuid('9e7ff0f6-7679-46c8-ac3e-71da818160dc')->firstOrFail();        
+        $workspace  = app(config('database.models.Workspace'))->uuid('9e7ff0f6-7679-46c8-ac3e-71da818160dd')->firstOrFail();        
         $api_access = app(config('database.models.ApiAccess'))
                     ->where('reference_type',$workspace->getMorphClass())
                     ->where('reference_id',$workspace->getKey())
                     ->first();
         if (!isset($api_access)){
             $exitCode = Artisan::call('helper:generate', [
-                '--app-code'       => 1,
+                '--app-code'       => 2,
                 '--algorithm'      => 'HS256',
                 '--reference-id'   => $workspace->getKey(),
                 '--reference-type' => $workspace->getMorphClass(),

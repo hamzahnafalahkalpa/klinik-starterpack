@@ -14,6 +14,7 @@ use Hanafalah\ModuleWorkspace\Data\{
 use Hanafalah\ModuleWorkspace\Enums\Workspace\Status;
 use Hanafalah\KlinikStarterpack\Concerns\HasComposer;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
@@ -27,9 +28,9 @@ class WorkspaceSeeder extends Seeder{
     {
         $workspace = app(config('database.models.Workspace'))->uuid('9e7ff0f6-7679-46c8-ac3e-71da818160dd')->first();        
         $generator_config = config('laravel-package-generator');
+        $project_namespace = 'Projects';
+        $group_namespace   = 'Klinik';
         if (!isset($workspace)){
-            $project_namespace = 'Projects';
-            $group_namespace   = 'Klinik';
             $tenant_namespace  = 'GroupInitialKlinik';
 
             $tenant_schema  = app(config('app.contracts.Tenant'));
@@ -140,18 +141,52 @@ class WorkspaceSeeder extends Seeder{
                     'symlink' => true
                 ]
             ];
-            $requires['require'][Str::kebab($original)] = '1.x-dev as 1.0'; 
+            if (Str::kebab($original) != 'hanafalah/microtenant'){
+                $requires['require'][Str::kebab($original)] = '1.x-dev as 1.0'; 
+            }
         }
         $project_tenant->setAttribute('packages',$package_providers);
         $project_tenant->save();
 
+        $composer = $tenant_path.'/'.Str::kebab($tenant->name).'/composer.json';
+        if (!file_exists($composer)){
+            Artisan::call('micro:add-package',[
+                'namespace' => $group_namespace.'\\'.Str::studly($tenant->name),
+                '--package-author' => 'Hamzah Nur Alfalah',
+                '--package-email' => 'hamzahnafalah@gmail.com',
+                '--pattern' => 'tenant',
+                '--main-id' => $tenant->getKey()
+            ]);
+        }
         file_put_contents(__DIR__.'/../../../tenant-repositories.json', json_encode($repositories, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
-        $this->updateComposer($tenant_path.'/'.Str::kebab($tenant->name).'/composer.json', __DIR__.'/../../../tenant-repositories.json','repositories');
+        $this->updateComposer($composer, __DIR__.'/../../../tenant-repositories.json','repositories');
+
+        $composer = $group_tenant->path.'/'.Str::kebab($group_tenant->name).'/composer.json';
+        if (!file_exists($composer)){
+            Artisan::call('micro:add-package',[
+                'namespace' => $group_namespace.'\\'.Str::studly($group_tenant->name),
+                '--package-author' => 'Hamzah Nur Alfalah',
+                '--package-email' => 'hamzahnafalah@gmail.com',
+                '--pattern' => 'group',
+                '--main-id' => $group_tenant->getKey()
+            ]);
+        }
+
+        $composer = $project_tenant->path.'/'.Str::kebab($project_tenant->name).'/composer.json';
+        if (!file_exists($composer)){
+            Artisan::call('micro:add-package',[
+                'namespace' => $project_namespace.'\\'.$group_namespace,
+                '--package-author' => 'Hamzah Nur Alfalah',
+                '--package-email' => 'hamzahnafalah@gmail.com',
+                '--pattern' => 'project',
+                '--main-id' => $project_tenant->getKey()
+            ]);
+        }
         
         file_put_contents(__DIR__.'/../../../project-requirements.json', json_encode($requires, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
-        $this->updateComposer($project_tenant->path.'/'.Str::kebab($project_tenant->name).'/composer.json', __DIR__.'/../../../project-requirements.json','require');
+        $this->updateComposer($composer, __DIR__.'/../../../project-requirements.json','require');
 
-        shell_exec("cd $tenant_path/".Str::kebab($tenant->name)." && rm -rf composer.lock && composer install");
+        // shell_exec("cd $tenant_path/".Str::kebab($tenant->name)." && rm -rf composer.lock && composer install");
         tenancy()->initialize($tenant->getKey());
         MicroTenant::tenantImpersonate($tenant);
     }

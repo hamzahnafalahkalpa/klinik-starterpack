@@ -98,5 +98,6 @@ return [
         // 'hanafalah/jurnal-laravel'              => ['repository' => 'micro-tenant/jurnal-laravel'],
         'hanafalah/module-distribution'         => ['repository' =>'micro-tenant/module-distribution'],
         'hanafalah/module-pharmacy'             => ['repository' =>'micro-tenant/module-pharmacy'],
+        'hanafalah/module-tax'                  => ['repository' =>'micro-tenant/module-tax'],
     ]
 ];

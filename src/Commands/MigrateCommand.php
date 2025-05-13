@@ -33,7 +33,6 @@ class MigrateCommand extends Command
             $this->error("The migrations path does not exist: {$migrationsPath}");
             return Command::FAILURE;
         }
-        
         // Potong base_path untuk mendapatkan path relatif
         $relativePath = str_replace(base_path() . DIRECTORY_SEPARATOR, '', $migrationsPath);
         
