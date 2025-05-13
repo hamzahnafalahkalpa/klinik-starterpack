@@ -15,7 +15,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             WorkspaceSeeder::class,
-            ApiAccessSeeder::class
+            ApiAccessSeeder::class,
+            EmployeeSeeder::class
         ]);
     }
 }

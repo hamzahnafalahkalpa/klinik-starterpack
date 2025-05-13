@@ -42,6 +42,10 @@
         "hanafalah/module-opname-stock": "1.x-dev as 1.0",
         "hanafalah/module-distribution": "1.x-dev as 1.0",
         "hanafalah/module-pharmacy": "1.x-dev as 1.0",
+        "hanafalah/module-rencana-anggaran": "1.x-dev as 1.0",
+        "hanafalah/module-event": "1.x-dev as 1.0",
+        "hanafalah/module-manufacture": "1.x-dev as 1.0",
+        "hanafalah/module-handwriting": "1.x-dev as 1.0",
         "hanafalah/module-tax": "1.x-dev as 1.0"
     }
 }

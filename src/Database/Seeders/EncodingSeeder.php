@@ -12,7 +12,7 @@ class EncodingSeeder extends Seeder{
      */
     public function run()
     {
-        $workspace  = app(config('database.models.Workspace'))->uuid('9e7ff0f6-7679-46c8-ac3e-71da818160dc')->firstOrFail();        
+        $workspace  = app(config('database.models.Workspace'))->uuid('9e7ff0f6-7679-46c8-ac3e-71da818160dd')->firstOrFail();        
         
         foreach (config('module-encoding.encodings') as $encoding) {
             $encoding = app(config('database.models.Encoding'))

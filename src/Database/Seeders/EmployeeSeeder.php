@@ -64,8 +64,8 @@ class EmployeeSeeder extends Seeder
                 ],
                 "user_reference" => [ // Referensi user
                     "role_ids" => [9], // Daftar role ID
-                    "workspace_type" => 'Workspace',
-                    "workspace_id" => 1,
+                    "workspace_type" => 'Tenant',
+                    "workspace_id" => tenancy()->tenant->id,
                     "user" => [ // Informasi akun user (boleh null untuk tidak update akun user)
                         "id" => null,
                         "username" => "admin",
