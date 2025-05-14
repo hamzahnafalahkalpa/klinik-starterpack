@@ -6,7 +6,7 @@ $prefix = '';
 
 return [
     'name'       => 'Medical Record',
-    'alias'      => 'medical-record.',
+    'alias'      => 'medical-record',
     'icon'       => 'material-symbols-light:radiology-outline',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,

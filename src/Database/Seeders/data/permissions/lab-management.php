@@ -6,7 +6,7 @@ $prefix = '';
 
 return [
     'name'       => 'Laboratory Management', 
-    'alias'      => 'lab-management.',
+    'alias'      => 'lab-management',
     'icon'       => 'entypo:lab-flask',
     'type'  => Type::MENU->value,
     'guard_name' => 'api',

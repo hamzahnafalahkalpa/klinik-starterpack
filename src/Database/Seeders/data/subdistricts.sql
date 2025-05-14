@@ -1,19 +1,7 @@
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(1, '11.01.01', 'Bakongan', 1, '2.9622427', '97.4705935');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(2, '11.01.02', 'Kluet Utara', 1, '3.1221015', '97.3408535');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(3, '11.01.03', 'Kluet Selatan', 1, '3.0516577', '97.4597725');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+INSERT INTO public.subdistricts (id, code, name, district_id, latitude, longitude) VALUES
+(1, '11.01.01', 'Bakongan', 1, '2.9622427', '97.4705935'),
+(2, '11.01.02', 'Kluet Utara', 1, '3.1221015', '97.3408535'),
+(3, '11.01.03', 'Kluet Selatan', 1, '3.0516577', '97.4597725'),
 (4, '11.01.04', 'Labuhan Haji', 1, '3.5645593', '97.0175879'),
 (5, '11.01.05', 'Meukek', 1, '3.5931213', '97.2221421'),
 (6, '11.01.06', 'Samadua', 1, NULL, NULL),
@@ -126,8 +114,7 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (113, '11.07.08', 'Kembang Tanjong', 7, '5.31218', '96.0361574'),
 (114, '11.07.09', 'Kota Sigli', 7, '5.3847763', '95.9602371'),
 (115, '11.07.11', 'Mila', 7, '5.2876435', '95.8828751'),
-(116, '11.07.12', 'Muara Tiga', 7, '5.5126065', '95.7932008');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(116, '11.07.12', 'Muara Tiga', 7, '5.5126065', '95.7932008'),
 (117, '11.07.13', 'Mutiara', 7, '5.2867372', '95.9779702'),
 (118, '11.07.14', 'Padang Tiji', 7, '5.3453369', '95.8353837'),
 (119, '11.07.15', 'Peukan Baro', 7, '5.3284568', '95.9673967'),
@@ -206,8 +193,7 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (192, '11.11.14', 'Kuala', 11, '5.2272338', '96.722641'),
 (193, '11.11.15', 'Peusangan Siblah Krueng', 11, '5.0761383', '96.8029489'),
 (194, '11.11.16', 'Peusangan Selatan', 11, NULL, NULL),
-(195, '11.11.17', 'Kuta Blang', 11, '5.2053351', '96.8297403');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(195, '11.11.17', 'Kuta Blang', 11, '5.2053351', '96.8297403'),
 (196, '11.12.01', 'Blang Pidie', 12, '3.7431465', '96.8326488'),
 (197, '11.12.02', 'Tangan-Tangan', 12, '3.6959787', '96.9423844'),
 (198, '11.12.03', 'Manggeng', 12, '3.6206532', '96.9155468'),
@@ -360,9 +346,9 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (345, '12.04.20', 'Hiliserangkai', 27, NULL, NULL),
 (346, '12.04.21', 'Botomuzoi', 27, '1.1730878', '97.5355555'),
 (347, '12.04.27', 'Ulugawo', 27, '0.9826667', '97.7090854'),
-(348, '12.04.28', 'Ma\'u', 27, NULL, NULL),
+(348, '12.04.28', 'Ma''u', 27, NULL, NULL),
 (349, '12.04.29', 'Somolo-molo', 27, NULL, NULL),
-(350, '12.04.35', 'Sogae\'adu', 27, NULL, NULL),
+(350, '12.04.35', 'Sogae''adu', 27, NULL, NULL),
 (351, '12.05.01', 'Bahorok', 28, NULL, NULL),
 (352, '12.05.02', 'Salapian', 28, '3.4838956', '98.2869478'),
 (353, '12.05.03', 'Kuala', 28, '5.2272338', '96.722641'),
@@ -565,11 +551,11 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (550, '12.14.18', 'Fanayama', 37, '0.605328', '97.7742702'),
 (551, '12.14.19', 'Ulunoyo', 37, '0.8786391', '97.6765157'),
 (552, '12.14.20', 'Huruna', 37, '0.9780419', '97.6602365'),
-(553, '12.14.21', 'O\'o\'u', 37, NULL, NULL),
+(553, '12.14.21', 'O''o''u', 37, NULL, NULL),
 (554, '12.14.22', 'Onohazumba', 37, '0.9829664', '97.5788975'),
-(555, '12.14.23', 'Hilisalawa\'ahe', 37, NULL, NULL),
+(555, '12.14.23', 'Hilisalawa''ahe', 37, NULL, NULL),
 (556, '12.14.24', 'Ulususua', 37, '0.817197', '97.7036561'),
-(557, '12.14.25', 'Sidua\'ori', 37, NULL, NULL),
+(557, '12.14.25', 'Sidua''ori', 37, NULL, NULL),
 (558, '12.14.26', 'Somambawa', 37, '0.8357059', '97.8884881'),
 (559, '12.14.27', 'Boronadu', 37, '0.8690323', '97.7525352'),
 (560, '12.14.28', 'Simuk', 37, '-0.0786021', '97.8667182'),
@@ -584,8 +570,7 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (569, '12.15.02', 'Kerajaan', 38, '2.6406763', '98.2978951'),
 (570, '12.15.03', 'Salak', 38, '2.4543341', '98.2869478'),
 (571, '12.15.04', 'Sitelu Tali Urang Julu', 38, NULL, NULL),
-(572, '12.15.05', 'Pergetteng Getteng Sengkut', 38, NULL, NULL);
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(572, '12.15.05', 'Pergetteng Getteng Sengkut', 38, NULL, NULL),
 (573, '12.15.06', 'Pagindar', 38, '2.4551455', '98.1557066'),
 (574, '12.15.07', 'Tinada', 38, '2.5962771', '98.3252705'),
 (575, '12.15.08', 'Siempat Rube', 38, '2.571407', '98.3745717'),
@@ -667,10 +652,8 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (651, '12.21.16', 'Barumun Barat', 44, NULL, NULL),
 (652, '12.21.17', 'Sosa Timur', 44, NULL, NULL),
 (653, '12.22.01', 'Kotapinang', 45, NULL, NULL),
-(654, '12.22.02', 'Kampung Rakyat', 45, '2.0724054', '100.2151578');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(655, '12.22.03', 'Torgamba', 45, '1.6877896', '100.2151578');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(654, '12.22.02', 'Kampung Rakyat', 45, '2.0724054', '100.2151578'),
+(655, '12.22.03', 'Torgamba', 45, '1.6877896', '100.2151578'),
 (656, '12.22.04', 'Sungai Kanan', 45, '1.7470756', '99.8794744'),
 (657, '12.22.05', 'Silangkitang', 45, '1.8427607', '99.9465077'),
 (658, '12.23.01', 'Kualuh Hulu', 46, '2.561968', '99.7009754'),
@@ -695,11 +678,11 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (677, '12.25.01', 'Lahomi', 48, '0.9831141', '97.5138947'),
 (678, '12.25.02', 'Sirombu', 48, '0.9643028', '97.4489531'),
 (679, '12.25.03', 'Mandrehe Barat', 48, '1.1160444', '97.5138947'),
-(680, '12.25.04', 'Moro\'o', 48, NULL, NULL),
+(680, '12.25.04', 'Moro''o', 48, NULL, NULL),
 (681, '12.25.05', 'Mandrehe', 48, '1.0212525', '97.4273195'),
 (682, '12.25.06', 'Mandrehe Utara', 48, '1.1160444', '97.5138947'),
 (683, '12.25.07', 'Lolofitu Moi', 48, '1.0968079', '97.6005786'),
-(684, '12.25.08', 'Ulu Moro\'o', 48, NULL, NULL),
+(684, '12.25.08', 'Ulu Moro''o', 48, NULL, NULL),
 (685, '12.71.01', 'Medan Kota', 49, '3.5627311', '98.69582'),
 (686, '12.71.02', 'Medan Sunggal', 49, '3.5759525', '98.6215649'),
 (687, '12.71.03', 'Medan Helvetia', 49, '3.6096804', '98.6311865'),
@@ -759,7 +742,7 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (741, '12.78.02', 'Gunungsitoli Selatan', 56, '1.2109538', '97.6222665'),
 (742, '12.78.03', 'Gunungsitoli Utara', 56, '1.3640551', '97.5138947'),
 (743, '12.78.04', 'Gunungsitoli Idanoi', 56, '1.1537551', '97.6439611'),
-(744, '12.78.05', 'Gunungsitoli Alo\'oa', 56, NULL, NULL),
+(744, '12.78.05', 'Gunungsitoli Alo''oa', 56, NULL, NULL),
 (745, '12.78.06', 'Gunungsitoli Barat', 56, '1.2253595', '97.5843171'),
 (746, '13.01.01', 'Pancung Soal', 57, '-2.0475001', '101.048549'),
 (747, '13.01.02', 'Ranah Pesisir', 57, '-1.6838348', '100.9354944'),
@@ -1282,8 +1265,7 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (1264, '16.02.17', 'Jejawi', 100, '-3.168933', '104.8688126'),
 (1265, '16.02.18', 'Cengal', 100, '-3.5262443', '105.6881788'),
 (1266, '16.02.19', 'Pangkalan Lampam', 100, NULL, NULL),
-(1267, '16.02.20', 'Mesuji Makmur', 100, '-4.1312979', '104.8921668');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(1267, '16.02.20', 'Mesuji Makmur', 100, '-4.1312979', '104.8921668'),
 (1268, '16.02.21', 'Mesuji Raya', 100, '-3.7520716', '105.1025075'),
 (1269, '16.02.22', 'Lempuing Jaya', 100, '-3.6573963', '104.8921668'),
 (1270, '16.02.23', 'Teluk Gelam', 100, '-3.6100409', '104.7871004'),
@@ -1578,10 +1560,8 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (1559, '17.06.04', 'Pondok Suguh', 121, '-2.7413558', '101.5475409'),
 (1560, '17.06.05', 'Ipuh', 121, '-2.9863926', '101.5134398'),
 (1561, '17.06.06', 'Malin Deman', 121, '-2.8369828', '101.7523854'),
-(1562, '17.06.07', 'Air Rami', 121, '-3.0438293', '101.6499125');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(1563, '17.06.08', 'Teramang Jaya', 121, '-2.664191', '101.4566299');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(1562, '17.06.07', 'Air Rami', 121, '-3.0438293', '101.6499125'),
+(1563, '17.06.08', 'Teramang Jaya', 121, '-2.664191', '101.4566299'),
 (1564, '17.06.09', 'Selagan Raya', 121, '-2.4700455', '101.4112049'),
 (1565, '17.06.10', 'Penarik', 121, '-2.586689', '101.4112049'),
 (1566, '17.06.11', 'XIV Koto', 121, '-2.4825815', '101.0824912'),
@@ -1881,10 +1861,8 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (1860, '19.03.08', 'Kepulauan Pongok', 143, '-2.8519477', '107.0626956'),
 (1861, '19.04.01', 'Koba', 144, '-2.4944583', '106.3228338'),
 (1862, '19.04.02', 'Pangkalan Baru', 144, '-2.1929147', '106.1345705'),
-(1863, '19.04.03', 'Sungai Selan', 144, '-2.384753', '105.986397');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(1864, '19.04.04', 'Simpang Katis', 144, '-2.2788559', '106.0757749');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(1863, '19.04.03', 'Sungai Selan', 144, '-2.384753', '105.986397'),
+(1864, '19.04.04', 'Simpang Katis', 144, '-2.2788559', '106.0757749'),
 (1865, '19.04.05', 'Namang', 144, '-2.324729', '106.182098'),
 (1866, '19.04.06', 'Lubuk Besar', 144, '-2.6050665', '106.6055534'),
 (1867, '19.05.01', 'Mentok', 145, '-2.0651651', '105.1643012'),
@@ -1897,8 +1875,7 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (1874, '19.06.02', 'Gantung', 146, '-2.973548', '108.151802'),
 (1875, '19.06.03', 'Dendang', 146, '-1.2324731', '103.9376021'),
 (1876, '19.06.04', 'Kelapa Kampit', 146, '-2.6984349', '107.985063'),
-(1877, '19.06.05', 'Damar', 146, '-2.7716449', '108.214028');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(1877, '19.06.05', 'Damar', 146, '-2.7716449', '108.214028'),
 (1878, '19.06.06', 'Simpang Renggiang', 146, '-2.9082231', '108.0005933'),
 (1879, '19.06.07', 'Simpang Pesak', 146, '-3.1562185', '108.024301'),
 (1880, '19.71.01', 'Bukitintan', 147, NULL, NULL),
@@ -2194,8 +2171,7 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (2170, '32.05.14', 'Malangbong', 165, '-7.047554', '108.084999'),
 (2171, '32.05.15', 'Sukawening', 165, '-7.128915', '108.0124469'),
 (2172, '32.05.16', 'Karangtengah', 165, '-6.8008183', '107.1781769'),
-(2173, '32.05.17', 'Bayongbong', 165, '-7.2801838', '107.8465394');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(2173, '32.05.17', 'Bayongbong', 165, '-7.2801838', '107.8465394'),
 (2174, '32.05.18', 'Cigedug', 165, '-7.3225372', '107.8228459'),
 (2175, '32.05.19', 'Cilawu', 165, '-7.2989496', '107.893932'),
 (2176, '32.05.20', 'Cisurupan', 165, '-7.31517', '107.7901'),
@@ -2383,8 +2359,7 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (2358, '32.10.22', 'Banjaran', 170, '-7.0476872', '107.5836555'),
 (2359, '32.10.23', 'Cingambul', 170, '-7.0341681', '108.3207992'),
 (2360, '32.10.24', 'Kasokandel', 170, '-6.7711112', '108.2258897'),
-(2361, '32.10.25', 'Sindang', 170, '-6.8288937', '108.3207992');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(2361, '32.10.25', 'Sindang', 170, '-6.8288937', '108.3207992'),
 (2362, '32.10.26', 'Malausma', 170, '-7.0370275', '108.2496145'),
 (2363, '32.11.01', 'Wado', 171, '-6.9809857', '108.1072924'),
 (2364, '32.11.02', 'Jatinunggal', 171, '-6.9370724', '108.1784455'),
@@ -2502,10 +2477,8 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (2476, '32.15.10', 'Pedes', 175, '-6.0871757', '107.3730563'),
 (2477, '32.15.11', 'Cibuaya', 175, '-6.0074218', '107.3257545'),
 (2478, '32.15.12', 'Pakisjaya', 175, '-6.0135298', '107.1366365'),
-(2479, '32.15.13', 'Cikampek', 175, '-6.3958742', '107.4381106');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(2480, '32.15.14', 'Jatisari', 175, '-6.3472481', '107.5150139');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(2479, '32.15.13', 'Cikampek', 175, '-6.3958742', '107.4381106'),
+(2480, '32.15.14', 'Jatisari', 175, '-6.3472481', '107.5150139'),
 (2481, '32.15.15', 'Cilamaya Wetan', 175, '-6.2224773', '107.5860213'),
 (2482, '32.15.16', 'Tirtamulya', 175, '-6.3488871', '107.4676861'),
 (2483, '32.15.17', 'Telagasari', 175, NULL, NULL),
@@ -2807,12 +2780,9 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (2779, '33.07.15', 'Kalibawang', 194, '-7.4992021', '109.9139594'),
 (2780, '33.08.01', 'Salaman', 195, '-7.571206', '110.128347'),
 (2781, '33.08.02', 'Borobudur', 195, '-7.6293983', '110.1998238'),
-(2782, '33.08.03', 'Ngluwar', 195, '-7.6615963', '110.2772644');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(2783, '33.08.04', 'Salam', 195, '-7.6247732', '110.2951364');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(2784, '33.08.05', 'Srumbung', 195, '-7.5814029', '110.3427968');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(2782, '33.08.03', 'Ngluwar', 195, '-7.6615963', '110.2772644'),
+(2783, '33.08.04', 'Salam', 195, '-7.6247732', '110.2951364'),
+(2784, '33.08.05', 'Srumbung', 195, '-7.5814029', '110.3427968'),
 (2785, '33.08.06', 'Dukun', 195, '-7.5392289', '110.366628'),
 (2786, '33.08.07', 'Sawangan', 195, '-6.4085961', '106.7647475'),
 (2787, '33.08.08', 'Muntilan', 195, '-7.5800091', '110.2840049'),
@@ -3119,12 +3089,9 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (3088, '33.24.18', 'Ringinarum', 211, '-6.9943602', '110.1104789'),
 (3089, '33.24.19', 'Ngampel', 211, '-7.0018959', '110.170041'),
 (3090, '33.24.20', 'Kaliwungu Selatan', 211, '-7.0137066', '110.2474787'),
-(3091, '33.25.01', 'Wonotunggal', 212, '-7.0095178', '109.7651203');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(3092, '33.25.02', 'Bandar', 212, '4.703412', '96.9531225');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(3093, '33.25.03', 'Blado', 212, '-7.0702885', '109.8335818');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(3091, '33.25.01', 'Wonotunggal', 212, '-7.0095178', '109.7651203'),
+(3092, '33.25.02', 'Bandar', 212, '4.703412', '96.9531225'),
+(3093, '33.25.03', 'Blado', 212, '-7.0702885', '109.8335818'),
 (3094, '33.25.04', 'Reban', 212, '-7.0703438', '109.8901427'),
 (3095, '33.25.05', 'Bawang', 212, '-7.4302513', '109.6282212'),
 (3096, '33.25.06', 'Tersono', 212, '-7.0671806', '109.9615952'),
@@ -3431,10 +3398,8 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (3397, '35.06.22', 'Banyakan', 233, '-7.7859312', '111.9403254'),
 (3398, '35.06.23', 'Ringinrejo', 233, '-7.9794517', '112.0416754'),
 (3399, '35.06.24', 'Kayen Kidul', 233, '-7.7415553', '112.1012912'),
-(3400, '35.06.25', 'Ngasem', 233, '-7.8052707', '112.0535987');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(3401, '35.06.26', 'Badas', 233, '-7.7309635', '112.2026347');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(3400, '35.06.25', 'Ngasem', 233, '-7.8052707', '112.0535987'),
+(3401, '35.06.26', 'Badas', 233, '-7.7309635', '112.2026347'),
 (3402, '35.07.01', 'Donomulyo', 234, '-8.3219695', '112.4053046'),
 (3403, '35.07.02', 'Pagak', 234, '-8.2439594', '112.5125893'),
 (3404, '35.07.03', 'Bantur', 234, '-8.313498', '112.548349'),
@@ -3446,8 +3411,7 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (3410, '35.07.09', 'Turen', 234, '-8.1768705', '112.6973355'),
 (3411, '35.07.10', 'Gondanglegi', 234, '-8.1551922', '112.6317838'),
 (3412, '35.07.11', 'Kalipare', 234, '-8.2072238', '112.4410671'),
-(3413, '35.07.12', 'Sumberpucung', 234, NULL, NULL);
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(3413, '35.07.12', 'Sumberpucung', 234, NULL, NULL),
 (3414, '35.07.13', 'Kepanjen', 234, '-8.1593726', '112.5602686'),
 (3415, '35.07.14', 'Bululawang', 234, '-8.1129703', '112.6556213'),
 (3416, '35.07.15', 'Tajinan', 234, '-8.0503973', '112.6794582'),
@@ -3748,10 +3712,8 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (3711, '35.21.02', 'Ngrambe', 248, '-7.4969478', '111.224885'),
 (3712, '35.21.03', 'Jogorogo', 248, '-7.536536', '111.2487319'),
 (3713, '35.21.04', 'Kendal', 248, '-7.5569171', '111.2994071'),
-(3714, '35.21.05', 'Geneng', 248, '-7.4873219', '111.4156647');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(3715, '35.21.06', 'Kwadungan', 248, '-7.5082269', '111.5050955');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(3714, '35.21.05', 'Geneng', 248, '-7.4873219', '111.4156647'),
+(3715, '35.21.06', 'Kwadungan', 248, '-7.5082269', '111.5050955'),
 (3716, '35.21.07', 'Karangjati', 248, '-7.4584925', '111.5826028'),
 (3717, '35.21.08', 'Padas', 248, '-7.4609184', '111.5349059'),
 (3718, '35.21.09', 'Ngawi', 248, '-7.4068693', '111.431658'),
@@ -4063,12 +4025,9 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (4024, '36.03.08', 'Mauk', 268, '-6.0533001', '106.5230542'),
 (4025, '36.03.09', 'Kemiri', 268, '-7.6431441', '109.9139594'),
 (4026, '36.03.10', 'Sukadiri', 268, '-6.0775231', '106.5642998'),
-(4027, '36.03.11', 'Rajeg', 268, '-6.1152896', '106.4994889');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(4028, '36.03.12', 'Pasar Kemis', 268, NULL, NULL);
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(4029, '36.03.13', 'Teluknaga', 268, '-6.0488816', '106.6645007');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(4027, '36.03.11', 'Rajeg', 268, '-6.1152896', '106.4994889'),
+(4028, '36.03.12', 'Pasar Kemis', 268, NULL, NULL),
+(4029, '36.03.13', 'Teluknaga', 268, '-6.0488816', '106.6645007'),
 (4030, '36.03.14', 'Kosambi', 268, '-6.0734468', '106.6939803'),
 (4031, '36.03.15', 'Pakuhaji', 268, '-6.0503588', '106.6173415'),
 (4032, '36.03.16', 'Sepatan', 268, '-6.1179866', '106.5760857'),
@@ -4274,7 +4233,7 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (4232, '52.04.29', 'Lantung', 286, '-8.7796269', '117.5261025'),
 (4233, '52.05.01', 'Dompu', 287, '-8.545437', '118.445801'),
 (4234, '52.05.02', 'Kempo', 287, '-8.4900543', '118.1824793'),
-(4235, '52.05.03', 'Hu\'u', 287, '-8.783401', '118.382301'),
+(4235, '52.05.03', 'Hu''u', 287, '-8.783401', '118.382301'),
 (4236, '52.05.04', 'Kilo', 287, '-8.3535519', '118.4163103'),
 (4237, '52.05.05', 'Woja', 287, '-8.5111152', '118.4163103'),
 (4238, '52.05.06', 'Pekat', 287, '-8.238184', '117.715797'),
@@ -4355,7 +4314,7 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (4313, '53.02.07', 'Amanuban Barat', 294, '-9.8793286', '124.3532417'),
 (4314, '53.02.08', 'Amanatun Selatan', 294, '-9.8376805', '124.6303372'),
 (4315, '53.02.09', 'Amanatun Utara', 294, '-9.6861802', '124.7077665'),
-(4316, '53.02.10', 'KI\'E', 294, NULL, NULL),
+(4316, '53.02.10', 'KI''E', 294, NULL, NULL),
 (4317, '53.02.11', 'Kuanfatu', 294, NULL, NULL),
 (4318, '53.02.12', 'Fatumnasi', 294, '-9.594324', '124.1754442'),
 (4319, '53.02.13', 'Polen', 294, '-9.6670621', '124.3754414'),
@@ -4376,12 +4335,9 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (4334, '53.02.28', 'Fautmolo', 294, '-9.7882733', '124.5639142'),
 (4335, '53.02.29', 'Fatukopa', 294, '-9.6475919', '124.6303372'),
 (4336, '53.02.30', 'Mollo Tengah', 294, '-9.8564641', '124.2199267'),
-(4337, '53.02.31', 'Tobu', 294, '-9.6092037', '124.297718');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(4338, '53.02.32', 'Nunbena', 294, '-9.6482042', '124.1198102');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(4339, '53.03.01', 'Miomafo Timur', 295, NULL, NULL);
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(4337, '53.02.31', 'Tobu', 294, '-9.6092037', '124.297718'),
+(4338, '53.02.32', 'Nunbena', 294, '-9.6482042', '124.1198102'),
+(4339, '53.03.01', 'Miomafo Timur', 295, NULL, NULL),
 (4340, '53.03.02', 'Miomafo Barat', 295, NULL, NULL),
 (4341, '53.03.03', 'Biboki Selatan', 295, '-9.3502957', '124.6635297'),
 (4342, '53.03.04', 'Noemuti', 295, '-9.5974717', '124.4863567'),
@@ -4980,12 +4936,9 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (4935, '63.02.17', 'Kelumpang Hilir', 344, '-3.1996501', '116.0650307'),
 (4936, '63.02.18', 'Kelumpang Barat', 344, '-2.7280486', '116.1123078'),
 (4937, '63.02.19', 'Pamukan Barat', 344, '-2.3900193', '115.9940986'),
-(4938, '63.02.20', 'Pulau Laut Kepulauan', 344, '-3.9953249', '116.1477598');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(4939, '63.02.21', 'Pulau Laut Tanjung Selayar', 344, '-4.0154512', '116.1004894');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(4940, '63.02.22', 'Pulaulaut Sigam', 344, NULL, NULL);
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(4938, '63.02.20', 'Pulau Laut Kepulauan', 344, '-3.9953249', '116.1477598'),
+(4939, '63.02.21', 'Pulau Laut Tanjung Selayar', 344, '-4.0154512', '116.1004894'),
+(4940, '63.02.22', 'Pulaulaut Sigam', 344, NULL, NULL),
 (4941, '63.03.01', 'Aluh Aluh', 345, NULL, NULL),
 (4942, '63.03.02', 'Kertak Hanyar', 345, '-3.3753772', '114.6549185'),
 (4943, '63.03.03', 'Gambut', 345, '-3.4301491', '114.678669'),
@@ -5282,8 +5235,7 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (5234, '71.01.31', 'Bolaang Timur', 371, '0.923424', '124.1754442'),
 (5235, '71.01.32', 'Bilalang', 371, '0.8348125', '124.3199316'),
 (5236, '71.01.33', 'Dumoga', 371, '0.6597984', '124.0251538'),
-(5237, '71.01.34', 'Dumoga Tenggara', 371, '0.6090894', '123.9527031');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(5237, '71.01.34', 'Dumoga Tenggara', 371, '0.6090894', '123.9527031'),
 (5238, '71.01.35', 'Dumoga Tengah', 371, '0.5162843', '124.0056535'),
 (5239, '71.02.01', 'Tondano Barat', 372, '1.299262', '124.8900033'),
 (5240, '71.02.02', 'Tondano Timur', 372, '1.2865521', '124.9396367'),
@@ -5329,13 +5281,12 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (5280, '71.04.02', 'Beo', 374, '4.2472682', '126.8142605'),
 (5281, '71.04.03', 'Rainis', 374, '4.2784597', '126.8573186'),
 (5282, '71.04.04', 'Essang', 374, '4.4529473', '126.7496264'),
-(5283, '71.04.05', 'Nanusa', 374, '4.7677023', '127.1365803');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(5283, '71.04.05', 'Nanusa', 374, '4.7677023', '127.1365803'),
 (5284, '71.04.06', 'Kabaruan', 374, '3.8317299', '126.7711774'),
 (5285, '71.04.07', 'Melonguane', 374, '4.0430046', '126.7172882'),
 (5286, '71.04.08', 'Gemeh', 374, '4.4751436', '126.8034921'),
 (5287, '71.04.09', 'Damau', 374, '3.7963449', '126.8142605'),
-(5288, '71.04.10', 'Tampan\' Amma', 374, NULL, NULL),
+(5288, '71.04.10', 'Tampan'' Amma', 374, NULL, NULL),
 (5289, '71.04.11', 'Salibabu', 374, '3.9026876', '126.6849359'),
 (5290, '71.04.12', 'Kalongan', 374, '4.0179493', '126.6363811'),
 (5291, '71.04.13', 'Miangas', 374, '5.5560786', '126.5850946'),
@@ -5585,12 +5536,9 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (5535, '72.10.06', 'Kulawi Selatan', 395, '-1.6696158', '120.0896313'),
 (5536, '72.10.07', 'Pipikoro', 395, '-1.8251672', '119.9277947'),
 (5537, '72.10.08', 'Gumbasa', 395, '-1.2669305', '119.9971769'),
-(5538, '72.10.09', 'Dolo Selatan', 395, '-1.2857748', '119.8352303');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(5539, '72.10.10', 'Tanambulava', 395, '-1.1336893', '119.950926');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(5540, '72.10.11', 'Dolo Barat', 395, '-1.0679499', '119.8583772');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(5538, '72.10.09', 'Dolo Selatan', 395, '-1.2857748', '119.8352303'),
+(5539, '72.10.10', 'Tanambulava', 395, '-1.1336893', '119.950926'),
+(5540, '72.10.11', 'Dolo Barat', 395, '-1.0679499', '119.8583772'),
 (5541, '72.10.12', 'Dolo', 395, '-0.990628', '119.878098'),
 (5542, '72.10.13', 'Kinovaro', 395, '-0.9935307', '119.8005027'),
 (5543, '72.10.14', 'Marawola', 395, '-0.9722078', '119.8525909'),
@@ -5887,13 +5835,13 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (5834, '73.26.03', 'Nanggala', 419, '-2.9798801', '119.9971769'),
 (5835, '73.26.04', 'Rindingallo', 419, NULL, NULL),
 (5836, '73.26.05', 'Buntao', 419, '-3.0422396', '119.9624902'),
-(5837, '73.26.06', 'Sa\'dan', 419, '-2.8427437', '119.9046594'),
+(5837, '73.26.06', 'Sa''dan', 419, '-2.8427437', '119.9046594'),
 (5838, '73.26.07', 'Sanggalangi', 419, '-3.0078867', '119.9393608'),
 (5839, '73.26.08', 'Sopai', 419, '-2.9973508', '119.8525909'),
 (5840, '73.26.09', 'Tikala', 419, '1.4667399', '124.8900033'),
 (5841, '73.26.10', 'Balusu', 419, '-4.3447989', '119.6730939'),
 (5842, '73.26.11', 'Tallunglipu', 419, '-2.9518335', '119.9104436'),
-(5843, '73.26.12', 'Dende\' Piongan Napo', 419, NULL, NULL),
+(5843, '73.26.12', 'Dende'' Piongan Napo', 419, NULL, NULL),
 (5844, '73.26.13', 'Buntu Pepasan', 419, '-2.8007412', '119.8468043'),
 (5845, '73.26.14', 'Baruppu', 419, '-2.7949212', '119.742604'),
 (5846, '73.26.15', 'Kesu', 419, '-2.9959627', '119.898875'),
@@ -5904,12 +5852,9 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (5851, '73.26.20', 'Kapala Pitu', 419, '-2.9276199', '119.8410174'),
 (5852, '73.26.21', 'Awan Rante Karua', 419, '-2.9089339', '119.7310213'),
 (5853, '73.71.01', 'Mariso', 420, '-5.1590928', '119.4092257'),
-(5854, '73.71.02', 'Mamajang', 420, '-5.1643461', '119.4193834');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(5855, '73.71.03', 'Makassar', 420, '-5.1476651', '119.4327314');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(5856, '73.71.04', 'Ujung Pandang', 420, '-5.1403519', '119.4150302');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(5854, '73.71.02', 'Mamajang', 420, '-5.1643461', '119.4193834'),
+(5855, '73.71.03', 'Makassar', 420, '-5.1476651', '119.4327314'),
+(5856, '73.71.04', 'Ujung Pandang', 420, '-5.1403519', '119.4150302'),
 (5857, '73.71.05', 'Wajo', 420, '-5.1255864', '119.4106768'),
 (5858, '73.71.06', 'Bontoala', 420, '-5.130839', '119.4208345'),
 (5859, '73.71.07', 'Tallo', 420, '-5.1185879', '119.4353441'),
@@ -6216,12 +6161,9 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (6160, '75.05.03', 'Anggrek', 444, '0.8421527', '122.740723'),
 (6161, '75.05.04', 'Sumalata', 444, '0.9252647', '122.4920088'),
 (6162, '75.05.05', 'Tolinggula', 444, '0.9449831', '122.151897'),
-(6163, '75.05.06', 'Gentuma Raya', 444, '0.8635461', '123.0226174');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(6164, '75.05.07', 'Tomolito', 444, NULL, NULL);
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(6165, '75.05.08', 'Ponelo Kepulauan', 444, '0.8905048', '122.8851257');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(6163, '75.05.06', 'Gentuma Raya', 444, '0.8635461', '123.0226174'),
+(6164, '75.05.07', 'Tomolito', 444, NULL, NULL),
+(6165, '75.05.08', 'Ponelo Kepulauan', 444, '0.8905048', '122.8851257'),
 (6166, '75.05.09', 'Monano', 444, '0.8567497', '122.6870742'),
 (6167, '75.05.10', 'Biau', 444, '1.1910581', '121.3884671'),
 (6168, '75.05.11', 'Sumalata Timur', 444, '0.9812982', '122.5092775'),
@@ -6520,12 +6462,9 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (6461, '82.08.03', 'Lede', 470, '-1.6883187', '124.4420073'),
 (6462, '82.08.04', 'Taliabu Utara', 470, '-1.7308614', '124.7298765'),
 (6463, '82.08.05', 'Taliabu Timur', 470, '-1.7702426', '125.148879'),
-(6464, '82.08.06', 'Taliabu Timur Selatan', 470, '-1.8542092', '124.994751');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(6465, '82.08.07', 'Taliabu Selatan', 470, '-1.8601861', '124.7298765');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(6466, '82.08.08', 'Tabona', 470, '-1.8405417', '124.8844867');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(6464, '82.08.06', 'Taliabu Timur Selatan', 470, '-1.8542092', '124.994751'),
+(6465, '82.08.07', 'Taliabu Selatan', 470, '-1.8601861', '124.7298765'),
+(6466, '82.08.08', 'Tabona', 470, '-1.8405417', '124.8844867'),
 (6467, '82.71.01', 'Pulau Ternate', 471, '0.7957999', '127.3613533'),
 (6468, '82.71.02', 'Kota Ternate Selatan', 471, NULL, NULL),
 (6469, '82.71.03', 'Kota Ternate Utara', 471, NULL, NULL),
@@ -6847,12 +6786,9 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (6785, '91.13.52', 'Kayo', 485, '-4.4896723', '139.2233389'),
 (6786, '91.13.53', 'Sumo', 485, '-4.7710232', '139.3247147'),
 (6787, '91.14.01', 'Karubaga', 486, '-3.6761367', '138.4887224'),
-(6788, '91.14.02', 'Bokondini', 486, '-3.6881806', '138.6803623');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(6789, '91.14.03', 'Kanggime', 486, '-3.669342', '138.3688834');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
-(6790, '91.14.04', 'Kembu', 486, '-3.5449985', '138.3688834');
-INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `longitude`) VALUES
+(6788, '91.14.02', 'Bokondini', 486, '-3.6881806', '138.6803623'),
+(6789, '91.14.03', 'Kanggime', 486, '-3.669342', '138.3688834'),
+(6790, '91.14.04', 'Kembu', 486, '-3.5449985', '138.3688834'),
 (6791, '91.14.05', 'Goyage', 486, '-3.73627', '138.448747'),
 (6792, '91.14.06', 'Wunim', 486, NULL, NULL),
 (6793, '91.14.07', 'Wina', 486, '-3.5813279', '138.254283'),
@@ -7073,7 +7009,7 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (7008, '91.25.13', 'Kembru', 497, NULL, NULL),
 (7009, '91.25.14', 'Bina', 497, NULL, NULL),
 (7010, '91.25.15', 'Sinak Barat', 497, NULL, NULL),
-(7011, '91.25.16', 'Mage\'abume', 497, NULL, NULL),
+(7011, '91.25.16', 'Mage''abume', 497, NULL, NULL),
 (7012, '91.25.17', 'Yugumuak', 497, NULL, NULL),
 (7013, '91.25.18', 'Ilaga Utara', 497, NULL, NULL),
 (7014, '91.25.19', 'Mabugi', 497, NULL, NULL),
@@ -7329,11 +7265,3 @@ INSERT INTO `subdistricts` (`id`, `code`, `name`, `district_id`, `latitude`, `lo
 (7264, '92.71.08', 'Klaurung', 514, '-0.9316366', '131.3510866'),
 (7265, '92.71.09', 'Malaimsimsa', 514, '-0.8820606', '131.2965939'),
 (7266, '92.71.10', 'Maladum Mes', 514, '-0.8056881', '131.336045');
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

@@ -4,9 +4,9 @@ use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
     'name'       => 'Access Control List', 
-    'alias'      => 'acl.',
+    'alias'      => 'acl',
     'icon'       => 'game-icons:house-keys',
-    'type'  => Type::MENU->value,
+    'type'       => Type::MENU->value,
     'guard_name' => 'api',
     'childs'     => [
         [

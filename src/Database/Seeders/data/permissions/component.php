@@ -6,7 +6,7 @@ $prefix = '';
 
 return [
     'name'           => 'Component Management', 
-    'alias'          => 'component.',
+    'alias'          => 'component',
     'icon'       => 'uiw:component',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',

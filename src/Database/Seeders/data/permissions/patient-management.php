@@ -6,7 +6,7 @@ $prefix = '';
 
 return [
     'name'           => 'Patient Data Management',
-    'alias'          => 'patient-management.',
+    'alias'          => 'patient-management',
     'icon'       => 'fluent:people-community-20-regular',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',

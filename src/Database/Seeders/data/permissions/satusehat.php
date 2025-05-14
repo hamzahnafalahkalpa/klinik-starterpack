@@ -6,7 +6,7 @@ $prefix = '';
 
 return [
     'name'           => 'Satu Sehat',
-    'alias'          => 'satusehat.',
+    'alias'          => 'satusehat',
     'icon'       => 'game-icons:medical-pack',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',

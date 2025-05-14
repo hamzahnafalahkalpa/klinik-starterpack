@@ -6,7 +6,7 @@ $prefix = '';
 
 return [
     'name'           => 'Transaction',
-    'alias'          => 'transaction.',
+    'alias'          => 'transaction',
     'icon'       => 'tabler:transaction-dollar',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',

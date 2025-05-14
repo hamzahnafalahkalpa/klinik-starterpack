@@ -6,7 +6,7 @@ $prefix = '';
 
 return [
     'name'           => 'Profession Management',
-    'alias'          => 'profession-management.',
+    'alias'          => 'profession-management',
     'icon'       => 'tabler:briefcase-filled',
     'show_in_acl' => true,
     'type'           => Type::MENU->value,

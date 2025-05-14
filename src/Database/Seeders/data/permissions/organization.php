@@ -6,7 +6,7 @@ $prefix = '';
 
 return [
     'name'           => 'Organization Management', 
-    'alias'          => 'organization.',
+    'alias'          => 'organization',
     'icon'       => 'clarity:organization-solid',
     'type'           => Type::MENU->value,
     'guard_name'     => 'api',

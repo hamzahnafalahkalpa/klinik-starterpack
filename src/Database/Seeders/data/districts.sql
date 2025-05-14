@@ -1,19 +1,7 @@
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
-INSERT INTO `districts` (`id`, `code`, `name`, `type`, `province_id`, `latitude`, `longitude`) VALUES
-(1, '11.01', 'ACEH SELATAN', '0', 1, '3.3115056', '97.3516558');
-INSERT INTO `districts` (`id`, `code`, `name`, `type`, `province_id`, `latitude`, `longitude`) VALUES
-(2, '11.02', 'ACEH TENGGARA', '0', 1, '3.3088666', '97.6982272');
-INSERT INTO `districts` (`id`, `code`, `name`, `type`, `province_id`, `latitude`, `longitude`) VALUES
-(3, '11.03', 'ACEH TIMUR', '0', 1, '4.5224111', '97.6114217');
-INSERT INTO `districts` (`id`, `code`, `name`, `type`, `province_id`, `latitude`, `longitude`) VALUES
+INSERT INTO public.districts (id, code, name, type, province_id, latitude, longitude) VALUES
+(1, '11.01', 'ACEH SELATAN', '0', 1, '3.3115056', '97.3516558'),
+(2, '11.02', 'ACEH TENGGARA', '0', 1, '3.3088666', '97.6982272'),
+(3, '11.03', 'ACEH TIMUR', '0', 1, '4.5224111', '97.6114217'),
 (4, '11.04', 'ACEH TENGAH', '0', 1, '4.4482641', '96.8350999'),
 (5, '11.05', 'ACEH BARAT', '0', 1, '4.4542745', '96.1526985'),
 (6, '11.06', 'ACEH BESAR', '0', 1, '5.4529168', '95.4777811'),
@@ -525,11 +513,3 @@ INSERT INTO `districts` (`id`, `code`, `name`, `type`, `province_id`, `latitude`
 (512, '92.11', 'MANOKWARI SELATAN', '0', 34, '-0.9135107', '134.0008674'),
 (513, '92.12', 'PEGUNUNGAN ARFAK', '0', 34, '-1.1554562', '133.7142484'),
 (514, '92.71', 'SORONG', '1', 34, '-0.8761629', '131.255828');
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

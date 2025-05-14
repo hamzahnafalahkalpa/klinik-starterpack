@@ -84,9 +84,9 @@ class InstallMakeCommand extends EnvironmentCommand
         $this->call('db:seed');
         $this->call('up');
         $this->call('klinik-starterpack:seed');
-        $this->call('tenants:migrate');
+        // $this->call('tenants:migrate');
         
-        // $this->call('klinik:migrate');
+        $this->call('klinik:migrate');
 
         $this->comment('hanafalah\\klinik-starterpack installed successfully.');
     }

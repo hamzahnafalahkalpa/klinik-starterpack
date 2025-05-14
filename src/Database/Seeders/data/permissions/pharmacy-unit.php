@@ -6,7 +6,7 @@ $prefix = '';
 
 return [
     'name'           => 'Instalasi Farmasi',
-    'alias'          => 'pharmacy-unit.',
+    'alias'          => 'pharmacy-unit',
     'icon'       => 'healthicons:pharmacy',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',

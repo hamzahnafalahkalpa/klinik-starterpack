@@ -6,7 +6,7 @@ $prefix = '';
 
 return [
     'name'           => 'Reports Collection', 
-    'alias'          => 'report.',
+    'alias'          => 'report',
     'icon'       => 'mdi:report-tree',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',

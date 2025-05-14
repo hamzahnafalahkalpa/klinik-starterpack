@@ -6,7 +6,7 @@ $prefix = '';
 
 return [
     'name'           => 'Daftar Obat dan BMHP',
-    'alias'          => 'medicine-management.',
+    'alias'          => 'medicine-management',
     'icon'       => 'healthicons:pharmacy',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',

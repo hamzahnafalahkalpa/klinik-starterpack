@@ -6,7 +6,7 @@ $prefix = '';
 
 return [
     'name'           => 'Disease Encyclopedia',
-    'alias'          => 'disease.',
+    'alias'          => 'disease',
     'icon'       => 'fa-solid:disease',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',

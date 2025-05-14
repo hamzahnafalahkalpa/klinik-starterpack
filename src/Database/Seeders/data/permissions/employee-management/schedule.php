@@ -7,7 +7,7 @@ $prefix_directory = 'employee-management';
 
 return [
     'name'       => 'Schedule Master Data', 
-    'alias'      => 'schedule.',
+    'alias'      => 'schedule',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',
     'childs'     => [

@@ -6,7 +6,7 @@ $prefix = '';
 
 return [
     'name'           => 'Treatment Management', 
-    'alias'          => 'treatment.',
+    'alias'          => 'treatment',
     'icon'       => 'mdi:medical-bag',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',

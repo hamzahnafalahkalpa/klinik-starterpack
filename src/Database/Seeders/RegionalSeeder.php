@@ -4,6 +4,7 @@ namespace Hanafalah\KlinikStarterpack\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class RegionalSeeder extends Seeder
 {
@@ -14,10 +15,14 @@ class RegionalSeeder extends Seeder
      */
     public function run()
     {
-        $files = ['provinces', 'districts', 'subdistricts', 'villages'];
+        $files = ['Province', 'District', 'Subdistrict', 'Village'];
         foreach ($files as $file) {
-            $sql = file_get_contents(__DIR__ . '/data/' . $file . '.sql');
-            DB::unprepared($sql);
+            $model = app(config('database.models.'.$file));
+            $first = $model->first();
+            if (!isset($first)){
+                $sql = file_get_contents(__DIR__ . '/data/' . Str::lower(Str::plural($file)) . '.sql');
+                DB::unprepared($sql);
+            }
         }
     }
 }

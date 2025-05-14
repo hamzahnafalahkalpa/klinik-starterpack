@@ -6,7 +6,7 @@ $prefix = '';
 
 return [
     'name'           => 'Manajemen Pegawai', 
-    'alias'          => 'employee-management.',
+    'alias'          => 'employee-management',
     'icon'       => 'clarity:employee-group-solid',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',

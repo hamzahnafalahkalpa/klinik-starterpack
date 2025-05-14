@@ -6,7 +6,7 @@ $prefix = '';
 
 return [
     'name'           => 'Service Management', 
-    'alias'          => 'service.',
+    'alias'          => 'service',
     'icon'       => 'ri:service-line',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',

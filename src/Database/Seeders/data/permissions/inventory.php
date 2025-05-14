@@ -6,7 +6,7 @@ $prefix = '';
 
 return [
     'name'       => 'Inventory Management', 
-    'alias'      => 'inventory.',
+    'alias'      => 'inventory',
     'icon'       => 'fluent-mdl2:manufacturing',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',

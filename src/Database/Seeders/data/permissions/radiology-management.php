@@ -6,7 +6,7 @@ $prefix = '';
 
 return [
     'name'       => 'Radiology Management', 
-    'alias'      => 'radiology-management.',
+    'alias'      => 'radiology-management',
     'icon'       => 'material-symbols-light:radiology-outline',
     'type'  => Type::MENU->value,
     'guard_name' => 'api',

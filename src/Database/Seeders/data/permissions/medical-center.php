@@ -6,7 +6,7 @@ $prefix = '';
 
 return [
     'name'       => 'Medical Center', 
-    'alias'      => 'medical-center.',
+    'alias'      => 'medical-center',
     'icon'       => 'tabler:timeline-event',
     'type'  => Type::MENU->value,
     'guard_name' => 'api',
