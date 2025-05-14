@@ -1,44 +1,39 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = 'medicine-management.';
 $prefix_directory = 'medicine-management';
 
 return [
     'name'            => 'Order Medcal Item',
-    'alias'           => $prefix . 'order.index',
-    'props'           => [
-        'icon'        => 'lsicon:distribution-filled',
-        'directory'   => "$prefix_directory/order"
-    ],
+    'alias'           => 'order.index',
+    'icon'        => 'lsicon:distribution-filled',
     'type'           => Type::MENU->value,
     'guard_name'     => 'api',
     'childs'         => [
         [
             'name'       => 'Add Order Medical Item',
-            'alias'      => $prefix . 'order.add',
+            'alias'      => 'order.add',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
-            'props'      => [
-                'show_in_acl' => true
-            ]
+            'show_in_acl' => true
         ],
         [
             'name'       => 'Show Order Medical Item',
-            'alias'      => $prefix . 'order.show',
+            'alias'      => 'order.show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Report Order Medical Item',
-            'alias'      => $prefix . 'order.update',
+            'alias'      => 'order.update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Order Medical Item',
-            'alias'      => $prefix . 'order.delete',
+            'alias'      => 'order.delete',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

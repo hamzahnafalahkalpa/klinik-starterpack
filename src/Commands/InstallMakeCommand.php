@@ -33,8 +33,9 @@ class InstallMakeCommand extends EnvironmentCommand
      */
     public function handle()
     {
-        $this->call('support:install');
-        $this->call('micro:install');
+        $this->call('micro:install',[
+            "--skip-generate" => true
+        ]);
 
         $provider = 'Hanafalah\KlinikStarterpack\KlinikStarterpackServiceProvider';
         $this->comment('Installing Module...');
@@ -50,12 +51,8 @@ class InstallMakeCommand extends EnvironmentCommand
         ]);
         $this->info('✔️  Created migrations');
 
-        $this->call('micro:install',[
-            "--skip-generate" => true
-        ]);
-
-        $this->call('klinik-starterpack:install-submodule');
-        $this->info('✔️  Submodule installed');
+        // $this->call('klinik-starterpack:install-submodule');
+        // $this->info('✔️  Submodule installed');
 
         $username = env('DB_USERNAME');
         $password = env('DB_PASSWORD');
@@ -68,9 +65,6 @@ class InstallMakeCommand extends EnvironmentCommand
         config(['database.connections.mysql.password' => env('DB_ROOT_PASSWORD')]);
     
         // Jalankan perintah CREATE USER
-        // DB::statement("CREATE USER IF NOT EXISTS '$username'@'%' IDENTIFIED BY '$password'");
-        // DB::statement("GRANT ALL PRIVILEGES ON *.* TO '$username'@'%' WITH GRANT OPTION");
-        // DB::statement("FLUSH PRIVILEGES");
         DB::statement(<<<SQL
             DO \$\$
             BEGIN
@@ -90,8 +84,9 @@ class InstallMakeCommand extends EnvironmentCommand
         $this->call('db:seed');
         $this->call('up');
         $this->call('klinik-starterpack:seed');
-
         $this->call('tenants:migrate');
+        
+        // $this->call('klinik:migrate');
 
         $this->comment('hanafalah\\klinik-starterpack installed successfully.');
     }

@@ -1,23 +1,20 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = 'medicine-management.bmhp.';
 $prefix_directory = 'medicine-management.bmhp';
 
 return [
     'name'            => 'Data Card Stock',
-    'alias'           => $prefix . 'card-stock.index',
-    'props'           => [
-        'icon'        => 'game-icons:medical-thermometer',
-        'directory'   => "$prefix_directory/card-stock"
-    ],
+    'alias'           => 'card-stock.index',
+    'icon'        => 'game-icons:medical-thermometer',
     'type'           => Type::MENU->value,
     'guard_name'     => 'api',
     'childs'         => [
         [
             'name'       => 'Show Card Stock',
-            'alias'      => $prefix . 'card-stock.show',
+            'alias'      => 'card-stock.show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

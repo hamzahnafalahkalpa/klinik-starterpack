@@ -1,16 +1,13 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = '';
 
 return [
     'name'           => 'Daftar Obat dan BMHP',
-    'alias'          => $prefix . 'medicine-management.',
-    'props'          => [
-        'icon'       => 'healthicons:pharmacy',
-        'directory'  => 'medicine-management'
-    ],
+    'alias'          => 'medicine-management.',
+    'icon'       => 'healthicons:pharmacy',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',
     'childs'     => [

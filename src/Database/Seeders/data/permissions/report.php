@@ -1,16 +1,13 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = '';
 
 return [
     'name'           => 'Reports Collection', 
-    'alias'          => $prefix.'report.',
-    'props'          => [
-        'icon'       => 'mdi:report-tree',
-        'directory'  => 'report'
-    ], 
+    'alias'          => 'report.',
+    'icon'       => 'mdi:report-tree',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',
     'childs'     => [

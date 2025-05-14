@@ -1,54 +1,51 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = 'pharmacy-unit.';
 $prefix_directory = 'pharmacy-unit';
 
 return [
     'name'            => 'Penebusan Resep',
-    'alias'           => $prefix . 'prescription-redemption.index',
-    'props'           => [
-        'icon'        => 'fa-solid:prescription-bottle',
-        'directory'   => "$prefix_directory/prescription-redemption",
-        'show_in_acl' => true
-    ],
+    'alias'           => 'prescription-redemption.index',
+    'icon'        => 'fa-solid:prescription-bottle',
+    'show_in_acl' => true,
     'type'           => Type::MENU->value,
     'guard_name'     => 'api',
     'childs'         => [
         [
             'name'       => 'View Frontline',
-            'alias'      => $prefix . 'frontline.view',
+            'alias'      => 'frontline.view',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Edit Frontline',
-            'alias'      => $prefix . 'frontline.edit',
+            'alias'      => 'frontline.edit',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'View Dispensing',
-            'alias'      => $prefix . 'dispensing.view',
+            'alias'      => 'dispensing.view',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Process Dispensing',
-            'alias'      => $prefix . 'dispensing.process',
+            'alias'      => 'dispensing.process',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'View Penyerahan',
-            'alias'      => $prefix . 'penyerahan.view',
+            'alias'      => 'penyerahan.view',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Confirm Penyerahan',
-            'alias'      => $prefix . 'penyerahan.confirm',
+            'alias'      => 'penyerahan.confirm',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

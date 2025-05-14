@@ -1,16 +1,13 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = '';
 
 return [
     'name'       => 'Medical Center', 
-    'alias'      => $prefix.'medical-center.',
-    'props'      => [
-        'icon'       => 'tabler:timeline-event',
-        'directory'  => 'medical-center'
-    ], 
+    'alias'      => 'medical-center.',
+    'icon'       => 'tabler:timeline-event',
     'type'  => Type::MENU->value,
     'guard_name' => 'api',
     'childs'     => [

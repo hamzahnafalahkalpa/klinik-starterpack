@@ -1,16 +1,13 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = '';
 
 return [
     'name'           => 'Organization Management', 
-    'alias'          => $prefix.'organization.',
-    'props'          => [
-        'icon'       => 'clarity:organization-solid',
-        'directory'  => 'organization'
-    ], 
+    'alias'          => 'organization.',
+    'icon'       => 'clarity:organization-solid',
     'type'           => Type::MENU->value,
     'guard_name'     => 'api',
     'childs'         => [

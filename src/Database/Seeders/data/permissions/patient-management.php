@@ -1,16 +1,13 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = '';
 
 return [
     'name'           => 'Patient Data Management',
-    'alias'          => $prefix.'patient-management.',
-    'props'          => [
-        'icon'       => 'fluent:people-community-20-regular',
-        'directory'  => 'patient-management'
-    ],
+    'alias'          => 'patient-management.',
+    'icon'       => 'fluent:people-community-20-regular',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',
     'childs'     => [

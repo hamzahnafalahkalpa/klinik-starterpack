@@ -1,30 +1,27 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix           = 'transaction.';
 $prefix_directory = 'transaction';
 
 return [
     'name'           => 'Refund',
-    'alias'          => $prefix . 'refund.index',
-    'props'          => [
-        'icon'       => 'gridicons:refund',
-        'directory'  => $prefix_directory . '/refund',
-        'show_in_acl' => true
-    ],
+    'alias'          => 'refund.index',
+    'icon'       => 'gridicons:refund',
+    'show_in_acl' => true,
     'type'       => Type::MENU->value,
     'guard_name' => 'api',
     'childs'     => [
         [
             'name'            => 'Update Refund Status',
-            'alias'           => $prefix . 'refund.update',
+            'alias'           => 'refund.update',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api'
         ],
         [
             'name'            => 'Detail Refund Status',
-            'alias'           => $prefix . 'refund.show',
+            'alias'           => 'refund.show',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api'
         ]

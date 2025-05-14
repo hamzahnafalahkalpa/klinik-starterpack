@@ -48,7 +48,7 @@ return [
         ]
     ],
     "provider" => "Hanafalah\KlinikStarterpack\\Providers\\KlinikStarterpackServiceProvider",
-    'packages'  => [
+    'packages' => [
         'hanafalah/api-helper'                  => ['repository' =>'micro-tenant/api-helper'],
         'hanafalah/laravel-feature'             => ['repository' =>'micro-tenant/laravel-feature'],
         'hanafalah/laravel-has-props'           => ['repository' =>'micro-tenant/laravel-has-props'],
@@ -62,7 +62,6 @@ return [
         'hanafalah/module-user'                 => ['repository' =>'micro-tenant/module-user'],
         'hanafalah/module-workspace'            => ['repository' =>'micro-tenant/module-workspace'],
         'hanafalah/module-patient'              => ['repository' =>'micro-tenant/module-patient'],
-        'hanafalah/laravel-support'             => ['repository' =>'micro-tenant/laravel-support'],
         'hanafalah/module-agent'                => ['repository' =>'micro-tenant/module-agent'],
         'hanafalah/module-employee'             => ['repository' =>'micro-tenant/module-employee'],
         'hanafalah/module-funding'              => ['repository' =>'micro-tenant/module-funding'],
@@ -72,11 +71,14 @@ return [
         'hanafalah/module-organization'         => ['repository' =>'micro-tenant/module-organization'],
         'hanafalah/module-patient'              => ['repository' =>'micro-tenant/module-patient'],
         'hanafalah/module-payer'                => ['repository' =>'micro-tenant/module-payer'],
+        'hanafalah/module-payment'              => ['repository' =>'micro-tenant/module-payment'],
         'hanafalah/module-people'               => ['repository' =>'micro-tenant/module-people'],
+        'hanafalah/module-card-identity'        => ['repository' =>'micro-tenant/module-card-identity'],
         'hanafalah/module-profession'           => ['repository' =>'micro-tenant/module-profession'],
         'hanafalah/module-regional'             => ['repository' =>'micro-tenant/module-regional'],
         'hanafalah/module-service'              => ['repository' =>'micro-tenant/module-service'],
         'hanafalah/module-summary'              => ['repository' =>'micro-tenant/module-summary'],
+        'hanafalah/module-support'              => ['repository' =>'micro-tenant/module-support'],
         'hanafalah/module-transaction'          => ['repository' =>'micro-tenant/module-transaction'],
         'hanafalah/module-treatment'            => ['repository' =>'micro-tenant/module-treatment'],
         'hanafalah/module-warehouse'            => ['repository' =>'micro-tenant/module-warehouse'],

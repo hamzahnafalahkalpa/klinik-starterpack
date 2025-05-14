@@ -2,19 +2,21 @@
 
 namespace Hanafalah\KlinikStarterpack\Database\Seeders;
 
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use Hanafalah\LaravelPermission\Facades\LaravelPermission;
+use Hanafalah\LaravelSupport\Concerns\Support\HasRequest;
 use Illuminate\Database\Seeder;
-use Zahzah\LaravelPermission\LaravelPermission;
 
 class RoleSeeder extends Seeder
 {
+    use HasRequest;
+
     /**
      * Seed the application's database.
-     *
-     * @return void
      */
-    public function run()
+    public function run(): void
     {
-        $roles = include_once(__DIR__.'/data/roles.php');
-        LaravelPermission::useRole()->setGuard(['parent_id','name'],true)->adds($roles);
+        LaravelPermission::scanRoles(__DIR__.'/data/roles');
     }
 }

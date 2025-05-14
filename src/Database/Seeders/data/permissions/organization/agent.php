@@ -1,45 +1,40 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = 'organization.';
 $prefix_directory = 'organization';
 
 return [
     'name'            => 'Agent Management', 
-    'alias'           => $prefix.'agent.index',
-    'props'           => [
-        'icon'        => 'mdi:face-agent',
-        'directory'   => "$prefix_directory/agent",
-        'show_in_acl' => true
-    ], 
+    'alias'           => 'agent.index',
+    'icon'        => 'mdi:face-agent',
+    'show_in_acl' => true,
     'type'  => Type::MENU->value,
     'guard_name' => 'api',
     'childs'     => [
         [
             'name'       => 'Add Agent',
-            'alias'      => $prefix.'agent.add',
+            'alias'      => 'agent.add',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
-            'props'      => [
-                'show_in_acl' => true
-            ]
+            'show_in_acl' => true
         ],
         [
             'name'       => 'Update Agent',
-            'alias'      => $prefix.'agent.update',
+            'alias'      => 'agent.update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Detail Agent',
-            'alias'      => $prefix.'agent.show',
+            'alias'      => 'agent.show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Agent',
-            'alias'      => $prefix.'agent.delete',
+            'alias'      => 'agent.delete',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

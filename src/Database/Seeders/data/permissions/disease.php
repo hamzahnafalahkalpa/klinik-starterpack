@@ -1,16 +1,13 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = '';
 
 return [
     'name'           => 'Disease Encyclopedia',
-    'alias'          => $prefix.'disease.',
-    'props'          => [
-        'icon'       => 'fa-solid:disease',
-        'directory'  => 'disease'
-    ], 
+    'alias'          => 'disease.',
+    'icon'       => 'fa-solid:disease',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',
     'childs'     => [

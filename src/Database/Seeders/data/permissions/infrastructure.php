@@ -1,16 +1,13 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = '';
 
 return [
     'name'       => 'Infrastructure Management',
-    'alias'      => $prefix.'infrastructure.',
-    'props'      => [
-        'icon'       => 'bi:buildings-fill',
-        'directory'  => 'infrastructure'
-    ], 
+    'alias'      => 'infrastructure.',
+    'icon'       => 'bi:buildings-fill',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',
     'childs'     => [

@@ -1,42 +1,39 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = 'profession-management.occupation.';
 $prefix_directory = 'profession-management/occupation';
 
 return [
     'name'            => 'Occupation Management',
-    'alias'           => $prefix . 'index',
-    'props'           => [
-        'icon'        => 'mdi:briefcase-outline',
-        'directory'   => "$prefix_directory",
-        'show_in_acl' => true
-    ],
+    'alias'           => 'index',
+    'icon'        => 'mdi:briefcase-outline',
+    'show_in_acl' => true,
     'type'           => Type::MENU->value,
     'guard_name'     => 'api',
     'childs'         => [
         [
             'name'       => 'Add Occupation',
-            'alias'      => $prefix . 'add',
+            'alias'      => 'add',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
         ],
         [
             'name'       => 'Update Occupation',
-            'alias'      => $prefix . 'update',
+            'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Detail Occupation',
-            'alias'      => $prefix . 'show',
+            'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Occupation',
-            'alias'      => $prefix . 'delete',
+            'alias'      => 'delete',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

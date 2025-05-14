@@ -1,16 +1,13 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = '';
 
 return [
     'name'           => 'Instalasi Farmasi',
-    'alias'          => $prefix.'pharmacy-unit.',
-    'props'          => [
-        'icon'       => 'healthicons:pharmacy',
-        'directory'  => 'pharmacy-unit'
-    ],
+    'alias'          => 'pharmacy-unit.',
+    'icon'       => 'healthicons:pharmacy',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',
     'childs'     => [

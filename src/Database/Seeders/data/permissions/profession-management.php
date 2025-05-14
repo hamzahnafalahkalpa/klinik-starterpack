@@ -1,17 +1,14 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = '';
 
 return [
     'name'           => 'Profession Management',
-    'alias'          => $prefix.'profession-management.',
-    'props'          => [
-        'icon'       => 'tabler:briefcase-filled',
-        'directory'  => 'profession-management',
-        'show_in_acl' => true
-    ],
+    'alias'          => 'profession-management.',
+    'icon'       => 'tabler:briefcase-filled',
+    'show_in_acl' => true,
     'type'           => Type::MENU->value,
     'guard_name'     => 'api',
     'childs'         => [

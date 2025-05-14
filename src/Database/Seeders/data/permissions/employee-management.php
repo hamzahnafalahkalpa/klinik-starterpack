@@ -1,16 +1,13 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = '';
 
 return [
     'name'           => 'Manajemen Pegawai', 
-    'alias'          => $prefix.'employee-management.',
-    'props'          => [
-        'icon'       => 'clarity:employee-group-solid',
-        'directory'  => 'employee-management'
-    ], 
+    'alias'          => 'employee-management.',
+    'icon'       => 'clarity:employee-group-solid',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',
     'childs'     => [

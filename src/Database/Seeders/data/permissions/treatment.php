@@ -1,16 +1,13 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = '';
 
 return [
     'name'           => 'Treatment Management', 
-    'alias'          => $prefix.'treatment.',
-    'props'          => [
-        'icon'       => 'mdi:medical-bag',
-        'directory'  => 'treatment'
-    ], 
+    'alias'          => 'treatment.',
+    'icon'       => 'mdi:medical-bag',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',
     'childs'     => [

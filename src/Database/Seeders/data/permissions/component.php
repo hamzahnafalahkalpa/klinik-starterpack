@@ -1,16 +1,13 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = '';
 
 return [
     'name'           => 'Component Management', 
-    'alias'          => $prefix.'component.',
-    'props'          => [
-        'icon'       => 'uiw:component',
-        'directory'  => 'component'
-    ], 
+    'alias'          => 'component.',
+    'icon'       => 'uiw:component',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',
     'childs'     => [

@@ -2,21 +2,20 @@
 
 namespace Hanafalah\KlinikStarterpack\Database\Seeders;
 
+use Hanafalah\LaravelPermission\Facades\LaravelPermission;
+use Hanafalah\LaravelSupport\Concerns\Support\HasRequest;
 use Illuminate\Database\Seeder;
-use Zahzah\LaravelPermission\Contracts\Permission;
-use Zahzah\LaravelPermission\LaravelPermission;
 
 class PermissionSeeder extends Seeder
 {
+    use HasRequest;
+
     /**
      * Seed the application's database.
-     *
-     * @return void
      */
-    public function run()
+    public function run(): void
     {
-        $permissions = include_once(__DIR__.'/data/permission.php');
-        app(Permission::class)->prepareStorePermission($permissions);
-        // LaravelPermission::usePermission()->setAdd('parent_id')->setGuard('alias',true)->adds($permissions);
+        $permissions = LaravelPermission::scanPermissions(__DIR__.'/data/permissions');
+        app(config('app.contracts.Permission'))->prepareStorePermission($permissions);
     }
 }

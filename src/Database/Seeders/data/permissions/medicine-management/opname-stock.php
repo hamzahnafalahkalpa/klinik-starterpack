@@ -1,32 +1,27 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = 'medicine-management.';
 $prefix_directory = 'medicine-management';
 
 return [
     'name'            => 'Opname Stock',
-    'alias'           => $prefix . 'opname-stock.index',
-    'props'           => [
-        'icon'        => 'tabler:building-warehouse',
-        'directory'   => "$prefix_directory/opname-stock"
-    ],
+    'alias'           => 'opname-stock.index',
+    'icon'        => 'tabler:building-warehouse',
     'type'           => Type::MENU->value,
     'guard_name'     => 'api',
     'childs'         => [
         [
             'name'       => 'Add & Edit Opname',
-            'alias'      => $prefix . 'opname-stock.add',
+            'alias'      => 'opname-stock.add',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
-            'props'      => [
-                'show_in_acl' => true
-            ]
+            'show_in_acl' => true
         ],
         [
             'name'       => 'Delete Opname',
-            'alias'      => $prefix . 'opname-stock.delete',
+            'alias'      => 'opname-stock.delete',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

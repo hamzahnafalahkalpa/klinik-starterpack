@@ -1,39 +1,34 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = 'patient-management.';
 $prefix_directory = 'patient-management';
 
 return [
     'name'           => 'Visit Registration',
-    'alias'          => $prefix.'register.index',
-    'props'          => [
-        'icon'       => 'mdi:patient',
-        'directory'  => "$prefix_directory/register",
-        'show_in_acl' => true
-    ],
+    'alias'          => 'register.index',
+    'icon'       => 'mdi:patient',
+    'show_in_acl' => true,
     'type'      => Type::MENU->value,
     'guard_name'     => 'api',
     'childs'         => [
         [
             'name'       => 'Add Visit Registration',
-            'alias'      => $prefix.'register.store',
+            'alias'      => 'register.store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
-            'props'      => [
-                'show_in_acl' => true
-            ]
+            'show_in_acl' => true
         ],
         [
             'name'        => 'Medical Record',
-            'alias'       => $prefix.'register.show',
+            'alias'       => 'register.show',
             'type'        => Type::PERMISSION->value,
             'guard_name'  => 'api'
         ],
         [
             'name'       => 'Delete Patient',
-            'alias'      => $prefix.'register.destroy',
+            'alias'      => 'register.destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],

@@ -1,16 +1,13 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = '';
 
 return [
     'name'           => 'Service Management', 
-    'alias'          => $prefix.'service.',
-    'props'          => [
-        'icon'       => 'ri:service-line',
-        'directory'  => 'service'
-    ], 
+    'alias'          => 'service.',
+    'icon'       => 'ri:service-line',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',
     'childs'     => [

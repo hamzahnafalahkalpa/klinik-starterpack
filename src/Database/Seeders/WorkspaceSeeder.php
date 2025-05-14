@@ -15,7 +15,6 @@ use Hanafalah\ModuleWorkspace\Enums\Workspace\Status;
 use Hanafalah\KlinikStarterpack\Concerns\HasComposer;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 class WorkspaceSeeder extends Seeder{
@@ -186,8 +185,23 @@ class WorkspaceSeeder extends Seeder{
         file_put_contents(__DIR__.'/../../../project-requirements.json', json_encode($requires, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
         $this->updateComposer($composer, __DIR__.'/../../../project-requirements.json','require');
 
-        shell_exec("cd $tenant_path/".Str::kebab($tenant->name)." && rm -rf composer.lock && composer install");
+        // shell_exec("cd $tenant_path/".Str::kebab($tenant->name)." && rm -rf composer.lock && composer install");
         tenancy()->initialize($tenant->getKey());
-        MicroTenant::tenantImpersonate($tenant);
+        // MicroTenant::tenantImpersonate($tenant);
+
+        Artisan::call('optimize:clear');
+
+        // Artisan::call('impersonate:cache',[
+        //     '--tenant_id' => $tenant->getKey(),
+        //     '--group_id'  => $group_tenant->getKey(),
+        //     '--app_id'    => $project_tenant->getKey()
+        // ]);
+        
+        Artisan::call('impersonate:migrate',[
+            '--app'       => true,
+            '--app_id'    => $project_tenant->getKey(),
+            '--group_id'  => $group_tenant->getKey(),
+            '--tenant_id' => $tenant->getKey()
+        ]);
     }
 }

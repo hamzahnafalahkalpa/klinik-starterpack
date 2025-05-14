@@ -31,7 +31,7 @@ class InstallSubmoduleCommand extends EnvironmentCommand
         foreach (config('klinik-starterpack.packages') as $package) {
             $module      = $package['repository'];
             $module_name = Str::afterLast("{$module}", '/');
-            shell_exec("git submodule add -f git@gitlab.com:{$module}.git repositories/{$module_name}");
+            shell_exec("git submodule add -f https://gitlab.com/{$module}.git repositories/{$module_name}");
         }
 
         $this->updateComposer(base_path('composer.json'), __DIR__.'/../../repositories.json', 'repositories');
@@ -49,7 +49,7 @@ class InstallSubmoduleCommand extends EnvironmentCommand
     private function appSubmodule(string $path, string $module_name): self{
         $path = config("laravel-package-generator.patterns.$path.published_at");
         $path = preg_replace('/^' . preg_quote(base_path().'/', '/') . '/', '', $path, 1);
-        shell_exec("git submodule add -f git@gitlab.com:micro-tenant/{$module_name}.git {$path}/{$module_name}");
+        shell_exec("git submodule add -f https://gitlab.com/micro-tenant/{$module_name}.git {$path}/{$module_name}");
         return $this;
     }
 }

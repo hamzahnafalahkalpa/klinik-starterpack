@@ -15,8 +15,16 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             WorkspaceSeeder::class,
-            ApiAccessSeeder::class,
-            EmployeeSeeder::class
+            // ApiAccessSeeder::class,
+            // PermissionSeeder::class,
+            // ItemStuffSeeder::class,
+            // // MedicServiceSeeder::class,
+            // PaymentMethodSeeder::class,
+            // AnatomySeeder::class,
+            // RegionalSeeder::class,
+            // EncodingSeeder::class,
+            // RoleSeeder::class,
+            // EmployeeSeeder::class
         ]);
     }
 }

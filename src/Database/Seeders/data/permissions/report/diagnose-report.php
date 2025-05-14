@@ -1,18 +1,15 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = 'report.';
 $prefix_directory = 'report';
 
 return [
     'name'            => 'Diagnose Report', 
-    'alias'           => $prefix.'diagnose-report.index',
-    'props'           => [
-        'icon'        => 'fa-solid:diagnoses',
-        'directory'   => "$prefix_directory/diagnose-report",
-        'show_in_acl' => true
-    ], 
+    'alias'           => 'diagnose-report.index',
+    'icon'        => 'fa-solid:diagnoses',
+    'show_in_acl' => true,
     'type'  => Type::MENU->value,
     'guard_name' => 'api'
 ];

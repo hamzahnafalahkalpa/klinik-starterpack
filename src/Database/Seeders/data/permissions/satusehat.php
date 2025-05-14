@@ -1,16 +1,13 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = '';
 
 return [
     'name'           => 'Satu Sehat',
-    'alias'          => $prefix.'satusehat.',
-    'props'          => [
-        'icon'       => 'game-icons:medical-pack',
-        'directory'  => 'satusehat'
-    ],
+    'alias'          => 'satusehat.',
+    'icon'       => 'game-icons:medical-pack',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',
     'childs'     => [

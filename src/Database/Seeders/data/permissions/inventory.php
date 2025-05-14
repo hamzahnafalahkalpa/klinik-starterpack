@@ -1,16 +1,13 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = '';
 
 return [
     'name'       => 'Inventory Management', 
-    'alias'      => $prefix.'inventory.',
-    'props'      => [
-        'icon'       => 'fluent-mdl2:manufacturing',
-        'directory'  => 'Inventory'
-    ], 
+    'alias'      => 'inventory.',
+    'icon'       => 'fluent-mdl2:manufacturing',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',
     'childs'     => [

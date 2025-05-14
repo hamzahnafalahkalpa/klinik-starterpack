@@ -1,16 +1,13 @@
 <?php
 
-use Zahzah\LaravelPermission\Enums\Permission\Type;
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 $prefix = '';
 
 return [
     'name'           => 'Transaction',
-    'alias'          => $prefix.'transaction.',
-    'props'          => [
-        'icon'       => 'tabler:transaction-dollar',
-        'directory'  => 'transaction'
-    ],
+    'alias'          => 'transaction.',
+    'icon'       => 'tabler:transaction-dollar',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',
     'childs'     => [
