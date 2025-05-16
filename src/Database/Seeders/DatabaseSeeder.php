@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
             RegionalSeeder::class,
             EncodingSeeder::class,
             RoleSeeder::class,
-            // EmployeeSeeder::class
+            EmployeeSeeder::class
         ]);
     }
 }
