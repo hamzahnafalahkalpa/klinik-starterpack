@@ -11,7 +11,7 @@ return [
     'childs'     => [
         [
             'name'       => 'Manajemen Role', 
-            'alias'      => 'acl.role.index',
+            'alias'      => 'role',
             'menu'       => true,
             'show_in_acl' => true,
             'type'  => Type::MENU->value,
@@ -19,20 +19,20 @@ return [
             'childs'     => [
                 [
                     'name'       => 'Tambah Role',
-                    'alias'      => 'acl.role.store',
+                    'alias'      => 'store',
                     'type'  => Type::PERMISSION->value,
                     'guard_name' => 'api',
                     'show_in_acl' => true
                 ],
                 [
                     'name'       => 'Ubah Role',
-                    'alias'      => 'acl.role.update',
+                    'alias'      => 'update',
                     'type'  => Type::PERMISSION->value,
                     'guard_name' => 'api'
                 ],
                 [
                     'name'       => 'Hapus Role', 
-                    'alias'      => 'acl.role.destroy',
+                    'alias'      => 'destroy',
                     'type'  => Type::PERMISSION->value,
                     'guard_name' => 'api'
                 ]        

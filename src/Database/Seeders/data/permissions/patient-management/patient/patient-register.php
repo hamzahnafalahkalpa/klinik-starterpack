@@ -7,7 +7,7 @@ $prefix_directory = 'patient-management';
 
 return [
     'name'           => 'Visit Registration',
-    'alias'          => 'register.index',
+    'alias'          => 'register',
     'icon'       => 'mdi:patient',
     'show_in_acl' => true,
     'type'      => Type::MENU->value,
@@ -15,20 +15,20 @@ return [
     'childs'         => [
         [
             'name'       => 'Add Visit Registration',
-            'alias'      => 'register.store',
+            'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'        => 'Medical Record',
-            'alias'       => 'register.show',
+            'alias'       => 'show',
             'type'        => Type::PERMISSION->value,
             'guard_name'  => 'api'
         ],
         [
             'name'       => 'Delete Patient',
-            'alias'      => 'register.destroy',
+            'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],

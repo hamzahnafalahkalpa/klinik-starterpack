@@ -7,33 +7,33 @@ $prefix_directory = 'medicine-management';
 
 return [
     'name'            => 'Data BMHP',
-    'alias'           => 'bmhp.index',
+    'alias'           => 'bmhp',
     'icon'        => 'game-icons:medical-thermometer',
     'type'           => Type::MENU->value,
     'guard_name'     => 'api',
     'childs'         => [
         [
             'name'       => 'Show BMHP',
-            'alias'      => 'bmhp.show',
+            'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'       => 'Add BMHP',
-            'alias'      => 'bmhp.add',
+            'alias'      => 'add',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Edit BMHP',
-            'alias'      => 'bmhp.edit',
+            'alias'      => 'edit',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete BMHP',
-            'alias'      => 'bmhp.delete',
+            'alias'      => 'delete',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],

@@ -7,21 +7,21 @@ $prefix_directory = 'medicine-management';
 
 return [
     'name'            => 'Supplier Data',
-    'alias'           => 'supplier.index',
+    'alias'           => 'supplier',
     'icon'        => 'lsicon:distribution-filled',
     'type'           => Type::MENU->value,
     'guard_name'     => 'api',
     'childs'         => [
         [
             'name'       => 'Add & Edit Supplier',
-            'alias'      => 'supplier.add',
+            'alias'      => 'add',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'       => 'Delete Supplier',
-            'alias'      => 'supplier.delete',
+            'alias'      => 'delete',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

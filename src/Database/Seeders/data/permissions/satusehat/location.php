@@ -7,7 +7,7 @@ $prefix_directory = 'satusehat';
 
 return [
     'name'           => 'Location',
-    'alias'          => 'location.index',
+    'alias'          => 'location',
     'icon'       => 'duo-icons:location',
     'show_in_acl' => true,
     'type'       => Type::MENU->value,
@@ -15,13 +15,13 @@ return [
     'childs'     => [
         [
             'name'            => 'Update Location Satu Sehat',
-            'alias'           => 'location.update',
+            'alias'           => 'update',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api'
         ],
         [
             'name'            => 'Detail Location Satu Sehat',
-            'alias'           => 'location.show',
+            'alias'           => 'show',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api'
         ]

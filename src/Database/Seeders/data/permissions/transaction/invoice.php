@@ -7,7 +7,7 @@ $prefix_directory = 'transaction';
 
 return [
     'name'           => 'Invoice Collection', 
-    'alias'          => 'invoice.index',
+    'alias'          => 'invoice',
     'icon'       => 'la:file-invoice-dollar',
     'show_in_acl' => true,
     'type'       => Type::MENU->value,
@@ -15,13 +15,13 @@ return [
     'childs'     => [
         [
             'name'            => 'Update Invoice Status',
-            'alias'           => 'invoice.update',
+            'alias'           => 'update',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api'
         ],
         [
             'name'            => 'Detail Invoice Status',
-            'alias'           => 'invoice.show',
+            'alias'           => 'show',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api'
         ]

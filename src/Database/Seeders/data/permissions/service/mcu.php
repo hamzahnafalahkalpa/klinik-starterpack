@@ -8,7 +8,7 @@ $prefix_directory = 'service';
 
 return [
     'name'            => 'MCU Package',
-    'alias'           => 'mcu.index',
+    'alias'           => 'mcu',
     'icon'        => 'carbon:reminder-medical',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,
@@ -16,26 +16,26 @@ return [
     'childs'     => [
         [
             'name'            => 'Add MCU Package',
-            'alias'           => 'mcu.store',
+            'alias'           => 'store',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api',
             'show_in_acl' => true
         ],
         [
             'name'            => 'Update MCU Package',
-            'alias'           => 'mcu.update',
+            'alias'           => 'update',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api'
         ],
         [
             'name'            => 'Detail MCU Package',
-            'alias'           => 'mcu.show',
+            'alias'           => 'show',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api'
         ],
         [
             'name'            => 'Delete MCU Package',
-            'alias'           => 'mcu.destroy',
+            'alias'           => 'destroy',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api'
         ]

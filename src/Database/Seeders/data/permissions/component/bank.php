@@ -4,7 +4,7 @@ use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
     'name'            => 'Bank Management', 
-    'alias'           => 'bank.index',
+    'alias'           => 'bank',
     'icon'        => 'noto:bank',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,
@@ -12,20 +12,20 @@ return [
     'childs'     => [
         [
             'name'       => 'Add Bank',
-            'alias'      => 'bank.store',
+            'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'       => 'Edit Bank',
-            'alias'      => 'bank.update',
+            'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Bank', 
-            'alias'      => 'bank.destroy',
+            'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

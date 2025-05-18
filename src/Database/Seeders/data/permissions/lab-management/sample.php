@@ -7,7 +7,7 @@ $prefix_directory = 'lab-management';
 
 return [
         'name'       => 'Sample Management', 
-        'alias'      => 'sample.index',
+        'alias'      => 'sample',
         'icon'        => 'healthicons:medical-sample',
         'show_in_acl' => true,
         'type'  => Type::MENU->value,
@@ -15,20 +15,20 @@ return [
         'childs'     => [
             [
                 'name'       => 'Add Sample',
-                'alias'      => 'sample.store',
+                'alias'      => 'store',
                 'type'  => Type::PERMISSION->value,
                 'guard_name' => 'api',
                 'show_in_acl' => true
             ],
             [
                 'name'       => 'Update Sample',
-                'alias'      => 'sample.update',
+                'alias'      => 'update',
                 'type'       => Type::PERMISSION->value,
                 'guard_name' => 'api'
             ],
             [
                 'name'       => 'Delete Sample',
-                'alias'      => 'sample.destroy',
+                'alias'      => 'destroy',
                 'type'       => Type::PERMISSION->value,
                 'guard_name' => 'api'
             ]

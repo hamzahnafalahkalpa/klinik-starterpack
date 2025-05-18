@@ -7,33 +7,33 @@ $prefix_directory = 'medicine-management';
 
 return [
     'name'            => 'Medical Item Distribution',
-    'alias'           => 'distribution.index',
+    'alias'           => 'distribution',
     'icon'        => 'lsicon:distribution-filled',
     'type'           => Type::MENU->value,
     'guard_name'     => 'api',
     'childs'         => [
         [
             'name'       => 'Add Distribution',
-            'alias'      => 'distribution.add',
+            'alias'      => 'add',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'       => 'Show Distribution',
-            'alias'      => 'distribution.show',
+            'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Report Distribution',
-            'alias'      => 'distribution.update',
+            'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Distribution',
-            'alias'      => 'distribution.delete',
+            'alias'      => 'delete',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

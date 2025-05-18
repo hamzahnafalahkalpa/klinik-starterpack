@@ -7,7 +7,7 @@ $prefix_directory = 'patient-management';
 
 return [
     'name'           => 'Reservation',
-    'alias'          => 'reservation.index',
+    'alias'          => 'reservation',
     'icon'       => 'material-symbols:app-registration-outline-sharp',
     'show_in_acl' => true,
     'type'           => Type::MENU->value,
@@ -15,20 +15,20 @@ return [
     'childs'         => [
         [
             'name'       => 'Add Reservation',
-            'alias'      => 'reservation.store',
+            'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'       => 'Update Reservation',
-            'alias'      => 'reservation.update',
+            'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Reservation',
-            'alias'      => 'reservation.delete',
+            'alias'      => 'delete',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

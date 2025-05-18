@@ -7,7 +7,7 @@ $prefix_directory = 'transaction';
 
 return [
     'name'           => 'Refund',
-    'alias'          => 'refund.index',
+    'alias'          => 'refund',
     'icon'       => 'gridicons:refund',
     'show_in_acl' => true,
     'type'       => Type::MENU->value,
@@ -15,13 +15,13 @@ return [
     'childs'     => [
         [
             'name'            => 'Update Refund Status',
-            'alias'           => 'refund.update',
+            'alias'           => 'update',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api'
         ],
         [
             'name'            => 'Detail Refund Status',
-            'alias'           => 'refund.show',
+            'alias'           => 'show',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api'
         ]

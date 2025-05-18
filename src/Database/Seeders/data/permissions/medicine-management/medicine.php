@@ -7,33 +7,33 @@ $prefix_directory = 'medicine-management';
 
 return [
     'name'            => 'Data Obat',
-    'alias'           => 'medicine.index',
+    'alias'           => 'medicine',
     'icon'        => 'icon-park-outline:medicine-bottle',
     'type'           => Type::MENU->value,
     'guard_name'     => 'api',
     'childs'         => [
         [
             'name'       => 'Add Medicine',
-            'alias'      => 'medicine.add',
+            'alias'      => 'add',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'       => 'Show Medicine',
-            'alias'      => 'medicine.show',
+            'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Edit Medicine',
-            'alias'      => 'medicine.edit',
+            'alias'      => 'edit',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Medicine',
-            'alias'      => 'medicine.delete',
+            'alias'      => 'delete',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],

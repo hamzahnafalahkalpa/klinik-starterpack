@@ -12,7 +12,7 @@ $prefix_directory = 'patient-management';
 
 return [
     'name'            => 'Outpatient Waiting List', 
-    'alias'           => 'outpatient-waiting-list.index',
+    'alias'           => 'outpatient-waiting-list',
     'icon'            => 'healthicons:outpatient-department',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,
@@ -20,7 +20,7 @@ return [
     'childs'     => [
         [
             'name'       => 'Detail Patient',
-            'alias'      => 'outpatient-waiting-list.show',
+            'alias'      => 'show',
             'type'  => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],

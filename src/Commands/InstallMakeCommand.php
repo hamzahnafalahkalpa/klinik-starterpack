@@ -51,8 +51,8 @@ class InstallMakeCommand extends EnvironmentCommand
         ]);
         $this->info('✔️  Created migrations');
 
-        // $this->call('klinik-starterpack:install-submodule');
-        // $this->info('✔️  Submodule installed');
+        $this->call('klinik-starterpack:install-submodule');
+        $this->info('✔️  Submodule installed');
 
         $username = env('DB_USERNAME');
         $password = env('DB_PASSWORD');

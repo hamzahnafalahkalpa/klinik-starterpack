@@ -12,7 +12,7 @@ $prefix_directory = 'patient-management';
 
 return [
     'name'            => 'MCU Waiting List', 
-    'alias'           => 'mcu-waiting-list.index',
+    'alias'           => 'mcu-waiting-list',
     'icon'        => 'carbon:reminder-medical',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,
@@ -20,7 +20,7 @@ return [
     'childs'     => [
         [
             'name'       => 'Detail Patient',
-            'alias'      => 'mcu-waiting-list.show',
+            'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],

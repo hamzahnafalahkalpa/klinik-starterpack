@@ -7,7 +7,7 @@ $prefix_directory = 'satusehat';
 
 return [
     'name'           => 'Examination',
-    'alias'          => 'examination.index',
+    'alias'          => 'examination',
     'icon'       => 'healthicons:exercise-walking',
     'show_in_acl' => true,
     'type'       => Type::MENU->value,
@@ -15,13 +15,13 @@ return [
     'childs'     => [
         [
             'name'            => 'Update Examination Satu Sehat',
-            'alias'           => 'examination.update',
+            'alias'           => 'update',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api'
         ],
         [
             'name'            => 'Detail Examination Satu Sehat',
-            'alias'           => 'examination.show',
+            'alias'           => 'show',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api'
         ]

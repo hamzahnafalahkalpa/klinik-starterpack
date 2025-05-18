@@ -7,7 +7,7 @@ $prefix_directory = 'inventory';
 
 return [
     'name'            => 'Distribusi Obat dan BMHP',
-    'alias'           => 'index',
+    'alias'           => 'distribution',
     'icon'        => 'fontisto:injection-syringe',
     'show_in_acl' => true,
     'type'           => Type::MODULE->value,

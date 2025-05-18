@@ -7,7 +7,7 @@ $prefix_directory = 'report';
 
 return [
     'name'            => 'Transactional Report', 
-    'alias'           => 'transactional-report.index',
+    'alias'           => 'transactional-report',
     'icon'        => 'tabler:transaction-dollar',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,

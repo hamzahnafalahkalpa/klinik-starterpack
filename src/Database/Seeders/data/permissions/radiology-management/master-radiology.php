@@ -7,7 +7,7 @@ $prefix_directory = 'radiology-management';
 
 return [
     'name'       => 'Radiology Master', 
-    'alias'      => 'master-radiology.index',
+    'alias'      => 'master-radiology',
     'icon'        => 'material-symbols-light:radiology-outline-rounded',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,
@@ -15,26 +15,26 @@ return [
     'childs'     => [
         [
             'name'       => 'Add Radiology',
-            'alias'      => 'master-radiology.store',
+            'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'       => 'Update Radiology',
-            'alias'      => 'master-radiology.update',
+            'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'View Radiology',
-            'alias'      => 'master-radiology.show',
+            'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Radiology',
-            'alias'      => 'master-radiology.destroy',
+            'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

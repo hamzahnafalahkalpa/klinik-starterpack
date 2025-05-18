@@ -7,7 +7,7 @@ $prefix_directory = 'report';
 
 return [
     'name'            => 'Diagnose Report', 
-    'alias'           => 'diagnose-report.index',
+    'alias'           => 'diagnose-report',
     'icon'        => 'fa-solid:diagnoses',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,

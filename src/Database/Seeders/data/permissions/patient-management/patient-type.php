@@ -7,7 +7,7 @@ $prefix_directory = 'patient-management';
 
 return [
     'name'       => 'Patient Type Master', 
-    'alias'      => 'patient-type.index',
+    'alias'      => 'patient-type',
     'icon'        => 'material-symbols:recent-patient-rounded',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,
@@ -15,20 +15,20 @@ return [
     'childs'     => [
         [
             'name'       => 'Add Patient Type',
-            'alias'      => 'patient-type.store',
+            'alias'      => 'store',
             'type'  => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'       => 'Edit Patient Type',
-            'alias'      => 'patient-type.update',
+            'alias'      => 'update',
             'type'  => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Patient Type', 
-            'alias'      => 'patient-type.destroy',
+            'alias'      => 'destroy',
             'type'  => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

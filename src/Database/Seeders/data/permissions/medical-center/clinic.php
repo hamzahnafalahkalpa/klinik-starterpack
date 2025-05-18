@@ -7,7 +7,7 @@ $prefix_directory = 'medical-center';
 
 return [
     'name'       => 'Clinical Network and Information', 
-    'alias'      => 'clinic.index',
+    'alias'      => 'clinic',
     'icon'       => 'iconoir:healthcare',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,
@@ -15,13 +15,13 @@ return [
     'childs'     => [
         [
             'name'       => 'Update Clinic',
-            'alias'      => 'clinic.update',
+            'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Show Detail',
-            'alias'      => 'clinic.show',
+            'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

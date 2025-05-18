@@ -6,16 +6,16 @@ $prefix = 'component.';
 $prefix_directory = 'component';
 
 return [
-    'name'            => 'Profession Fee', 
-    'alias'           => 'profession-fee.index',
+    'name'        => 'Profession Fee', 
+    'alias'       => 'profession-fee',
     'icon'        => 'solar:wallet-money-bold',
     'show_in_acl' => true,
-    'type'  => Type::MENU->value,
-    'guard_name' => 'api',
-    'childs'     => [
+    'type'        => Type::MENU->value,
+    'guard_name'  => 'api',
+    'childs'      => [
         [
             'name'       => 'Manage Profession Fee',
-            'alias'      => 'profession-fee.store',
+            'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

@@ -7,7 +7,7 @@ $prefix_directory = 'inventory';
 
 return [
     'name'            => 'Inventory Data Management', 
-    'alias'           => 'inventory-data.index',
+    'alias'           => 'inventory-data',
     'icon'        => 'tabler:building-warehouse',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,
@@ -15,26 +15,26 @@ return [
     'childs'     => [
         [
             'name'       => 'Add Inventory Data',
-            'alias'      => 'inventory-data.store',
+            'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'       => 'Update Inventory Data',
-            'alias'      => 'inventory-data.update',
+            'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Show Inventory Data Detail',
-            'alias'      => 'inventory-data.show',
+            'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Inventory Data',
-            'alias'      => 'inventory-data.destroy',
+            'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

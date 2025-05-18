@@ -7,7 +7,7 @@ $prefix_directory = 'organization';
 
 return [
     'name'            => 'Boat Management', 
-    'alias'           => 'boat.index',
+    'alias'           => 'boat',
     'icon'        => 'mdi:boat',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,
@@ -15,26 +15,26 @@ return [
     'childs'     => [
         [
             'name'       => 'Add Boat',
-            'alias'      => 'boat.add',
+            'alias'      => 'add',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'       => 'Update Boat',
-            'alias'      => 'boat.update',
+            'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Detail Boat',
-            'alias'      => 'boat.show',
+            'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Boat',
-            'alias'      => 'boat.delete',
+            'alias'      => 'delete',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

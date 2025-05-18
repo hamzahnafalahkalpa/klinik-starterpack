@@ -7,7 +7,7 @@ $prefix_directory = 'pharmacy-unit';
 
 return [
     'name'            => 'Penebusan Resep',
-    'alias'           => 'prescription-redemption.index',
+    'alias'           => 'prescription-redemption',
     'icon'        => 'fa-solid:prescription-bottle',
     'show_in_acl' => true,
     'type'           => Type::MENU->value,

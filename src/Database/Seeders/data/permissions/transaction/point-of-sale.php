@@ -6,11 +6,11 @@ $prefix           = 'transaction.';
 $prefix_directory = 'transaction';
 
 return [
-    'name'            => 'Point of Sale', 
-    'alias'           => 'pos.index',
+    'name'        => 'Point of Sale', 
+    'alias'       => 'pos',
     'icon'        => 'mdi:point-of-sale',
     'show_in_acl' => true,
-    'type'       => Type::MENU->value,
-    'guard_name' => 'api'
+    'type'        => Type::MENU->value,
+    'guard_name'  => 'api'
 ];
 

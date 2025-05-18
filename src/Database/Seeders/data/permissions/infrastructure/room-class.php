@@ -7,7 +7,7 @@ $prefix_directory = 'infrastructure';
 
 return         [
     'name'       => 'Room Classification Level', 
-    'alias'      => 'room-classification.index',
+    'alias'      => 'room-classification',
     'icon'        => 'tabler:vip',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,
@@ -15,26 +15,26 @@ return         [
     'childs'     => [
         [
             'name'       => 'Add Room Class',
-            'alias'      => 'room-classification.store',
+            'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'       => 'Update Room Class',
-            'alias'      => 'room-classification.update',
+            'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Room Class', 
-            'alias'      => 'room-classification.destroy',
+            'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Show Room Class', 
-            'alias'      => 'room-classification.show',
+            'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

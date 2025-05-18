@@ -7,7 +7,7 @@ $prefix_directory = 'disease';
 
 return [
     'name'            => 'Disease Icd', 
-    'alias'           => 'icd.index',
+    'alias'           => 'icd',
     'icon'        => 'medical-icon:i-physical-therapy',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,
@@ -15,7 +15,7 @@ return [
     'childs'     => [
         [
             'name'       => 'Show Disease Icd Detail',
-            'alias'      => 'icd.show',
+            'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

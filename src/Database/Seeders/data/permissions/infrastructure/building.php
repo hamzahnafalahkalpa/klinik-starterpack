@@ -7,7 +7,7 @@ $prefix_directory = 'infrastructure';
 
 return         [
     'name'       => 'Master Gedung',
-    'alias'      => 'building.index',
+    'alias'      => 'building',
     'icon'        => 'hugeicons:building-04',
     'show_in_acl' => true,
     'type'       => Type::MENU->value,
@@ -15,20 +15,20 @@ return         [
     'childs'     => [
         [
             'name'       => 'Tambah Gedung',
-            'alias'      => 'building.store',
+            'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'       => 'Ubah Gedung',
-            'alias'      => 'building.update',
+            'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
         ],
         [
             'name'       => 'Hapus Gedung',
-            'alias'      => 'building.destroy',
+            'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
         ]

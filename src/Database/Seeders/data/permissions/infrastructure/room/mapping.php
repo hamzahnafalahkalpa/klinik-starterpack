@@ -7,7 +7,7 @@ $prefix_directory = 'infrastructure/room';
 
 return [
     'name'       => 'Room User Mapping', 
-    'alias'      => 'mapping.index',
+    'alias'      => 'mapping',
     'icon'       => 'oui:index-mapping',
     'show_in_acl' => true,
     'type'  => Type::MODULE->value,
@@ -15,20 +15,20 @@ return [
     'childs'     => [
         [
             'name'       => 'Add Room User',
-            'alias'      => 'room.store',
+            'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'       => 'Update Room User',
-            'alias'      => 'room.update',
+            'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Room User',
-            'alias'      => 'room.destroy',
+            'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],

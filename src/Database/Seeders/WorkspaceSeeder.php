@@ -88,6 +88,7 @@ class WorkspaceSeeder extends Seeder{
                     ])
                 ])
             ]));
+            
 
             $tenant = $tenant_schema->prepareStoreTenant($this->requestDTO(TenantData::class,[
                 'parent_id'      => $group_tenant->getKey(),
@@ -186,8 +187,8 @@ class WorkspaceSeeder extends Seeder{
         $this->updateComposer($composer, __DIR__.'/../../../project-requirements.json','require');
 
         // shell_exec("cd $tenant_path/".Str::kebab($tenant->name)." && rm -rf composer.lock && composer install");
+        MicroTenant::tenantImpersonate($tenant);
         tenancy()->initialize($tenant->getKey());
-        // MicroTenant::tenantImpersonate($tenant);
 
         Artisan::call('optimize:clear');
 

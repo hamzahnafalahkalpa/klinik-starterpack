@@ -7,7 +7,7 @@ $prefix_directory = 'component';
 
 return [
     'name'            => 'Voucher Management', 
-    'alias'           => 'voucher.index',
+    'alias'           => 'voucher',
     'icon'        => 'mdi:voucher',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,
@@ -15,20 +15,20 @@ return [
     'childs'     => [
         [
             'name'       => 'Add Voucher',
-            'alias'      => 'voucher.store',
+            'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'       => 'Edit Voucher',
-            'alias'      => 'voucher.update',
+            'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Voucher', 
-            'alias'      => 'voucher.destroy',
+            'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

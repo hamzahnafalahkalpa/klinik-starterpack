@@ -4,7 +4,7 @@ use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
     'name'            => 'Funding Management', 
-    'alias'           => 'funding.index',
+    'alias'           => 'funding',
     'icon'        => 'solar:wallet-money-bold',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,
@@ -12,20 +12,20 @@ return [
     'childs'     => [
         [
             'name'       => 'Add Funding',
-            'alias'      => 'funding.store',
+            'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'       => 'Edit Funding',
-            'alias'      => 'funding.update',
+            'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Funding', 
-            'alias'      => 'funding.destroy',
+            'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

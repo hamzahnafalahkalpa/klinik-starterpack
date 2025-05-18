@@ -7,7 +7,7 @@ $prefix_directory = 'infrastructure';
 
 return         [
     'name'       => 'Room Master Data', 
-    'alias'      => 'room.index',
+    'alias'      => 'room',
     'icon'        => 'fontisto:room',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,
@@ -15,26 +15,26 @@ return         [
     'childs'     => [
         [
             'name'       => 'Add Room',
-            'alias'      => 'room.store',
+            'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'       => 'Edit Room',
-            'alias'      => 'room.update',
+            'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Room', 
-            'alias'      => 'room.destroy',
+            'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Show Room', 
-            'alias'      => 'room.show',
+            'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'childs'     => [                

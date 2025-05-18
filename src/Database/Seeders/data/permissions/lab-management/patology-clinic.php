@@ -7,7 +7,7 @@ $prefix_directory = 'lab-management';
 
 return [
     'name'       => 'Clinical Pathology Master', 
-    'alias'      => 'patology-clinic.index',
+    'alias'      => 'patology-clinic',
     
         'icon'        => 'entypo:lab-flask',
         'directory'   => $prefix_directory.'/patology-clinic',
@@ -17,26 +17,26 @@ return [
     'childs'     => [
         [
             'name'       => 'Add Clinical Pathology',
-            'alias'      => 'patology-clinic.store',
+            'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'       => 'Update Clinical Pathology',
-            'alias'      => 'patology-clinic.update',
+            'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'View Clinical Pathology',
-            'alias'      => 'patology-clinic.show',
+            'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Clinical Pathology',
-            'alias'      => 'patology-clinic.destroy',
+            'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

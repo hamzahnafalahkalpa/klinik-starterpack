@@ -12,7 +12,7 @@ $prefix_directory = 'patient-management';
 
 return [
     'name'            => 'Lab Waiting List', 
-    'alias'           => 'lab-waiting-list.index',
+    'alias'           => 'lab-waiting-list',
     'icon'            => 'covid:virus-lab-research-microscope',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,
@@ -20,7 +20,7 @@ return [
     'childs'     => [
         [
             'name'       => 'Detail Patient',
-            'alias'      => 'lab-waiting-list.show',
+            'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],

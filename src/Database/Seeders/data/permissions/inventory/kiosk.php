@@ -7,7 +7,7 @@ $prefix_directory = 'inventory';
 
 return [
     'name'            => 'Kiosk Management', 
-    'alias'           => 'kiosk.index',
+    'alias'           => 'kiosk',
     'icon'        => 'fluent:kiosk-24-regular',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,
@@ -15,26 +15,26 @@ return [
     'childs'     => [
         [
             'name'       => 'Add Kiosk',
-            'alias'      => 'kiosk.store',
+            'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'       => 'Update Kiosk',
-            'alias'      => 'kiosk.update',
+            'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Show Kiosk Detail',
-            'alias'      => 'kiosk.show',
+            'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Kiosk',
-            'alias'      => 'kiosk.destroy',
+            'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

@@ -7,7 +7,7 @@ $prefix_directory = 'patient-management';
 
 return [
     'name'            => 'Patient Visit', 
-    'alias'           => 'visit-patient.index',
+    'alias'           => 'visit-patient',
     'icon'            => 'healthicons:outpatient-department',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,
@@ -15,19 +15,19 @@ return [
     'childs'     => [        
         [
             'name'       => 'Show Patient Visit',
-            'alias'      => 'visit-patient.show',
+            'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Update Patient Visit', 
-            'alias'      => 'patient-type.update',
+            'alias'      => 'update',
             'type'  => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Patient Visit', 
-            'alias'      => 'patient-type.destroy',
+            'alias'      => 'destroy',
             'type'  => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

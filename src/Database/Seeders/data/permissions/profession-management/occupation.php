@@ -15,7 +15,7 @@ return [
     'childs'         => [
         [
             'name'       => 'Add Occupation',
-            'alias'      => 'add',
+            'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
         ],

@@ -7,7 +7,7 @@ $prefix_directory = 'organization';
 
 return [
     'name'            => 'Agent Management', 
-    'alias'           => 'agent.index',
+    'alias'           => 'agent',
     'icon'        => 'mdi:face-agent',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,
@@ -15,26 +15,26 @@ return [
     'childs'     => [
         [
             'name'       => 'Add Agent',
-            'alias'      => 'agent.add',
+            'alias'      => 'add',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'       => 'Update Agent',
-            'alias'      => 'agent.update',
+            'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Detail Agent',
-            'alias'      => 'agent.show',
+            'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Agent',
-            'alias'      => 'agent.delete',
+            'alias'      => 'delete',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

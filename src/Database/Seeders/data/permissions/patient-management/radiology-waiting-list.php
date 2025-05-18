@@ -12,7 +12,7 @@ $prefix_directory = 'patient-management';
 
 return [
     'name'            => 'Radiology Waiting List', 
-    'alias'           => 'radiology-waiting-list.index',
+    'alias'           => 'radiology-waiting-list',
     'icon'            => 'healthicons:radiology',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,
@@ -20,7 +20,7 @@ return [
     'childs'     => [
         [
             'name'       => 'Detail Patient',
-            'alias'      => 'radiology-waiting-list.show',
+            'alias'      => 'show',
             'type'  => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],

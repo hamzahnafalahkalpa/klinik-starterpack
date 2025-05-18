@@ -7,7 +7,7 @@ $prefix_directory = 'lab-management/patology-clinic-queue';
 
 return [
     'name'       => 'Examination', 
-    'alias'      => 'examination.index',
+    'alias'      => 'examination',
     'icon'       => 'jam:medical',
     'type'       => Type::MODULE->value,
     'guard_name' => 'api'

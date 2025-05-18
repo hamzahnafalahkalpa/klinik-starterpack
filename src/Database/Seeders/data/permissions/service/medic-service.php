@@ -9,7 +9,7 @@ $prefix_directory = 'service';
 
 return [
     'name'            => 'Medical Service', 
-    'alias'           => 'medic-service.index',
+    'alias'           => 'medic-service',
     'icon'        => 'uil:medical-drip',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,
@@ -17,14 +17,14 @@ return [
     'childs'     => [
         [
             'name'            => 'Update Medic Service',
-            'alias'           => 'medic-service.update',
+            'alias'           => 'update',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api',
             'show_in_acl' => true
         ],
         [
             'name'            => 'Detail Medic Service',
-            'alias'           => 'medic-service.show',
+            'alias'           => 'show',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api'
         ]

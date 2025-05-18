@@ -7,27 +7,27 @@ $prefix_directory = 'medicine-management';
 
 return [
     'name'            => 'Medical Procurement',
-    'alias'           => 'medical-procurement.index',
+    'alias'           => 'medical-procurement',
     'icon'        => 'icon-park-outline:medicine-bottle',
     'type'           => Type::MENU->value,
     'guard_name'     => 'api',
     'childs'         => [
         [
             'name'       => 'Add Procurement',
-            'alias'      => 'medical-procurement.add',
+            'alias'      => 'add',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
             'name'       => 'Edit Procurement',
-            'alias'      => 'medical-procurement.edit',
+            'alias'      => 'edit',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
             'name'       => 'Delete Procurement',
-            'alias'      => 'medical-procurement.delete',
+            'alias'      => 'delete',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

@@ -7,14 +7,14 @@ $prefix_directory = 'medicine-management.medicine';
 
 return [
     'name'            => 'Data Card Stock',
-    'alias'           => 'card-stock.index',
+    'alias'           => 'card-stock',
     'icon'        => 'game-icons:medical-thermometer',
     'type'           => Type::MENU->value,
     'guard_name'     => 'api',
     'childs'         => [
         [
             'name'       => 'Show Card Stock',
-            'alias'      => 'card-stock.show',
+            'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

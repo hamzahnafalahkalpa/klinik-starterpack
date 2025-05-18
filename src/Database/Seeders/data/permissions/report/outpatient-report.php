@@ -7,7 +7,7 @@ $prefix_directory = 'report';
 
 return [
     'name'            => 'Outpatient Report', 
-    'alias'           => 'outpatient-report.index',
+    'alias'           => 'outpatient-report',
     'icon'        => 'medical-icon:i-outpatient',
     'show_in_acl' => true,
     'type'  => Type::MENU->value,

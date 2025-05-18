@@ -7,7 +7,7 @@ $prefix_directory = 'satusehat';
 
 return [
     'name'           => 'Organization',
-    'alias'          => 'organization.index',
+    'alias'          => 'organization',
     'icon'       => 'clarity:organization-line',
     'show_in_acl' => true,
     'type'       => Type::MENU->value,
@@ -15,13 +15,13 @@ return [
     'childs'     => [
         [
             'name'            => 'Update Organization Satu Sehat',
-            'alias'           => 'organization.update',
+            'alias'           => 'update',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api'
         ],
         [
             'name'            => 'Detail Organization Satu Sehat',
-            'alias'           => 'organization.show',
+            'alias'           => 'show',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api'
         ]
