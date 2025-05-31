@@ -5,18 +5,19 @@ use Hanafalah\LaravelPermission\Enums\Permission\Type;
 return [
     'name'       => 'Access Control List', 
     'alias'      => 'acl',
-    'icon'       => 'game-icons:house-keys',
+    'icon'       => 'lucide:key',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',
     'childs'     => [
         [
-            'name'       => 'Manajemen Role', 
-            'alias'      => 'role',
-            'menu'       => true,
+            'name'        => 'Manajemen Role', 
+            'alias'       => 'role',
+            'menu'        => true,
             'show_in_acl' => true,
-            'type'  => Type::MENU->value,
-            'guard_name' => 'api',
-            'childs'     => [
+            'type'        => Type::MENU->value,
+            'icon'       => 'oui:app-users-roles',
+            'guard_name'  => 'api',
+            'childs'      => [
                 [
                     'name'       => 'Tambah Role',
                     'alias'      => 'store',
