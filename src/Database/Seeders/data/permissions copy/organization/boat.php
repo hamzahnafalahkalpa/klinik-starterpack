@@ -6,34 +6,34 @@ $prefix = 'organization.';
 $prefix_directory = 'organization';
 
 return [
-    'name'            => 'Agent Management', 
-    'alias'           => 'agent',
-    'icon'            => 'mdi:face-agent',
-    'show_in_acl'     => true,
-    'type'            => Type::MENU->value,
-    'guard_name'      => 'api',
-    'childs'          => [
+    'name'            => 'Boat Management', 
+    'alias'           => 'boat',
+    'icon'        => 'mdi:boat',
+    'show_in_acl' => true,
+    'type'  => Type::MENU->value,
+    'guard_name' => 'api',
+    'childs'     => [
         [
-            'name'        => 'Add Agent',
-            'alias'       => 'add',
-            'type'        => Type::PERMISSION->value,
-            'guard_name'  => 'api',
+            'name'       => 'Add Boat',
+            'alias'      => 'add',
+            'type'       => Type::PERMISSION->value,
+            'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
-            'name'       => 'Update Agent',
+            'name'       => 'Update Boat',
             'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
-            'name'       => 'Detail Agent',
+            'name'       => 'Detail Boat',
             'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
-            'name'       => 'Delete Agent',
+            'name'       => 'Delete Boat',
             'alias'      => 'delete',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'

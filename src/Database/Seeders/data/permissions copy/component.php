@@ -5,8 +5,8 @@ use Hanafalah\LaravelPermission\Enums\Permission\Type;
 $prefix = '';
 
 return [
-    'name'           => 'Component Management', 
-    'alias'          => 'component',
+    'name'       => 'Component', 
+    'alias'      => 'component',
     'icon'       => 'uiw:component',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',

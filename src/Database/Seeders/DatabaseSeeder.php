@@ -14,20 +14,20 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            WorkspaceSeeder::class,
-            ApiAccessSeeder::class,
+            // WorkspaceSeeder::class,
+            // ApiAccessSeeder::class,
             PermissionSeeder::class,
-            ItemStuffSeeder::class,
+            // ItemStuffSeeder::class,
             // MedicServiceSeeder::class,
-            PaymentMethodSeeder::class,
-            FormSeeder::class,
-            ExaminationStuffSeeder::class,
-            MasterVaccineSeeder::class,
-            AnatomySeeder::class,
-            RegionalSeeder::class,
-            EncodingSeeder::class,
+            // PaymentMethodSeeder::class,
+            // FormSeeder::class,
+            // ExaminationStuffSeeder::class,
+            // MasterVaccineSeeder::class,
+            // AnatomySeeder::class,
+            // RegionalSeeder::class,
+            // EncodingSeeder::class,
             RoleSeeder::class,
-            EmployeeSeeder::class
+            // EmployeeSeeder::class
         ]);
     }
 }

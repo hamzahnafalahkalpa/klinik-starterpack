@@ -6,34 +6,34 @@ $prefix = 'organization.';
 $prefix_directory = 'organization';
 
 return [
-    'name'            => 'Agent Management', 
-    'alias'           => 'agent',
-    'icon'            => 'mdi:face-agent',
-    'show_in_acl'     => true,
-    'type'            => Type::MENU->value,
-    'guard_name'      => 'api',
-    'childs'          => [
+    'name'            => 'Payer Management', 
+    'alias'           => 'payer',
+    'icon'        => 'game-icons:coins',
+    'show_in_acl' => true,
+    'type'  => Type::MENU->value,
+    'guard_name' => 'api',
+    'childs'     => [
         [
-            'name'        => 'Add Agent',
-            'alias'       => 'add',
-            'type'        => Type::PERMISSION->value,
-            'guard_name'  => 'api',
+            'name'       => 'Add Payer',
+            'alias'      => 'add',
+            'type'       => Type::PERMISSION->value,
+            'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
-            'name'       => 'Update Agent',
+            'name'       => 'Update Payer',
             'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
-            'name'       => 'Detail Agent',
+            'name'       => 'Detail Payer',
             'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
-            'name'       => 'Delete Agent',
+            'name'       => 'Delete Payer',
             'alias'      => 'delete',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'

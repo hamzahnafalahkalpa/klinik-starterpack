@@ -8,16 +8,16 @@ $prefix_directory = 'organization';
 return [
     'name'            => 'Agent Management', 
     'alias'           => 'agent',
-    'icon'            => 'mdi:face-agent',
-    'show_in_acl'     => true,
-    'type'            => Type::MENU->value,
-    'guard_name'      => 'api',
-    'childs'          => [
+    'icon'        => 'mdi:face-agent',
+    'show_in_acl' => true,
+    'type'  => Type::MENU->value,
+    'guard_name' => 'api',
+    'childs'     => [
         [
-            'name'        => 'Add Agent',
-            'alias'       => 'add',
-            'type'        => Type::PERMISSION->value,
-            'guard_name'  => 'api',
+            'name'       => 'Add Agent',
+            'alias'      => 'add',
+            'type'       => Type::PERMISSION->value,
+            'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [

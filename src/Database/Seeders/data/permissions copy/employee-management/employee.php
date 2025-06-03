@@ -6,28 +6,28 @@ $prefix = 'employee-management.';
 $prefix_directory = 'employee-management';
 
 return [
-    'name'          => 'Data Pegawai',
-    'alias'         => 'employee',
+    'name'       => 'Employee Master Data',
+    'alias'      => 'employee',
     'icon'          => 'fluent:people-team-20-regular',
-    'type'          => Type::MENU->value,
     'show_in_acl'   => true,
-    'guard_name'    => 'api',
-    'childs'        => [
+    'type'  => Type::MENU->value,
+    'guard_name' => 'api',
+    'childs'     => [
         [
-            'name'       => 'Tambah Pegawai',
+            'name'       => 'Add Employee',
             'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
-            'name'       => 'Edit Pegawai',
+            'name'       => 'Edit Employee',
             'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
-            'name'       => 'Hapus Pegawai',
+            'name'       => 'Delete Employee',
             'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
