@@ -1,0 +1,25 @@
+<?php
+
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
+
+return [
+    'name'       => 'Data Pasien dan EMR', 
+    'alias'      => 'api.patient-emr',
+    'icon'       => 'fluent:patient-20-regular',
+    'type'       => Type::MENU->value,
+    'guard_name' => 'api',
+    'childs'     => [
+        include(__DIR__.'/patient-emr/patient.php'),
+        include(__DIR__.'/patient-emr/visit-patient.php'),
+        include(__DIR__.'/patient-emr/patient-referral.php'),
+        include(__DIR__.'/patient-emr/appointment.php'),
+        include(__DIR__.'/patient-emr/reservation.php'),
+        include(__DIR__.'/patient-emr/letter-queue.php'),
+        include(__DIR__.'/patient-emr/emergency-waiting-list.php'),
+        include(__DIR__.'/patient-emr/mcu-waiting-list.php'),
+        include(__DIR__.'/patient-emr/outpatient-waiting-list.php'),
+        include(__DIR__.'/patient-emr/lab-waiting-list.php'),
+        include(__DIR__.'/patient-emr/radiology-waiting-list.php'),
+    ]
+];
+

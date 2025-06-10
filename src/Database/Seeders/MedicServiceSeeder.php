@@ -2,76 +2,62 @@
 
 namespace Hanafalah\KlinikStarterpack\Database\Seeders;
 
-use Hanafalah\ModuleMedicService\Enums\MedicServiceFlag;
-use Hanafalah\ModuleMedicService\ModuleMedicService;
+use Hanafalah\LaravelSupport\Concerns\Support\HasRequestData;
+use Hanafalah\ModuleMedicService\Contracts\Data\MedicServiceData;
+use Hanafalah\ModuleMedicService\Enums\Label;
 use Illuminate\Database\Seeder;
 
 class MedicServiceSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     *
-     * @return void
-     */
+    use HasRequestData;
+
     public function run()
     {
         $arr = [
             [
-                "name" => "Rawat Jalan",
-                "flag" => MedicServiceFlag::OUTPATIENT,
-                'props' => ['text-color' => '#000', 'color' => '#87CEEB', 'color' => '#87CEEB','jurnal' => [
-                    "product" => [
-                        "name" => "Pendapatan - Poly",
-                        "code" => "14451931"
-                    ],
-                ]],
+                'name' => 'Rawat Jalan',
+                'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value,
                 'childs' => [
-                    ["name" => "Klinik Umum", "flag" => MedicServiceFlag::OUTPATIENT],
-                    ["name" => "Klinik Orthopedi", "flag" => MedicServiceFlag::OUTPATIENT],
-                    ["name" => "Klinik Mata", "flag" => MedicServiceFlag::OUTPATIENT],
-                    ["name" => "Klinik THT", "flag" => MedicServiceFlag::OUTPATIENT],
-                    ["name" => "Klinik Penyakit Dalam", "flag" => MedicServiceFlag::OUTPATIENT],
-                    ["name" => "Klinik Gigi & Mulut", "flag" => MedicServiceFlag::OUTPATIENT],
-                    ["name" => "Klinik Kesehatan Ibu dan Anak (KIA)", "flag" => MedicServiceFlag::OUTPATIENT],
-                    ["name" => "Lansia", "flag" => MedicServiceFlag::OUTPATIENT],
-                    ['name' => 'Admin', 'flag' => MedicServiceFlag::OUTPATIENT, 'props' => ['text-color' => '#000', 'color' => '#E5E5EA']],
-                    ["name" => "Vaccine", "flag" => MedicServiceFlag::OUTPATIENT,"props" => ['jurnal' => [
-                        "product" => [
-                            "name" => "Pendapatan - Vaksin & Khusus",
-                            "code" => "14451932"
-                        ]]]
-                    ]
+                    ['name' => 'Umum', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
+                    ['name' => 'Orthopedi', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
+                    ['name' => 'Sunat', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
+                    ['name' => 'Kecantikan', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
+                    ['name' => 'Mata', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
+                    ['name' => 'THT', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
+                    ['name' => 'Penyakit Dalam', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
+                    ['name' => 'Gigi & Mulut', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
+                    ['name' => 'KIA', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
+                    ['name' => 'Lansia', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
+                    ['name' => 'Admin', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
+                    ['name' => 'Vaccine', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value]
                 ]
             ],
-            ["name" => "Medical Check Up", "flag" => MedicServiceFlag::MCU,'props' => ['text-color' => '#000', 'color' => '#C7B8EA','jurnal' => [
-                "product" => [
-                    "name" => "Pendapatan - Kontrak MCU",
-                    "code" => "14451930"
-                ]
-            ]]],
             [
-                "name" => "Laboratorium Klinik",
-                "flag" => MedicServiceFlag::LABORATORY,
-                'props' => ['text-color' => '#000', 'color' => '#C6E2B5'],
+                'name' => 'Laboratorium Klinik',
+                'flag' => 'MEDIC_SERVICE','label' => Label::LABORATORY->value,
                 'childs' => [
-                    ["name" => "Patalogi Klinik", "flag" => MedicServiceFlag::LABORATORY],
-                    ["name" => "Patalogi Anatomi", "flag" => MedicServiceFlag::LABORATORY],
+                    ['name' => 'Patalogi Klinik', 'flag' => 'MEDIC_SERVICE','label' => Label::LABORATORY->value],
+                    ['name' => 'Patalogi Anatomi', 'flag' => 'MEDIC_SERVICE','label' => Label::LABORATORY->value],
                 ]
             ],
-            ["name" => "Radiologi", "flag" => MedicServiceFlag::RADIOLOGY, 'props' => ['text-color' => '#000', 'color' => '#FFD7BE']],
-            ["name" => "Rawat Inap", "flag" => MedicServiceFlag::INPATIENT],
-            ["name" => "Administrasi", "flag" => MedicServiceFlag::ADMINISTRATION],
+            ['name' => 'Medical Check Up', 'flag' => 'MEDIC_SERVICE','label' => Label::MCU->value],
+            ['name' => 'Radiologi', 'flag' => 'MEDIC_SERVICE','label' => Label::RADIOLOGY->value],
+            ['name' => 'Rawat Inap', 'flag' => 'MEDIC_SERVICE','label' => Label::INPATIENT->value],
+            ['name' => 'Administrasi', 'flag' => 'MEDIC_SERVICE','label' => Label::ADMINISTRATION->value],
             [
-                "name" => "Kefarmasian",
-                "flag" => MedicServiceFlag::PHARMACY,
+                'name' => 'Kefarmasian',
+                'flag' => 'MEDIC_SERVICE',
+                'label' => Label::PHARMACY->value,
                 'childs' => [
-                    ["name" => "Instalasi Farmasi", "flag" => MedicServiceFlag::PHARMACY],
-                    ["name" => "Gudang Farmasi", "flag" => MedicServiceFlag::PHARMACY],
+                    ['name' => 'Instalasi Farmasi', 'flag' => 'MEDIC_SERVICE','label' => Label::PHARMACY->value],
+                    ['name' => 'Gudang Farmasi', 'flag' => 'MEDIC_SERVICE','label' => Label::PHARMACY->value],
                 ]
             ],
-            ["name" => "Persalinan", "flag" => MedicServiceFlag::VERLOS_KAMER],
-            ["name" => "Instalasi Gawat Darurat" , "flag" => MedicServiceFlag::EMERGENCY_UNIT],
+            ['name' => 'Persalinan', 'flag' => 'MEDIC_SERVICE','label' => Label::VERLOS_KAMER->value],
+            ['name' => 'Instalasi Gawat Darurat' , 'flag' => 'MEDIC_SERVICE','label' => Label::EMERGENCY_UNIT->value],
         ];
-        ModuleMedicService::useMedicService()->setGuard('name',true)->adds($arr);
+        foreach ($arr as $data) {
+            app(config('app.contracts.MedicService'))->prepareStoreMedicService($this->requestDTO(MedicServiceData::class,$data));
+        }
     }
 }

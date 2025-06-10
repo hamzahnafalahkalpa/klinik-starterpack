@@ -3,32 +3,38 @@
 use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
-    'name'            => 'Pengaturan Komponen Tarif', 
-    'alias'           => 'tariff-component',
-    'icon'            => 'healthicons:coins',
+    'name'            => 'Kelas Ruangan', 
+    'alias'           => 'class-room',
+    'icon'            => 'ri:vip-fill',
     'type'            => Type::MODULE->value,
     'show_in_acl'     => true,
     'guard_name'      => 'api',
-    'childs'          => [
+    'childs'         => [
         [
-            'name'            => 'Tambah Komponen Tarif',
+            'name'            => 'Tambah Kelas Ruangan',
             'alias'           => 'store',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api',
             'show_in_acl'     => true
         ],
         [
-            'name'            => 'Ubah Komponen Tarif',
+            'name'            => 'Ubah Kelas Ruangan',
             'alias'           => 'update',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api'
         ],
         [
-            'name'            => 'Hapus Komponen Tarif', 
+            'name'        => 'Detail Kelas Ruangan',
+            'alias'       => 'show',
+            'type'        => Type::PERMISSION->value,
+            'guard_name'  => 'api',
+            'show_in_acl' => true
+        ],
+        [
+            'name'            => 'Hapus Kelas Ruangan',
             'alias'           => 'destroy',
             'type'            => Type::PERMISSION->value,
             'guard_name'      => 'api'
         ]
     ]
 ];
-

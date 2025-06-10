@@ -7,10 +7,10 @@ return [
     'alias'       => 'acl',
     'icon'        => 'mdi:cloud-access',
     'type'        => Type::MODULE->value,
-    'show_in_acl' => true,
     'guard_name'  => 'api',
-        'childs'      => [
-        include __DIR__.'/acl/role.php'
+    'childs'      => [
+        include __DIR__.'/acl/role.php',
+        include __DIR__.'/acl/permission.php'
     ]
 ];
 

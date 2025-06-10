@@ -9,7 +9,7 @@ return [
     'type'        => Type::MODULE->value,
     'show_in_acl' => true,
     'guard_name'  => 'api',
-        'childs'      => [
+    'childs'      => [
         include __DIR__.'/procurement/supplier.php'
     ]
 ];

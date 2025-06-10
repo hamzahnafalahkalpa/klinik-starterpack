@@ -3,39 +3,38 @@
 use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
-    'name'        => 'Pengaturan Voucher', 
-    'alias'       => 'voucher',
-    'icon'        => 'mdi:voucher',
-    'type'        => Type::MODULE->value,
-    'show_in_acl' => true,
-    'guard_name'  => 'api',
-    'childs'      => [
+    'name'            => 'Ruangan', 
+    'alias'           => 'room',
+    'icon'            => 'material-symbols:nest-multi-room',
+    'type'            => Type::MODULE->value,
+    'show_in_acl'     => true,
+    'guard_name'      => 'api',
+    'childs' => [
         [
-            'name'       => 'Tambah Voucher',
+            'name'       => 'Tambah Ruangan',
             'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
-            'name'       => 'Ubah Voucher',
+            'name'       => 'Ubah Ruangan',
             'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
-            'name'       => 'Detail Voucher',
+            'name'       => 'Detail Ruangan',
             'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
-            'guard_name' => 'api'
+            'guard_name' => 'api',
+            'show_in_acl' => true
         ],
         [
-            'name'       => 'Hapus Voucher',
+            'name'       => 'Hapus Ruangan',
             'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]
     ]
-
 ];
-

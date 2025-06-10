@@ -3,39 +3,31 @@
 use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
-    'name'        => 'Pengaturan Voucher', 
-    'alias'       => 'voucher',
-    'icon'        => 'mdi:voucher',
+    'name'        => 'Jenis Pasien',
+    'alias'       => 'patient-type',
+    'icon'        => 'material-symbols:recent-patient-rounded',
     'type'        => Type::MODULE->value,
     'show_in_acl' => true,
     'guard_name'  => 'api',
-    'childs'      => [
+    'childs'     => [
         [
-            'name'       => 'Tambah Voucher',
+            'name'       => 'Tambah Jenis Pasien',
             'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
-            'name'       => 'Ubah Voucher',
+            'name'       => 'Ubah Jenis Pasien',
             'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
-            'name'       => 'Detail Voucher',
-            'alias'      => 'show',
-            'type'       => Type::PERMISSION->value,
-            'guard_name' => 'api'
-        ],
-        [
-            'name'       => 'Hapus Voucher',
+            'name'       => 'Hapus Jenis Pasien',
             'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]
     ]
-
 ];
-
