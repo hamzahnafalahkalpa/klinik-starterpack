@@ -11,15 +11,27 @@ return [
     'guard_name'  => 'api',
     'childs'     => [
         [
-            'name'       => 'Update Medical Service',
-            'alias'      => 'update',
+            'name'       => 'Tambah Layanan Medis',
+            'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
-            'name'       => 'Detail Medical Service',
+            'name'       => 'Ubah Layanan Medis',
+            'alias'      => 'update',
+            'type'       => Type::PERMISSION->value,
+            'guard_name' => 'api'
+        ],
+        [
+            'name'       => 'Lihat Layanan Medis',
             'alias'      => 'show',
+            'type'       => Type::PERMISSION->value,
+            'guard_name' => 'api'
+        ],
+        [
+            'name'       => 'Hapus Layanan Medis',
+            'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]
