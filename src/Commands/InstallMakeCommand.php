@@ -78,7 +78,6 @@ class InstallMakeCommand extends EnvironmentCommand
         SQL);
         DB::statement("GRANT ALL PRIVILEGES ON DATABASE \"$database\" TO \"$username\";");
 
-
         $this->call('down');
         $this->call('migrate');
         $this->call('db:seed');

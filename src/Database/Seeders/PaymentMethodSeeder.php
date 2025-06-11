@@ -15,22 +15,28 @@ class PaymentMethodSeeder extends Seeder
     {
         $arr = [
             [
-                'name' => 'CASH'
+                'name' => 'CASH',
+                'flag' => 'TUNAI',
             ],
             [
-                'name' => 'BANK TRANSFER'
+                'name' => 'BANK TRANSFER',
+                'flag' => 'NON TUNAI',
             ],
             [
-                'name' => 'CREDIT CARD'
+                'name' => 'CREDIT CARD',
+                'flag' => 'NON TUNAI',
             ],
             [
-                'name' => 'DEBIT CARD'
+                'name' => 'DEBIT CARD',
+                'flag' => 'NON TUNAI',
             ],
             [
-                'name' => 'E-MONEY'
+                'name' => 'E-MONEY',
+                'flag' => 'NON TUNAI',
             ],
             [
-                'name' => 'DITAGIHKAN'
+                'name' => 'DITAGIHKAN',
+                'flag' => 'BILLED',
             ],
         ];
         $paymentMethod = app(config('database.models.PaymentMethod'));
