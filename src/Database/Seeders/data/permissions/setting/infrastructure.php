@@ -15,7 +15,10 @@ return [
         include __DIR__.'/infrastructure/payer.php',
         include __DIR__.'/infrastructure/room.php',
         include __DIR__.'/infrastructure/building.php',
-        include __DIR__.'/infrastructure/class-room.php'
+        include __DIR__.'/infrastructure/class-room.php',
+        include __DIR__.'/infrastructure/pustu.php',
+        include __DIR__.'/infrastructure/posyandu.php',
+        include __DIR__.'/infrastructure/external-facility.php',
     ]
 ];
 

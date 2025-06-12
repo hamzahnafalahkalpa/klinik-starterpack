@@ -35,7 +35,7 @@ class PatientTypeSeeder extends Seeder
                 'flag'  => 'IDENTITY',
                 'label' => 'CREW'
             ],
-                        [
+            [
                 'name'  => 'Partner',
                 'flag'  => 'IDENTITY',
                 'label' => 'PARTNER'

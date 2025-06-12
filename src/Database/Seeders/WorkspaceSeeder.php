@@ -45,8 +45,6 @@ class WorkspaceSeeder extends Seeder{
             $project_tenant->path     = $generator_config['patterns']['project']['published_at'];
             $project_tenant->packages = [];
             $project_tenant->config   = $generator_config['patterns']['project'];
-            // $project_tenant->tenancy_db_username = 'root';
-            // $project_tenant->tenancy_db_password = Hash::make(env('DB_PASSWORD'));
             $project_tenant->save();
 
             $group_tenant = $tenant_schema->prepareStoreTenant($this->requestDTO(TenantData::class,[
@@ -61,8 +59,6 @@ class WorkspaceSeeder extends Seeder{
             $group_tenant->path         = $generator_config['patterns']['group']['published_at'];
             $group_tenant->packages     = [];
             $group_tenant->config       = $generator_config['patterns']['group'];
-            // // $group_tenant->tenancy_db_username = $project_tenant->tenancy_db_username;
-            // // $group_tenant->tenancy_db_password = $project_tenant->tenancy_db_password;
             $group_tenant->save();
 
             $workspace = app(config('app.contracts.Workspace'))->prepareStoreWorkspace(WorkspaceData::from([
@@ -95,7 +91,10 @@ class WorkspaceSeeder extends Seeder{
                 'name'           => 'Tenant Klinik',
                 'flag'           => $tenant_model::FLAG_TENANT,
                 'reference_id'   => $workspace->getKey(),
-                'reference_type' => $workspace->getMorphClass()
+                'reference_type' => $workspace->getMorphClass(),
+                'domain'         => [
+                    'name' => 'localhost:8002'
+                ]
             ]));
 
             $tenant->provider = $tenant_namespace.'\\TenantKlinik\\Providers\\TenantKlinikServiceProvider';
@@ -104,8 +103,6 @@ class WorkspaceSeeder extends Seeder{
             $tenant->group    = ['provider' => $group_tenant->provider];
             $tenant->packages = [];
             $tenant->config   = $generator_config['patterns']['tenant'];
-            // // $tenant->tenancy_db_username = $project_tenant->tenancy_db_username;
-            // // $tenant->tenancy_db_password = $project_tenant->tenancy_db_password;
             $tenant->save();
         }else{
             $tenant         = $workspace->tenant;
