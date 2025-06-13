@@ -41,7 +41,7 @@ class WorkspaceSeeder extends Seeder{
                 'reference_id'   => null,
                 'reference_type' => null
             ]));
-            $project_tenant->provider = $project_namespace.'\\InitialKlinik\\Providers\\KlinikServiceProvider';
+            $project_tenant->provider = $project_namespace.'\\Klinik\\Providers\\KlinikServiceProvider';
             $project_tenant->path     = $generator_config['patterns']['project']['published_at'];
             $project_tenant->packages = [];
             $project_tenant->config   = $generator_config['patterns']['project'];
