@@ -2,9 +2,6 @@
 
 use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
-$prefix = 'patient-management.';
-$prefix_directory = 'patient-management';
-
 return [
     'name'           => 'Janji Temu', 
     'alias'          => 'appointment',
