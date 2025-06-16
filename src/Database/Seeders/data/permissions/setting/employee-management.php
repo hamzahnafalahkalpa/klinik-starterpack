@@ -12,7 +12,8 @@ return [
         include __DIR__.'/employee-management/employee-type.php',
         include __DIR__.'/employee-management/occupation.php',
         include __DIR__.'/employee-management/profession.php',
-        include __DIR__.'/employee-management/shift.php'
+        include __DIR__.'/employee-management/shift.php',
+        include __DIR__.'/employee-management/shift-schedule.php'
     ]
 ];
 
