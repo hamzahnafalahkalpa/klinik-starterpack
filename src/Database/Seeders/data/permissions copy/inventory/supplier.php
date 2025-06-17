@@ -2,14 +2,11 @@
 
 use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
-$prefix = 'inventory.';
-$prefix_directory = 'inventory';
-
 return [
-    'name'            => 'Supplier',
-    'alias'           => 'index',
-    'icon'        => 'icon-park-twotone:people-top-card',
-    'show_in_acl' => true,
+    'name'           => 'Supplier',
+    'alias'          => 'index',
+    'icon'           => 'icon-park-twotone:people-top-card',
+    'show_in_acl'    => true,
     'type'           => Type::MODULE->value,
     'guard_name'     => 'api',
     'childs'         => [

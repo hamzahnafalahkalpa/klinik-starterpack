@@ -36,7 +36,8 @@ class DatabaseSeeder extends Seeder
             EncodingSeeder::class,
             EmployeeSeeder::class,
             EmployeeTypeSeeder::class,
-            ModulePaymentSeeder::class
+            ModulePaymentSeeder::class,
+            PaymentMethodSeeder::class,
         ]);
     }
 }

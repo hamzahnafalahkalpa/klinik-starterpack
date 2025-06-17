@@ -41,9 +41,6 @@ class PaymentMethodSeeder extends Seeder
         ];
         $paymentMethod = app(config('database.models.PaymentMethod'));
 
-        foreach ($arr as $data) {
-            $paymentMethod->firstOrCreate($data);
-        }
-
+        foreach ($arr as $data) $paymentMethod->firstOrCreate($data);
     }
 }
