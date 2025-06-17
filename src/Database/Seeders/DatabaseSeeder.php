@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
             MedicServiceSeeder::class,
             ServiceClusterSeeder::class,
             PaymentMethodSeeder::class,
+            ProfessionSeeder::class,
             FormSeeder::class,
             ExaminationStuffSeeder::class,
             MasterVaccineSeeder::class,

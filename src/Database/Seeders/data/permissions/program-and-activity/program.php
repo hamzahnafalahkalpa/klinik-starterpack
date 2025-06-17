@@ -36,7 +36,7 @@ return [
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
-        include(__DIR__.'/program/kegiatan.php')
+        include(__DIR__.'/program/activity.php')
     ]
 ];
 

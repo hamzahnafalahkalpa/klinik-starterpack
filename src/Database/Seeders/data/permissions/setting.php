@@ -16,6 +16,7 @@ return [
         include __DIR__.'/setting/infrastructure.php',
         include __DIR__.'/setting/procurement.php',
         include __DIR__.'/setting/employee-management.php',
+        include __DIR__.'/setting/patient-management.php',
         include __DIR__.'/setting/faskes-service.php',
     ]
 ];
