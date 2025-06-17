@@ -29,7 +29,8 @@ class MedicServiceSeeder extends Seeder
                     ['name' => 'KIA', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
                     ['name' => 'Lansia', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
                     ['name' => 'Admin', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
-                    ['name' => 'Vaccine', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value]
+                    ['name' => 'Vaccine', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
+                    ['name' => 'MTBS', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value]
                 ]
             ],
             [

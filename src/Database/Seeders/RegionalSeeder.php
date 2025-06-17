@@ -15,7 +15,7 @@ class RegionalSeeder extends Seeder
      */
     public function run()
     {
-        $files = ['Province', 'District', 'Subdistrict', 'Village'];
+        $files = ['Country','Province', 'District', 'Subdistrict', 'Village'];
         foreach ($files as $file) {
             $model = app(config('database.models.'.$file));
             $first = $model->first();

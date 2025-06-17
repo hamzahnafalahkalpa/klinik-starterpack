@@ -5,7 +5,7 @@ namespace Hanafalah\KlinikStarterpack\Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Hanafalah\ModuleEmployee\Seeders\EmployeeTypeSeeder;
 use Hanafalah\ModulePayment\Database\Seeders\DatabaseSeeder as ModulePaymentSeeder;
-
+use Hanafalah\ModulePeople\Database\Seeders\DatabaseSeeder as PeopleCollectionSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             ApiAccessSeeder::class,
             PermissionSeeder::class,
             RoleSeeder::class,
+            PeopleCollectionSeeder::class,
             ItemStuffSeeder::class,
             PatientTypeSeeder::class,
             PatientTypeServiceSeeder::class,
@@ -34,10 +35,12 @@ class DatabaseSeeder extends Seeder
             AnatomySeeder::class,
             RegionalSeeder::class,
             EncodingSeeder::class,
-            EmployeeSeeder::class,
             EmployeeTypeSeeder::class,
+            EmployeeSeeder::class,
+            FundingSeeder::class,
             ModulePaymentSeeder::class,
             PaymentMethodSeeder::class,
+            // InfrastructureSeeder::class
         ]);
     }
 }
