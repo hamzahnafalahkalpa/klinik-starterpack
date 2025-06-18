@@ -12,7 +12,7 @@ return [
     'childs'      => [
         include __DIR__.'/faskes-service/patient-type-service.php',
         include __DIR__.'/faskes-service/patient-type.php',
-        include __DIR__.'/faskes-service/medical-service.php',
+        include __DIR__.'/faskes-service/medic-service.php',
         include __DIR__.'/faskes-service/service-cluster.php',
         include __DIR__.'/faskes-service/jasa.php',
     ]
