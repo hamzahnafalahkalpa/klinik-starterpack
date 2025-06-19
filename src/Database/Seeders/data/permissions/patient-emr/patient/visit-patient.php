@@ -7,7 +7,7 @@ return [
     'alias'           => 'visit-patient',
     'icon'            => 'healthicons:outpatient-department',
     'show_in_acl'     => true,
-    'type'            => Type::MENU->value,
+    'type'            => Type::MODULE->value,
     'guard_name'      => 'api',
     'childs'          => [        
         [

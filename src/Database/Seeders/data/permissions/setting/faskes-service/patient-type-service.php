@@ -4,7 +4,7 @@ use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
     'name'        => 'Jenis Layanan Pasien',
-    'alias'       => 'service-type',
+    'alias'       => 'patient-type-service',
     'icon'        => 'iconoir:healthcare',
     'type'        => Type::MODULE->value,
     'show_in_acl' => true,

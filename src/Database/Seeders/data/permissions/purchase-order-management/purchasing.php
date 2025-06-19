@@ -18,6 +18,20 @@ return [
             'show_in_acl' => true
         ],
         [
+            'name'       => 'Update Pembelian',
+            'alias'      => 'update',
+            'type'       => Type::PERMISSION->value,
+            'guard_name' => 'api'
+        ],
+        [
+            'name'       => 'Detail Pembelian',
+            'alias'      => 'show',
+            'type'       => Type::PERMISSION->value,
+            'guard_name' => 'api',
+            'show_in_data' => true,
+            'show_in_acl' => true
+        ],
+        [
             'name'       => 'Hapus Pembelian',
             'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,

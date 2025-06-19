@@ -18,12 +18,28 @@ return [
             'show_in_acl' => true
         ],
         [
+            'name'       => 'Ubah Data Pasien',
+            'alias'      => 'update',
+            'type'       => Type::PERMISSION->value,
+            'guard_name' => 'api'
+        ],
+        [
+            'name'       => 'Detail Data Pasien',
+            'alias'      => 'show',
+            'type'       => Type::PERMISSION->value,
+            'guard_name' => 'api',
+            'show_in_data' => true,
+            'show_in_acl' => true,
+            'childs'      => [
+                include_once __DIR__.'/patient/visit-patient.php',
+            ]
+        ],
+        [
             'name'       => 'Hapus Data Pasien',
             'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
-        include_once __DIR__.'/patient/patient-register.php',
     ]
 ];
 

@@ -50,7 +50,7 @@ class MedicServiceSeeder extends Seeder
                 'flag' => 'MEDIC_SERVICE',
                 'label' => Label::PHARMACY->value,
                 'childs' => [
-                    ['name' => 'Instalasi Farmasi', 'flag' => 'MEDIC_SERVICE','label' => Label::PHARMACY->value],
+                    ['name' => 'Instalasi Farmasi', 'flag' => 'MEDIC_SERVICE','label' => Label::PHARMACY_UNIT->value],
                     ['name' => 'Gudang Farmasi', 'flag' => 'MEDIC_SERVICE','label' => Label::PHARMACY->value],
                 ]
             ],
