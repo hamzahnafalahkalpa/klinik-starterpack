@@ -4,7 +4,7 @@ use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
     'name'            => 'Posyandu', 
-    'alias'           => 'external-facility',
+    'alias'           => 'posyandu',
     'icon'            => 'fa-solid:baby',
     'type'            => Type::MODULE->value,
     'show_in_acl'     => true,
