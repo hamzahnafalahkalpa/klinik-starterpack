@@ -33,6 +33,8 @@ class InstallMakeCommand extends EnvironmentCommand
      */
     public function handle()
     {
+        $this->call('optimize:clear');
+        
         $this->call('micro:install',[
             "--skip-generate" => true
         ]);

@@ -19,6 +19,9 @@ class EmployeeSeeder extends Seeder
     {
         $user = app(config('database.models.User'))->where('username','admin')->first();
         if (!isset($user)){
+            $role_ids = app(config('database.models.Role'))->get()->pluck('id');
+            $user     = app(config('database.models.User'))->where('username','admin')->first();
+
             request()->merge([
                 "card_identity" => [ // Informasi identitas kartu
                     "nip" => null,
@@ -63,7 +66,7 @@ class EmployeeSeeder extends Seeder
     
                 ],
                 "user_reference" => [ // Referensi user
-                    "role_ids" => [1], // Daftar role ID
+                    "role_ids" => $role_ids, // Daftar role ID
                     "workspace_type" => 'Tenant',
                     "workspace_id" => tenancy()->tenant->id,
                     "user" => [ // Informasi akun user (boleh null untuk tidak update akun user)
