@@ -14,7 +14,8 @@ class InstallMakeCommand extends EnvironmentCommand
      *
      * @var string
      */
-    protected $signature = 'klinik-starterpack:install';
+    protected $signature = 'klinik-starterpack:install
+                            {--drop : Drop database before installing}';
 
 
     /**
@@ -35,6 +36,17 @@ class InstallMakeCommand extends EnvironmentCommand
     {
         $this->call('optimize:clear');
         
+        if ($this->option('drop')) {
+            $this->comment('Drop database...');
+            try {
+                $default = config('database.default','pgsql');
+                DB::statement("DROP DATABASE IF EXISTS " . config('database.connections.'.$default.'.database'));
+            } catch (\Exception $e) {
+                $this->warn('Error when drop database: ' . $e->getMessage());
+            }
+        }
+        
+
         $this->call('micro:install',[
             "--skip-generate" => true
         ]);
