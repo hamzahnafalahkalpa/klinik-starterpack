@@ -19,7 +19,7 @@ class EmployeeSeeder extends Seeder
     {
         $user = app(config('database.models.User'))->where('username','admin')->first();
         if (!isset($user)){
-            $role_ids = app(config('database.models.Role'))->get()->pluck('id');
+            $role_ids = app(config('database.models.Role'))->get()->pluck('id')->toArray();
             $user     = app(config('database.models.User'))->where('username','admin')->first();
 
             request()->merge([
