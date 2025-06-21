@@ -2,10 +2,14 @@
 
 namespace Hanafalah\KlinikStarterpack\Database\Seeders;
 
+use Hanafalah\LaravelSupport\Concerns\Support\HasRequestData;
+use Hanafalah\ModuleProfession\Contracts\Data\ProfessionData;
 use Illuminate\Database\Seeder;
 
 class ProfessionSeeder extends Seeder
 {
+    use HasRequestData;
+
     public $professions = [
         [
             "name" => "Tenaga Medis",
@@ -122,17 +126,8 @@ class ProfessionSeeder extends Seeder
     public function run(): void
     {
         foreach ($this->professions as $group) {
-            $parent = app(config('database.models.Profession'))->updateOrCreate(
-                ['name' => $group['name'], 'parent_id' => null],
-                ['name' => $group['name']]
-            );
-        
-            foreach ($group['childs'] as $child) {
-                app(config('database.models.Profession'))->updateOrCreate(
-                    ['name' => $child['name'], 'parent_id' => $parent->id],
-                    ['name' => $child['name'], 'parent_id' => $parent->id]
-                );
-            }
+            $group['flag'] = 'Profession';
+            app(config('app.contracts.Profession'))->prepareStoreProfession($this->requestDTO(ProfessionData::class,$group));
         }
     }
 }

@@ -12,7 +12,6 @@ return [
     'childs'      => [
         include __DIR__.'/general-setting/workspace.php',
         include __DIR__.'/general-setting/encoding.php',
-        include __DIR__.'/general-setting/education.php',
     ]
 ];
 

@@ -16,46 +16,46 @@ class MedicServiceSeeder extends Seeder
         $arr = [
             [
                 'name' => 'Rawat Jalan',
-                'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value,
+                'flag' => 'MedicService','label' => Label::OUTPATIENT->value,
                 'childs' => [
-                    ['name' => 'Umum', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
-                    ['name' => 'Orthopedi', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
-                    ['name' => 'Sunat', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
-                    ['name' => 'Kecantikan', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
-                    ['name' => 'Mata', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
-                    ['name' => 'THT', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
-                    ['name' => 'Penyakit Dalam', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
-                    ['name' => 'Gigi & Mulut', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
-                    ['name' => 'KIA', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
-                    ['name' => 'Lansia', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
-                    ['name' => 'Admin', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
-                    ['name' => 'Vaccine', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value],
-                    ['name' => 'MTBS', 'flag' => 'MEDIC_SERVICE','label' => Label::OUTPATIENT->value]
+                    ['name' => 'Umum', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
+                    ['name' => 'Orthopedi', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
+                    ['name' => 'Sunat', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
+                    ['name' => 'Kecantikan', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
+                    ['name' => 'Mata', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
+                    ['name' => 'THT', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
+                    ['name' => 'Penyakit Dalam', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
+                    ['name' => 'Gigi & Mulut', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
+                    ['name' => 'KIA', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
+                    ['name' => 'Lansia', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
+                    ['name' => 'Admin', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
+                    ['name' => 'Vaccine', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
+                    ['name' => 'MTBS', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value]
                 ]
             ],
             [
                 'name' => 'Laboratorium Klinik',
-                'flag' => 'MEDIC_SERVICE','label' => Label::LABORATORY->value,
+                'flag' => 'MedicService','label' => Label::LABORATORY->value,
                 'childs' => [
-                    ['name' => 'Patalogi Klinik', 'flag' => 'MEDIC_SERVICE','label' => Label::LABORATORY->value],
-                    ['name' => 'Patalogi Anatomi', 'flag' => 'MEDIC_SERVICE','label' => Label::LABORATORY->value],
+                    ['name' => 'Patalogi Klinik', 'flag' => 'MedicService','label' => Label::LABORATORY->value],
+                    ['name' => 'Patalogi Anatomi', 'flag' => 'MedicService','label' => Label::LABORATORY->value],
                 ]
             ],
-            ['name' => 'Medical Check Up', 'flag' => 'MEDIC_SERVICE','label' => Label::MCU->value],
-            ['name' => 'Radiologi', 'flag' => 'MEDIC_SERVICE','label' => Label::RADIOLOGY->value],
-            ['name' => 'Rawat Inap', 'flag' => 'MEDIC_SERVICE','label' => Label::INPATIENT->value],
-            ['name' => 'Administrasi', 'flag' => 'MEDIC_SERVICE','label' => Label::ADMINISTRATION->value],
+            ['name' => 'Medical Check Up', 'flag' => 'MedicService','label' => Label::MCU->value],
+            ['name' => 'Radiologi', 'flag' => 'MedicService','label' => Label::RADIOLOGY->value],
+            ['name' => 'Rawat Inap', 'flag' => 'MedicService','label' => Label::INPATIENT->value],
+            ['name' => 'Administrasi', 'flag' => 'MedicService','label' => Label::ADMINISTRATION->value],
             [
                 'name' => 'Kefarmasian',
-                'flag' => 'MEDIC_SERVICE',
+                'flag' => 'MedicService',
                 'label' => Label::PHARMACY->value,
                 'childs' => [
-                    ['name' => 'Instalasi Farmasi', 'flag' => 'MEDIC_SERVICE','label' => Label::PHARMACY_UNIT->value],
-                    ['name' => 'Gudang Farmasi', 'flag' => 'MEDIC_SERVICE','label' => Label::PHARMACY->value],
+                    ['name' => 'Instalasi Farmasi', 'flag' => 'MedicService','label' => Label::PHARMACY_UNIT->value],
+                    ['name' => 'Gudang Farmasi', 'flag' => 'MedicService','label' => Label::PHARMACY->value],
                 ]
             ],
-            ['name' => 'Persalinan', 'flag' => 'MEDIC_SERVICE','label' => Label::VERLOS_KAMER->value],
-            ['name' => 'Instalasi Gawat Darurat' , 'flag' => 'MEDIC_SERVICE','label' => Label::EMERGENCY_UNIT->value],
+            ['name' => 'Persalinan', 'flag' => 'MedicService','label' => Label::VERLOS_KAMER->value],
+            ['name' => 'Instalasi Gawat Darurat' , 'flag' => 'MedicService','label' => Label::EMERGENCY_UNIT->value],
         ];
         foreach ($arr as $data) {
             app(config('app.contracts.MedicService'))->prepareStoreMedicService($this->requestDTO(MedicServiceData::class,$data));

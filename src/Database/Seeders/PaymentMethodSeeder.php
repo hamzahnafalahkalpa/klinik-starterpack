@@ -2,10 +2,14 @@
 
 namespace Hanafalah\KlinikStarterpack\Database\Seeders;
 
+use Hanafalah\LaravelSupport\Concerns\Support\HasRequestData;
+use Hanafalah\ModulePayment\Contracts\Data\PaymentMethodData;
 use Illuminate\Database\Seeder;
 
 class PaymentMethodSeeder extends Seeder
 {
+    use HasRequestData;
+
     /**
      * Seed the application's database.
      *
@@ -16,31 +20,36 @@ class PaymentMethodSeeder extends Seeder
         $arr = [
             [
                 'name' => 'CASH',
-                'flag' => 'TUNAI',
+                'flag' => 'PaymentMethod',
+                'label' => 'TUNAI',
             ],
             [
                 'name' => 'BANK TRANSFER',
-                'flag' => 'NON TUNAI',
+                'flag' => 'PaymentMethod',
+                'label' => 'NON TUNAI',
             ],
             [
                 'name' => 'CREDIT CARD',
-                'flag' => 'NON TUNAI',
+                'flag' => 'PaymentMethod',
+                'label' => 'NON TUNAI',
             ],
             [
                 'name' => 'DEBIT CARD',
-                'flag' => 'NON TUNAI',
+                'flag' => 'PaymentMethod',
+                'label' => 'NON TUNAI',
             ],
             [
                 'name' => 'E-MONEY',
-                'flag' => 'NON TUNAI',
+                'flag' => 'PaymentMethod',
+                'label' => 'NON TUNAI',
             ],
             [
                 'name' => 'DITAGIHKAN',
-                'flag' => 'BILLED',
+                'flag' => 'PaymentMethod',
+                'label' => 'BILLED',
             ],
         ];
-        $paymentMethod = app(config('database.models.PaymentMethod'));
-
-        foreach ($arr as $data) $paymentMethod->firstOrCreate($data);
+        $paymentMethod = app(config('app.contracts.PaymentMethod'));
+        foreach ($arr as $data) $paymentMethod->prepareStorePaymentMethod($this->requestDTO(PaymentMethodData::class,$data));
     }
 }

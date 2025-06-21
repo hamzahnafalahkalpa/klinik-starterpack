@@ -17,27 +17,27 @@ class PatientTypeServiceSeeder extends Seeder
         $arr = [
             [
                 'name'  => 'Umum',
-                'flag'  => 'SERVICE',
+                'flag'  => 'PatientTypeService',
                 'label' => 'UMUM'
             ],
             [
                 'name'  => 'BPJS Kelas I',
-                'flag'  => 'SERVICE',
+                'flag'  => 'PatientTypeService',
                 'label' => 'BPJS'
             ],
             [
                 'name'  => 'BPJS Kelas II',
-                'flag'  => 'SERVICE',
+                'flag'  => 'PatientTypeService',
                 'label' => 'BPJS'
             ],
             [
                 'name'  => 'BPJS Kelas III',
-                'flag'  => 'SERVICE',
+                'flag'  => 'PatientTypeService',
                 'label' => 'BPJS'
             ],
             [
                 'name'  => 'Asuransi',
-                'flag'  => 'SERVICE',
+                'flag'  => 'PatientTypeService',
                 'label' => 'ASURANSI'
             ]
         ];

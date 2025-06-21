@@ -35,8 +35,8 @@ class EmployeeSeeder extends Seeder
                     "sex" => "Male", // Pilihan: Male, Female
                     "dob" => "1996-01-01", // Tanggal lahir
                     "pob" => "Pandeglang", // Tempat lahir
-                    "last_education" => null, // Pendidikan terakhir
-                    "marital_status" => "Kawin", // Pilihan: Kawin, Belum Kawin
+                    "last_education_id" => null, // Pendidikan terakhir
+                    "marital_status_id" => null, 
                     "total_children" => 10, // Jumlah anak
                     "country_id" => null, // ID negara
                     "address" => [ // Alamat
@@ -56,7 +56,9 @@ class EmployeeSeeder extends Seeder
                     ],
                     "family_relationship" => [ // Hubungan keluarga
                         "people_id" => null,
-                        "role" => "Anak", // Contoh: Anak, Suami, Istri, dll.
+                        "family_role" => [
+                            "name" => "Anak"
+                        ], // Contoh: Anak, Suami, Istri, dll.
                         "name" => "Fathan",
                         "phone" => "081906521808",
                     ],

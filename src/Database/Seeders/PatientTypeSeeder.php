@@ -17,27 +17,27 @@ class PatientTypeSeeder extends Seeder
         $arr = [
             [
                 'name'  => 'Umum',
-                'flag'  => 'IDENTITY',
+                'flag'  => 'PatientType',
                 'label' => 'UMUM'
             ],
             [
                 'name'  => 'Karyawan',
-                'flag'  => 'IDENTITY',
+                'flag'  => 'PatientType',
                 'label' => 'KARYAWAN'
             ],
             [
                 'name'  => 'Member',
-                'flag'  => 'IDENTITY',
+                'flag'  => 'PatientType',
                 'label' => 'MEMBER'
             ],
                         [
                 'name'  => 'Crew',
-                'flag'  => 'IDENTITY',
+                'flag'  => 'PatientType',
                 'label' => 'CREW'
             ],
             [
                 'name'  => 'Partner',
-                'flag'  => 'IDENTITY',
+                'flag'  => 'PatientType',
                 'label' => 'PARTNER'
             ],
         ];
