@@ -9,6 +9,7 @@ use Hanafalah\ModuleExamination\Seeders\FormSeeder;
 use Hanafalah\ModuleExamination\Seeders\MasterVaccineSeeder;
 use Hanafalah\ModulePayment\Database\Seeders\DatabaseSeeder as ModulePaymentSeeder;
 use Hanafalah\ModulePeople\Database\Seeders\DatabaseSeeder as PeopleCollectionSeeder;
+use Hanafalah\ModuleAnatomy\Database\Seeders\DatabaseSeeder as AnatomyCollectionSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -35,7 +36,7 @@ class DatabaseSeeder extends Seeder
             FormSeeder::class,
             ExaminationStuffSeeder::class,
             MasterVaccineSeeder::class,
-            AnatomySeeder::class,
+            AnatomyCollectionSeeder::class,
             RegionalSeeder::class,
             EncodingSeeder::class,
             EmployeeTypeSeeder::class,
