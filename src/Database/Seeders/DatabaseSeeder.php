@@ -44,6 +44,16 @@ class DatabaseSeeder extends Seeder
             PatientOccupationSeeder::class,
             FundingSeeder::class,
             ModulePaymentSeeder::class,
+            DosageFormSeeder::class,
+            FreqUnitSeeder::class,
+            MedicalCompositionUnitSeeder::class,
+            MedicalNetUnitSeeder::class,
+            MixUnitSeeder::class,
+            TherapeuticClassSeeder::class,
+            PackageFormSeeder::class,
+            TrademarkSeeder::class,
+            UsageLocationSeeder::class,
+            UsageRouteSeeder::class
             // InfrastructureSeeder::class
         ]);
     }

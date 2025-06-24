@@ -65,7 +65,6 @@ class EmployeeSeeder extends Seeder
                     "phones" => [ // Daftar nomor telepon
                         "08129283746",
                     ]
-    
                 ],
                 "user_reference" => [ // Referensi user
                     "role_ids" => $role_ids, // Daftar role ID
