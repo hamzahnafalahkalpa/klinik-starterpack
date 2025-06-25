@@ -187,7 +187,7 @@ class WorkspaceSeeder extends Seeder{
         
         MicroTenant::tenantImpersonate($tenant);
         tenancy()->initialize($tenant->getKey());
-        Artisan::call('optimize:clear');
+        // Artisan::call('optimize:clear');
 
         // Artisan::call('impersonate:cache',[
         //     '--tenant_id' => $tenant->getKey(),
