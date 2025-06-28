@@ -29,5 +29,4 @@ return [
             'guard_name' => 'api'
         ]
     ]
-
 ];

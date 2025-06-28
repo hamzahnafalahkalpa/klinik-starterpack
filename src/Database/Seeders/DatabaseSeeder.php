@@ -21,7 +21,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        config(['micro-tenant.installing' => true]);
         $this->call([
             WorkspaceSeeder::class,
             ApiAccessSeeder::class,
@@ -35,6 +34,7 @@ class DatabaseSeeder extends Seeder
             ServiceClusterSeeder::class,
             PaymentMethodSeeder::class,
             ProfessionSeeder::class,
+            OccupationSeeder::class,
             FormSeeder::class,
             ExaminationStuffSeeder::class,
             MasterVaccineSeeder::class,
@@ -49,6 +49,7 @@ class DatabaseSeeder extends Seeder
             DosageFormSeeder::class,
             FreqUnitSeeder::class,
             MedicalCompositionUnitSeeder::class,
+            CompositionUnitSeeder::class,
             MedicalNetUnitSeeder::class,
             MixUnitSeeder::class,
             TherapeuticClassSeeder::class,
@@ -56,7 +57,10 @@ class DatabaseSeeder extends Seeder
             TrademarkSeeder::class,
             UsageLocationSeeder::class,
             UsageRouteSeeder::class,
-            ItemCollectionSeeder::class
+            RoomItemCategorySeeder::class,
+            ItemCollectionSeeder::class,
+            ClassRoomSeeder::class,
+            BrandSeeder::class,
             // InfrastructureSeeder::class
         ]);
     }

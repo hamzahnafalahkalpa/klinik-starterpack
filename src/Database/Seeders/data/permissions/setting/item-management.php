@@ -10,11 +10,11 @@ return [
     'guard_name'  => 'api',
     'childs'      => [
         include __DIR__.'/item-management/brand.php',
+        include __DIR__.'/item-management/composition-unit.php',
         include __DIR__.'/item-management/unit-of-measure.php',
         include __DIR__.'/item-management/medicine.php',
         include __DIR__.'/item-management/net-unit.php',
         include __DIR__.'/item-management/selling-form.php',
-        include __DIR__.'/item-management/unit-of-measure.php'
     ]
 ];
 

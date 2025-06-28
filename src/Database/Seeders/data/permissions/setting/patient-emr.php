@@ -9,9 +9,7 @@ return [
     'type'        => Type::MODULE->value,
     'guard_name'  => 'api',
     'childs'      => [
-        include __DIR__.'/patient-emr/marital-status.php',
-        include __DIR__.'/patient-emr/family-role.php',
-        include __DIR__.'/patient-emr/education.php',
+        include __DIR__.'/patient-emr/service-label.php',
         include __DIR__.'/patient-emr/examination.php',
     ]
 ];

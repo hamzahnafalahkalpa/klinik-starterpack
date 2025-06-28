@@ -1,0 +1,33 @@
+<?php
+
+use Hanafalah\LaravelPermission\Enums\Permission\Type;
+
+return [
+    'name'        => 'Pelabelan Layanan', 
+    'alias'       => 'service-label',
+    'icon'        => 'ix:label-filled',
+    'type'        => Type::MODULE->value,
+    'show_in_acl' => true,
+    'guard_name'  => 'api',
+    'childs' => [
+        [
+            'name'       => 'Tambah Pelabelan Layanan',
+            'alias'      => 'create',
+            'type'       => Type::PERMISSION->value,
+            'guard_name' => 'api'
+        ],
+        [
+            'name'       => 'Ubah Pelabelan Layanan',
+            'alias'      => 'update',
+            'type'       => Type::PERMISSION->value,
+            'guard_name' => 'api'
+        ],
+        [
+            'name'       => 'Hapus Pelabelan Layanan',
+            'alias'      => 'delete',
+            'type'       => Type::PERMISSION->value,
+            'guard_name' => 'api'
+        ]
+    ]
+];
+

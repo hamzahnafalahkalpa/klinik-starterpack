@@ -8,8 +8,6 @@ use Illuminate\Database\Seeder;
 class DosageFormSeeder extends Seeder{
     use HasRequestData;
 
-    private $__item_stuff;
-
     protected $datas = [
             ['name' => 'Aerosol'],
             ['name' => 'Ekstrak Bubuk'],

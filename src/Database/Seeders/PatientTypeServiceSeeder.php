@@ -2,7 +2,7 @@
 
 namespace Hanafalah\KlinikStarterpack\Database\Seeders;
 use Hanafalah\LaravelSupport\Concerns\Support\HasRequest;
-use Hanafalah\ModulePatient\Contracts\Data\PatientTypeData;
+use Hanafalah\ModulePatient\Contracts\Data\PatientTypeServiceData;
 use Illuminate\Database\Seeder;
 
 class PatientTypeServiceSeeder extends Seeder
@@ -42,7 +42,7 @@ class PatientTypeServiceSeeder extends Seeder
             ]
         ];
         foreach ($arr as $data) {
-            app(config('app.contracts.PatientType'))->prepareStorePatientType($this->requestDTO(PatientTypeData::class,$data));
+            app(config('app.contracts.PatientTypeService'))->prepareStorePatientTypeService($this->requestDTO(PatientTypeServiceData::class,$data));
         }
     }
 }

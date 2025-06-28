@@ -10,6 +10,7 @@ return [
     'show_in_acl' => true,
     'guard_name'  => 'api',
     'childs'      => [
+        include __DIR__.'/item-management/supply-chain.php',
         include __DIR__.'/item-management/medical-item.php',
         include __DIR__.'/item-management/inventory.php',
     ]
