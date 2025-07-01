@@ -46,7 +46,6 @@ class InstallMakeCommand extends EnvironmentCommand
             }
         }
         
-
         $this->call('micro:install',[
             "--skip-generate" => true
         ]);

@@ -61,7 +61,7 @@ class DatabaseSeeder extends Seeder
             ItemCollectionSeeder::class,
             ClassRoomSeeder::class,
             BrandSeeder::class,
-            // InfrastructureSeeder::class
+            InfrastructureSeeder::class
         ]);
     }
 }

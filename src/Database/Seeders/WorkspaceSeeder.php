@@ -183,17 +183,10 @@ class WorkspaceSeeder extends Seeder{
         file_put_contents(__DIR__.'/../../../project-requirements.json', json_encode($requires, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
         $this->updateComposer($composer, __DIR__.'/../../../project-requirements.json','require');
 
-        shell_exec("cd $tenant_path/".Str::kebab($tenant->name)." && rm -rf composer.lock && composer install");
+        // shell_exec("cd $tenant_path/".Str::kebab($tenant->name)." && rm -rf composer.lock && composer install");
         
         MicroTenant::tenantImpersonate($tenant);
         tenancy()->initialize($tenant->getKey());
-        // Artisan::call('optimize:clear');
-
-        // Artisan::call('impersonate:cache',[
-        //     '--tenant_id' => $tenant->getKey(),
-        //     '--group_id'  => $group_tenant->getKey(),
-        //     '--app_id'    => $project_tenant->getKey()
-        // ]);
         
         Artisan::call('impersonate:migrate',[
             '--app'       => true,
