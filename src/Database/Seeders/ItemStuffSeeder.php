@@ -29,7 +29,7 @@ class ItemStuffSeeder extends Seeder{
             ['name' => 'Pouch'],
             ['name' => 'Flask'],
         ],
-        'NetUnit' => [
+        'ReceiveUnit' => [
             ['name' => 'Box'],
             ['name' => 'Dus'],
             ['name' => 'Container'],

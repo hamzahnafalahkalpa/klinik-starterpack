@@ -14,7 +14,8 @@ return [
             'name'       => 'Tambah Pelabelan Layanan',
             'alias'      => 'create',
             'type'       => Type::PERMISSION->value,
-            'guard_name' => 'api'
+            'guard_name' => 'api',
+            'show_in_acl' => true
         ],
         [
             'name'       => 'Ubah Pelabelan Layanan',

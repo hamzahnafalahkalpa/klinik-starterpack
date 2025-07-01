@@ -10,6 +10,7 @@ return [
     'guard_name'  => 'api',
     'childs'      => [
         include __DIR__.'/supply-chain/purchase-request.php',
+        include __DIR__.'/supply-chain/purchase-order.php',
         include __DIR__.'/supply-chain/purchasing.php',
         include __DIR__.'/supply-chain/receive-order.php',
     ]

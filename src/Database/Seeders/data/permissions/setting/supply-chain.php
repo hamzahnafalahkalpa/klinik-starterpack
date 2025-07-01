@@ -11,7 +11,8 @@ return [
     'guard_name'  => 'api',
     'childs'      => [
         include __DIR__.'/supply-chain/supplier.php',
-        include __DIR__.'/supply-chain/received-unit.php'
+        include __DIR__.'/supply-chain/purchase-label.php',
+        include __DIR__.'/supply-chain/receive-unit.php'
     ]
 ];
 
