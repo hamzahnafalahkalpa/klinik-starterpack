@@ -3,28 +3,36 @@
 use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
-    'name'        => 'Label Pembelian',
-    'alias'       => 'purchase-label',
-    'icon'        => 'streamline-plump:page-setting-solid',
+    'name'        => 'Tindakan Medis',
+    'alias'       => 'medical-treatment',
+    'icon'        => 'hugeicons:treatment',
     'type'        => Type::MODULE->value,
     'show_in_acl' => true,
     'guard_name'  => 'api',
     'childs' => [
         [
-            'name'       => 'Tambah Label Pembelian',
+            'name'       => 'Tambah Tindakan Medis',
             'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
-            'name'       => 'Ubah Label Pembelian',
+            'name'       => 'Detail Tindakan Medis',
+            'alias'      => 'store',
+            'type'       => Type::PERMISSION->value,
+            'guard_name' => 'api',
+            'show_in_acl' => true,
+            'show_in_data' => true
+        ],
+        [
+            'name'       => 'Ubah Tindakan Medis',
             'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
-            'name'       => 'Hapus Label Pembelian',
+            'name'       => 'Hapus Tindakan Medis',
             'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'

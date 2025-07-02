@@ -12,7 +12,7 @@ return [
     'childs' => [
         [
             'name'       => 'Tambah Pelabelan Layanan',
-            'alias'      => 'create',
+            'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
@@ -25,7 +25,7 @@ return [
         ],
         [
             'name'       => 'Hapus Pelabelan Layanan',
-            'alias'      => 'delete',
+            'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]

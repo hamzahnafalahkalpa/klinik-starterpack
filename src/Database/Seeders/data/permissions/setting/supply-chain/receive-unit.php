@@ -12,7 +12,7 @@ return [
     'childs' => [
         [
             'name'       => 'Tambah Unit Penerimaan Barang',
-            'alias'      => 'create',
+            'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
@@ -25,7 +25,7 @@ return [
         ],
         [
             'name'       => 'Hapus Unit Penerimaan Barang',
-            'alias'      => 'delete',
+            'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]
