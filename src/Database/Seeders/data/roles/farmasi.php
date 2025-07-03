@@ -6,5 +6,5 @@ return [
     // 'medicine-management.*',
     // 'patient-management.letter-queue.*',
     // 'transaction.payment-history.*'
-    "api.setting.procurement.*"
+    "api.setting.supply-chain.*"
 ];
