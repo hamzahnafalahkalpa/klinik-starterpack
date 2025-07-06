@@ -9,6 +9,7 @@ return [
     'type'        => Type::MENU->value,
     'show_in_acl' => true,
     'guard_name'  => 'api',
+    'ordering'    => 10,
     'childs'      => [
         include __DIR__.'/setting/general-setting.php',
         include __DIR__.'/setting/acl.php',

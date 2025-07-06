@@ -18,6 +18,14 @@ return [
             'show_in_acl'     => true
         ],
         [
+            'name'            => 'Detail Komponen Tarif',
+            'alias'           => 'show',
+            'type'            => Type::PERMISSION->value,
+            'guard_name'      => 'api',
+            'show_in_acl'     => true,
+            'show_in_data'    => true
+        ],
+        [
             'name'            => 'Ubah Komponen Tarif',
             'alias'           => 'update',
             'type'            => Type::PERMISSION->value,

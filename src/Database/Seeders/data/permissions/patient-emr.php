@@ -8,6 +8,7 @@ return [
     'icon'       => 'fluent:patient-20-regular',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',
+    'ordering'   => 1,
     'childs'     => [
         include(__DIR__.'/patient-emr/patient.php'),
         include(__DIR__.'/patient-emr/visit-patient.php'),

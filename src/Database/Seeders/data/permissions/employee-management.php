@@ -8,6 +8,7 @@ return [
     'icon'       => 'clarity:employee-group-solid',
     'type'       => Type::MENU->value,
     'guard_name' => 'api',
+    'ordering'   => 2,
     'childs'     => [
         include(__DIR__.'/employee-management/employee.php'),
         include(__DIR__.'/employee-management/shift.php'),
