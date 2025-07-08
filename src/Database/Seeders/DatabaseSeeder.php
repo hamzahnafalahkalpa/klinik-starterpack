@@ -12,6 +12,7 @@ use Hanafalah\ModulePeople\Database\Seeders\DatabaseSeeder as PeopleCollectionSe
 use Hanafalah\ModuleAnatomy\Database\Seeders\DatabaseSeeder as AnatomyCollectionSeeder;
 use Hanafalah\ModuleItem\Database\Seeders\DatabaseSeeder as ItemCollectionSeeder;
 use Hanafalah\ModuleExamination\Seeders\FormSeeder;
+use Hanafalah\ModuleInformedConsent\Seeders\MasterInformedConsentSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -64,7 +65,8 @@ class DatabaseSeeder extends Seeder
             InfrastructureSeeder::class,
             PurchaseLabelSeeder::class,
             SampleSeeder::class,
-            ClinicalPathologySeeder::class
+            ClinicalPathologySeeder::class,
+            MasterInformedConsentSeeder::class
         ]);
     }
 }
