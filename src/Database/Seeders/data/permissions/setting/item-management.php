@@ -13,7 +13,6 @@ return [
         include __DIR__.'/item-management/composition-unit.php',
         include __DIR__.'/item-management/unit-of-measure.php',
         include __DIR__.'/item-management/medicine.php',
-        include __DIR__.'/item-management/net-unit.php',
         include __DIR__.'/item-management/selling-form.php',
     ]
 ];

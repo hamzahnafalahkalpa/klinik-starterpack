@@ -14,6 +14,10 @@ return [
         include __DIR__.'/medicine/therapeutic-class.php',
         include __DIR__.'/medicine/usage-location.php',
         include __DIR__.'/medicine/usage-route.php',
+        include __DIR__.'/medicine/freq-unit.php',
+        include __DIR__.'/medicine/medical-composition-unit.php',
+        include __DIR__.'/medicine/medical-net-unit.php',
+        include __DIR__.'/medicine/prescription-mix-unit.php',
     ]
 ];
 
