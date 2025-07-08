@@ -3,32 +3,39 @@
 use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
-    'name'        => 'Pelabelan Layanan', 
-    'alias'       => 'service-label',
-    'icon'        => 'ix:label-filled',
+    'name'        => 'Master Sample',
+    'alias'       => 'sample',
+    'icon'        => 'game-icons:anatomy',
     'type'        => Type::MODULE->value,
     'show_in_acl' => true,
     'guard_name'  => 'api',
     'childs' => [
         [
-            'name'       => 'Tambah Pelabelan Layanan',
+            'name'       => 'Tambah Master Sample',
             'alias'      => 'store',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
             'show_in_acl' => true
         ],
         [
-            'name'       => 'Ubah Pelabelan Layanan',
+            'name'       => 'Detial Master Sample',
+            'alias'      => 'show',
+            'type'       => Type::PERMISSION->value,
+            'guard_name' => 'api',
+            'show_in_acl' => true,
+            'show_in_data' => true
+        ],
+        [
+            'name'       => 'Ubah Master Sample',
             'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
-            'name'       => 'Hapus Pelabelan Layanan',
+            'name'       => 'Hapus Master Sample',
             'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ]
     ]
 ];
-

@@ -62,7 +62,9 @@ class DatabaseSeeder extends Seeder
             ClassRoomSeeder::class,
             BrandSeeder::class,
             InfrastructureSeeder::class,
-            PurchaseLabelSeeder::class
+            PurchaseLabelSeeder::class,
+            SampleSeeder::class,
+            ClinicalPathologySeeder::class
         ]);
     }
 }

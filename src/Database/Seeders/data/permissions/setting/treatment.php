@@ -9,8 +9,10 @@ return [
     'type'        => Type::MODULE->value,
     'guard_name'  => 'api',
     'childs'      => [
+        include __DIR__.'/treatment/sample.php',
         include __DIR__.'/treatment/medical-treatment.php',
-        include __DIR__.'/treatment/lab-treatment.php',
+        include __DIR__.'/treatment/clinical-pathology.php',
+        include __DIR__.'/treatment/anatomical-pathology.php',
         include __DIR__.'/treatment/radiology-treatment.php',
     ]
 ];
