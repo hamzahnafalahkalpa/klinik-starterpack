@@ -36,8 +36,8 @@ class InstallSubmoduleCommand extends EnvironmentCommand
 
         $this->updateComposer(base_path('composer.json'), __DIR__.'/../../repositories.json', 'repositories');
 
-        // shell_exec('rm -rf composer.lock');
-        // shell_exec('composer install');
+        shell_exec('rm -rf composer.lock');
+        shell_exec('composer install');
 
         $this->appSubmodule('project','klinik')
              ->appSubmodule('group','group-initial-klinik')
