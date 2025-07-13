@@ -12,6 +12,7 @@ return [
     'childs'     => [
         include(__DIR__.'/patient-emr/patient.php'),
         include(__DIR__.'/patient-emr/visit-patient.php'),
+        include(__DIR__.'/patient-emr/visit-registration.php'),
         include(__DIR__.'/patient-emr/patient-referral.php'),
         include(__DIR__.'/patient-emr/appointment.php'),
         include(__DIR__.'/patient-emr/reservation.php'),
