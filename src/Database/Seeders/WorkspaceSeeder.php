@@ -139,7 +139,7 @@ class WorkspaceSeeder extends Seeder{
                 ]
             ];
             if (Str::kebab($original) != 'hanafalah/microtenant'){
-                $requires['require'][Str::kebab($original)] = 'dev-main'; 
+                $requires['require'][Str::kebab($original)] = '1.x-dev as 1.0'; 
             }
         }
         $project_tenant->setAttribute('packages',$package_providers);
