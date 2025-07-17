@@ -14,10 +14,10 @@ class ProfessionSeeder extends Seeder
         [
             "name" => "Tenaga Medis",
             "childs" => [
-                ["name" => "Dokter Umum", 'Doctor'],
-                ["name" => "Dokter Spesialis", 'Doctor'],
-                ["name" => "Dokter Gigi Umum", 'Doctor'],
-                ["name" => "Dokter Gigi Spesialis", 'Doctor'],
+                ["name" => "Dokter Umum", 'label' => 'Doctor'],
+                ["name" => "Dokter Spesialis", 'label' => 'Doctor'],
+                ["name" => "Dokter Gigi Umum", 'label' => 'Doctor'],
+                ["name" => "Dokter Gigi Spesialis", 'label' => 'Doctor'],
             ],
         ],
         [
@@ -35,8 +35,8 @@ class ProfessionSeeder extends Seeder
         [
             "name" => "Tenaga Kefarmasian",
             "childs" => [
-                ["name" => "Apoteker",'Pharmacy'],
-                ["name" => "Tenaga Teknik Kefarmasian",'Pharmacy'],
+                ["name" => "Apoteker",'label' => 'Pharmacy'],
+                ["name" => "Tenaga Teknik Kefarmasian",'label' => 'Pharmacy'],
             ],
         ],
         [
