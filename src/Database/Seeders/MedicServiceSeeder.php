@@ -18,27 +18,27 @@ class MedicServiceSeeder extends Seeder
                 'name' => 'Rawat Jalan',
                 'flag' => 'MedicService','label' => Label::OUTPATIENT->value,
                 'childs' => [
-                    ['name' => 'Umum', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
-                    ['name' => 'Orthopedi', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
-                    ['name' => 'Sunat', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
-                    ['name' => 'Kecantikan', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
-                    ['name' => 'Mata', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
-                    ['name' => 'THT', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
-                    ['name' => 'Penyakit Dalam', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
-                    ['name' => 'Gigi & Mulut', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
-                    ['name' => 'KIA', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
-                    ['name' => 'Lansia', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
-                    ['name' => 'Admin', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
-                    ['name' => 'Vaccine', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value],
-                    ['name' => 'MTBS', 'flag' => 'MedicService','label' => Label::OUTPATIENT->value]
+                    ['name' => 'Umum', 'flag' => 'MedicService','label' => 'UMUM'],
+                    ['name' => 'Orthopedi', 'flag' => 'MedicService','label' => 'ORTHOPEDI'],
+                    ['name' => 'Sunat', 'flag' => 'MedicService','label' => 'SUNAT'],
+                    ['name' => 'Kecantikan', 'flag' => 'MedicService','label' => 'KECANTIKAN'],
+                    ['name' => 'Mata', 'flag' => 'MedicService','label' => 'MATA'],
+                    ['name' => 'THT', 'flag' => 'MedicService','label' => 'THT'],
+                    ['name' => 'Penyakit Dalam', 'flag' => 'MedicService','label' => 'INTERNIS'],
+                    ['name' => 'Gigi & Mulut', 'flag' => 'MedicService','label' => 'GIGI & MULUT'],
+                    ['name' => 'KIA', 'flag' => 'MedicService','label' => 'KIA'],
+                    ['name' => 'Lansia', 'flag' => 'MedicService','label' => 'LANSIA'],
+                    ['name' => 'Admin', 'flag' => 'MedicService','label' => 'ADMIN'],
+                    ['name' => 'Vaccine', 'flag' => 'MedicService','label' => 'VACCINE'],
+                    ['name' => 'MTBS', 'flag' => 'MedicService','label' => 'MTBS']
                 ]
             ],
             [
                 'name' => 'Laboratorium Klinik',
                 'flag' => 'MedicService','label' => Label::LABORATORY->value,
                 'childs' => [
-                    ['name' => 'Patalogi Klinik', 'flag' => 'MedicService','label' => Label::LABORATORY->value],
-                    ['name' => 'Patalogi Anatomi', 'flag' => 'MedicService','label' => Label::LABORATORY->value],
+                    ['name' => 'Patalogi Klinik', 'flag' => 'MedicService','label' => 'PATOLOGI KLINIK'],
+                    ['name' => 'Patalogi Anatomi', 'flag' => 'MedicService','label' => 'PATOLOGI ANATOMI'],
                 ]
             ],
             ['name' => 'Medical Check Up', 'flag' => 'MedicService','label' => Label::MCU->value],

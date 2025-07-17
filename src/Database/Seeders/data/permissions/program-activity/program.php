@@ -29,15 +29,17 @@ return [
             'type'        => Type::PERMISSION->value,
             'guard_name'  => 'api',
             'show_in_data' => true,
-            'show_in_acl' => true
+            'show_in_acl' => true,
+            'childs'       => [
+                include(__DIR__.'/program/activity-list.php')
+            ]
         ],
         [
             'name'       => 'Hapus Program',
             'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
-        ],
-        include(__DIR__.'/program/activity.php')
+        ]
     ]
 ];
 

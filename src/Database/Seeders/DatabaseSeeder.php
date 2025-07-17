@@ -5,13 +5,15 @@ namespace Hanafalah\KlinikStarterpack\Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use Hanafalah\ModuleEmployee\Seeders\EmployeeTypeSeeder;
-use Hanafalah\ModuleExamination\Seeders\ExaminationStuffSeeder;
-use Hanafalah\ModuleExamination\Seeders\MasterVaccineSeeder;
+use Hanafalah\ModuleExamination\Seeders\{
+    ExaminationStuffSeeder,
+    MasterVaccineSeeder,
+    FormSeeder
+};
 use Hanafalah\ModulePayment\Database\Seeders\DatabaseSeeder as ModulePaymentSeeder;
 use Hanafalah\ModulePeople\Database\Seeders\DatabaseSeeder as PeopleCollectionSeeder;
 use Hanafalah\ModuleAnatomy\Database\Seeders\DatabaseSeeder as AnatomyCollectionSeeder;
 use Hanafalah\ModuleItem\Database\Seeders\DatabaseSeeder as ItemCollectionSeeder;
-use Hanafalah\ModuleExamination\Seeders\FormSeeder;
 use Hanafalah\ModuleInformedConsent\Seeders\MasterInformedConsentSeeder;
 use Illuminate\Database\Seeder;
 
@@ -66,7 +68,10 @@ class DatabaseSeeder extends Seeder
             PurchaseLabelSeeder::class,
             SampleSeeder::class,
             ClinicalPathologySeeder::class,
-            MasterInformedConsentSeeder::class
+            RadiologySeeder::class,
+            MasterInformedConsentSeeder::class,
+            ProgramCategorySeeder::class,
+            ProgramOccupationSeeder::class
         ]);
     }
 }
