@@ -12,7 +12,6 @@ return [
     'childs'     => [
         include(__DIR__.'/program-activity/program.php'),
         include(__DIR__.'/program-activity/activity-list.php'),
+        include(__DIR__.'/program-activity/surveillance.php')
     ]
 ];
-
- 

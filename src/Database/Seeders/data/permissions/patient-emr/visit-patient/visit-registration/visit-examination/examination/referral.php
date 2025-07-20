@@ -3,39 +3,36 @@
 use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
-    'name'            => 'Kunjungan Pasien', 
-    'alias'           => 'visit-patient',
+    'name'            => 'Rujukan Pasien', 
+    'alias'           => 'referral',
     'icon'            => 'healthicons:outpatient-department',
     'show_in_acl'     => true,
-    'type'            => Type::MENU->value,
+    'type'            => Type::MODULE->value,
     'guard_name'      => 'api',
     'childs'          => [        
         [
-            'name'        => 'Kelola Kunjungan Pasien', 
+            'name'        => 'Kelola Rujukan', 
             'alias'       => 'store',
             'type'        => Type::PERMISSION->value,
             'guard_name'  => 'api',
             'show_in_acl' => true
         ],
         [
-            'name'        => 'Ubah Kunjungan Pasien', 
+            'name'        => 'Ubah Rujukan', 
             'alias'       => 'update',
             'type'        => Type::PERMISSION->value,
             'guard_name'  => 'api'
         ],
         [
-            'name'         => 'Detail Kunjungan Pasien', 
+            'name'         => 'Detail Rujukan', 
             'alias'        => 'show',
             'type'         => Type::PERMISSION->value,
             'guard_name'   => 'api',
             'show_in_data' => true,
-            'show_in_acl'  => true,
-            'childs'       => [
-                include(__DIR__.'/visit-patient/visit-registration.php'),
-            ]
+            'show_in_acl'  => true
         ],
         [
-            'name'       => 'Hapus Kunjungan Pasien', 
+            'name'       => 'Hapus Rujukan', 
             'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'

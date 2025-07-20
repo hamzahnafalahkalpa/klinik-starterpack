@@ -17,11 +17,12 @@ return [
         include(__DIR__.'/patient-emr/appointment.php'),
         include(__DIR__.'/patient-emr/reservation.php'),
         include(__DIR__.'/patient-emr/letter-queue.php'),
-        include(__DIR__.'/patient-emr/emergency-waiting-list.php'),
-        include(__DIR__.'/patient-emr/mcu-waiting-list.php'),
-        include(__DIR__.'/patient-emr/outpatient-waiting-list.php'),
-        include(__DIR__.'/patient-emr/lab-waiting-list.php'),
-        include(__DIR__.'/patient-emr/radiology-waiting-list.php'),
+        include(__DIR__.'/patient-emr/emergency-unit.php'),
+        include(__DIR__.'/patient-emr/medical-checkup.php'),
+        include(__DIR__.'/patient-emr/nurse-station.php'),
+        include(__DIR__.'/patient-emr/verlos-kamer.php'),
+        include(__DIR__.'/patient-emr/laboratorium.php'),
+        include(__DIR__.'/patient-emr/radiology.php')
     ]
 ];
 

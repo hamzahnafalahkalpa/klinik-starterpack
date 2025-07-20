@@ -3,39 +3,36 @@
 use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
-    'name'        => 'Master Kegiatan',
-    'alias'       => 'activity',
-    'icon'        => 'simple-icons:eventstore',
+    'name'        => 'Master Surveillance',
+    'alias'       => 'surveillance',
+    'icon'        => 'fluent:task-list-square-sparkle-16-filled',
     'type'        => Type::MENU->value,
     'show_in_acl' => true,
     'guard_name'  => 'api',
     'childs'      => [
         [
-            'name'        => 'Tambah Kegiatan',
+            'name'        => 'Tambah Surveillance',
             'alias'       => 'store',
             'type'        => Type::PERMISSION->value,
             'guard_name'  => 'api',
             'show_in_acl' => true
         ],
         [
-            'name'        => 'Ubah Kegiatan',
+            'name'        => 'Ubah Surveillance',
             'alias'       => 'update',
             'type'        => Type::PERMISSION->value,
             'guard_name'  => 'api'
         ],
         [
-            'name'        => 'Detail Kegiatan',
+            'name'        => 'Detail Surveillance',
             'alias'       => 'show',
             'type'        => Type::PERMISSION->value,
             'guard_name'  => 'api',
             'show_in_data' => true,
-            'show_in_acl' => true,
-            'childs'       => [
-                include(__DIR__.'/activity-list/surveillance.php')
-            ]
+            'show_in_acl' => true
         ],
         [
-            'name'       => 'Hapus Kegiatan',
+            'name'       => 'Hapus Surveillance',
             'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'

@@ -29,7 +29,10 @@ return [
             'type'        => Type::PERMISSION->value,
             'guard_name'  => 'api',
             'show_in_data' => true,
-            'show_in_acl' => true
+            'show_in_acl' => true,
+            'childs'       => [
+                include(__DIR__.'/activity-list/surveillance.php')
+            ]
         ],
         [
             'name'       => 'Hapus Kegiatan',
