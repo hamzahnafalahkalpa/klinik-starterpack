@@ -39,26 +39,25 @@ class WorkspaceSeeder extends Seeder{
                 'name'           => 'Klinik',
                 'flag'           => $tenant_model::FLAG_APP_TENANT,
                 'reference_id'   => null,
-                'reference_type' => null
+                'reference_type' => null,
+                'provider'       => $project_namespace.'\\Klinik\\Providers\\KlinikServiceProvider',
+                'path'           => $generator_config['patterns']['project']['published_at'],
+                'packages'       => [],
+                'config'         => $generator_config['patterns']['project']
             ]));
-            $project_tenant->provider = $project_namespace.'\\Klinik\\Providers\\KlinikServiceProvider';
-            $project_tenant->path     = $generator_config['patterns']['project']['published_at'];
-            $project_tenant->packages = [];
-            $project_tenant->config   = $generator_config['patterns']['project'];
-            $project_tenant->save();
 
             $group_tenant = $tenant_schema->prepareStoreTenant($this->requestDTO(TenantData::class,[
                 'parent_id'      => $project_tenant->getKey(),
                 'name'           => 'Group Initial Klinik',
                 'flag'           => $tenant_model::FLAG_CENTRAL_TENANT,
                 'reference_id'   => null,
-                'reference_type' => null
+                'reference_type' => null,
+                'provider'       => $group_namespace.'\\GroupInitialKlinik\\Providers\\GroupInitialKlinikServiceProvider',
+                'app'            => ['provider' => $project_tenant->provider],
+                'path'           => $generator_config['patterns']['group']['published_at'],
+                'packages'       => [],
+                'config'         => $generator_config['patterns']['group']
             ]));
-            $group_tenant->provider     = $group_namespace.'\\GroupInitialKlinik\\Providers\\GroupInitialKlinikServiceProvider';
-            $group_tenant->app          = ['provider' => $project_tenant->provider];
-            $group_tenant->path         = $generator_config['patterns']['group']['published_at'];
-            $group_tenant->packages     = [];
-            $group_tenant->config       = $generator_config['patterns']['group'];
             $group_tenant->save();
 
             $workspace = app(config('app.contracts.Workspace'))->prepareStoreWorkspace(WorkspaceData::from([
@@ -94,16 +93,14 @@ class WorkspaceSeeder extends Seeder{
                 'reference_type' => $workspace->getMorphClass(),
                 'domain'         => [
                     'name' => 'localhost:8002'
-                ]
+                ],
+                'provider' => $tenant_namespace.'\\TenantKlinik\\Providers\\TenantKlinikServiceProvider',
+                'path'     => $generator_config['patterns']['tenant']['published_at'],
+                'app'      => ['provider' => $project_tenant->provider],
+                'group'    => ['provider' => $group_tenant->provider],
+                'packages' => [],
+                'config'   => $generator_config['patterns']['tenant']
             ]));
-
-            $tenant->provider = $tenant_namespace.'\\TenantKlinik\\Providers\\TenantKlinikServiceProvider';
-            $tenant->path     = $generator_config['patterns']['tenant']['published_at'];
-            $tenant->app      = ['provider' => $project_tenant->provider];
-            $tenant->group    = ['provider' => $group_tenant->provider];
-            $tenant->packages = [];
-            $tenant->config   = $generator_config['patterns']['tenant'];
-            $tenant->save();
         }else{
             $tenant         = $workspace->tenant;
             $group_tenant   = $tenant->parent;
