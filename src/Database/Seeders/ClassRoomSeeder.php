@@ -11,27 +11,45 @@ class ClassRoomSeeder extends Seeder{
     protected $datas = [
         [
             'name' => 'Reguler',
-            'daily_rate' => 100000,
+            'service' => [
+                "id" => null,
+                "price" => 100000
+            ],
         ],
         [
             'name' => 'VIP',
-            'daily_rate' => 150000,
+            'service' => [
+                "id" => null,
+                "price" => 150000
+            ],
         ],
         [
             'name' => 'VVIP',
-            'daily_rate' => 250000,
+            'service' => [
+                "id" => null,
+                "price" => 250000
+            ],
         ],
         [
             'name' => 'BPJS I',
-            'daily_rate' => 250000,
+            'service' => [
+                "id" => null,
+                "price" => 250000
+            ],
         ],
         [
             'name' => 'BPJS II',
-            'daily_rate' => 150000,
+            'service' => [
+                "id" => null,
+                "price" => 150000
+            ],
         ],
         [
             'name' => 'BPJS III',
-            'daily_rate' => 100000,
+            'service' => [
+                "id" => null,
+                "price" => 100000
+            ],
         ]
     ];
 
@@ -41,7 +59,7 @@ class ClassRoomSeeder extends Seeder{
             $service = app(config('database.models.Service'))->where('name', $service_name)->first();
             if (isset($service)){
                 foreach ($this->datas as $data) {
-                    $data['service_id'] = $service->getKey();
+                    $data['service_type_id'] = $service->getKey();
                     app(config('app.contracts.ClassRoom'))->prepareStoreClassRoom(
                         $this->requestDTO(config('app.contracts.ClassRoomData'), $data)
                     );

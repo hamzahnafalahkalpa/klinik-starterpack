@@ -21,6 +21,8 @@ return [
         include(__DIR__.'/patient-emr/medical-checkup.php'),
         include(__DIR__.'/patient-emr/nurse-station.php'),
         include(__DIR__.'/patient-emr/verlos-kamer.php'),
+        include(__DIR__.'/patient-emr/visit-pustu.php'),
+        include(__DIR__.'/patient-emr/visit-posyandu.php'),
         include(__DIR__.'/patient-emr/laboratorium.php'),
         include(__DIR__.'/patient-emr/radiology.php')
     ]

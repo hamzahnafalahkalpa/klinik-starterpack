@@ -55,7 +55,9 @@ class MedicServiceSeeder extends Seeder
                 ]
             ],
             ['name' => 'Persalinan', 'flag' => 'MedicService','label' => Label::VERLOS_KAMER->value],
-            ['name' => 'Instalasi Gawat Darurat' , 'flag' => 'MedicService','label' => Label::EMERGENCY_UNIT->value],
+            ['name' => 'Instalasi Gawat Darurat', 'flag' => 'MedicService','label' => Label::EMERGENCY_UNIT->value],
+            ['name' => 'Puskesmas Pembantu', 'flag' => 'MedicService','label' => Label::PUSKESMAS_PEMBANTU->value],
+            ['name' => 'Posyandu', 'flag' => 'MedicService','label' => Label::POSYANDU->value],
         ];
         foreach ($arr as $data) {
             app(config('app.contracts.MedicService'))->prepareStoreMedicService($this->requestDTO(MedicServiceData::class,$data));

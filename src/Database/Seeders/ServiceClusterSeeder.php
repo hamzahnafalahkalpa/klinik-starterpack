@@ -41,6 +41,14 @@ class ServiceClusterSeeder extends Seeder
                 'name'  => 'Kluster 4',
                 'flag'  => 'ServiceCluster',
                 'label' => 'KLUSTER 4',
+                'childs' => [
+                    ['name' => 'Penanggulangan Penyakit Menular', 'flag' => 'ServiceCluster','label' => 'PENANGGULANGAN PENYAKIT MENULAR'],
+                ]
+            ],
+            [
+                'name'  => 'Lintas Kluster',
+                'flag'  => 'ServiceCluster',
+                'label' => 'LINTAS KLUSTER',
             ],
             [
                 'name'  => 'Luar Gedung',

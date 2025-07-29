@@ -19,15 +19,16 @@ class EmployeeSeeder extends Seeder
     {
         $user = app(config('database.models.User'))->where('username','admin')->first();
         if (!isset($user)){
-            $role_ids = app(config('database.models.Role'))->get()->pluck('id')->toArray();
-            $user     = app(config('database.models.User'))->where('username','admin')->first();
+            $role_ids   = app(config('database.models.Role'))->get()->pluck('id')->toArray();
+            $user       = app(config('database.models.User'))->where('username','admin')->first();
+            $profession = app(config('database.models.Profession'))->whereLike('name','Dokter Umum')->firstOrFail();
 
             request()->merge([
                 "card_identity" => [ // Informasi identitas kartu
                     "nip" => null,
                     "bpjs_ketenagakerjaan" => null,
                 ],
-                "profession_id" => null, // ID profesi (null jika tidak ada)
+                "profession_id" => $profession->getKey(), // ID profesi (null jika tidak ada)
                 "hired_at" => "2025-03-25", // Tanggal mulai bekerja
                 "people" => [ // Informasi individu
                     "id" => null,
