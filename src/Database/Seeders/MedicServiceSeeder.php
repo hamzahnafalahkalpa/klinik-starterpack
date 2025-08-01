@@ -4,7 +4,7 @@ namespace Hanafalah\KlinikStarterpack\Database\Seeders;
 
 use Hanafalah\LaravelSupport\Concerns\Support\HasRequestData;
 use Hanafalah\ModuleMedicService\Contracts\Data\MedicServiceData;
-use Hanafalah\ModuleMedicService\Enums\Label;
+use Hanafalah\ModuleMedicService\Enums\Label;   
 use Illuminate\Database\Seeder;
 
 class MedicServiceSeeder extends Seeder
@@ -42,6 +42,7 @@ class MedicServiceSeeder extends Seeder
                 ]
             ],
             ['name' => 'Medical Check Up', 'flag' => 'MedicService','label' => Label::MCU->value],
+            ['name' => 'Ruang Tindakan', 'flag' => 'MedicService','label' => Label::TREATMENT_ROOM->value],
             ['name' => 'Radiologi', 'flag' => 'MedicService','label' => Label::RADIOLOGY->value],
             ['name' => 'Rawat Inap', 'flag' => 'MedicService','label' => Label::INPATIENT->value],
             ['name' => 'Administrasi', 'flag' => 'MedicService','label' => Label::ADMINISTRATION->value],
