@@ -32,6 +32,7 @@ return [
             'show_in_acl' => true,
             'childs'      => [
                 include_once __DIR__.'/patient/visit-patient.php',
+                include_once __DIR__.'/patient/visit-registration.php',
             ]
         ],
         [

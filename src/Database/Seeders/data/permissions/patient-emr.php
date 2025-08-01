@@ -24,7 +24,8 @@ return [
         include(__DIR__.'/patient-emr/visit-pustu.php'),
         include(__DIR__.'/patient-emr/visit-posyandu.php'),
         include(__DIR__.'/patient-emr/laboratorium.php'),
-        include(__DIR__.'/patient-emr/radiology.php')
+        include(__DIR__.'/patient-emr/radiology.php'),
+        include(__DIR__.'/patient-emr/referral.php')
     ]
 ];
 

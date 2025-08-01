@@ -32,6 +32,7 @@ return [
             'show_in_acl'  => true,
             'childs'       => [
                 include(__DIR__.'/visit-registration/visit-examination.php'),
+                include(__DIR__.'/visit-registration/referral.php'),
             ],
         ],
         [
