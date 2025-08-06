@@ -44,8 +44,8 @@ class ScreeningSeeder extends Seeder
             ],
             [
                 'id'=> null,
-                "name" => "Anemia",
-                "ordering" => null,
+                'name' => 'Anemia',
+                'ordering' => null,
                 'screening_has_forms' => [
                     [
                         'id' => null,
@@ -61,8 +61,8 @@ class ScreeningSeeder extends Seeder
             ],
             [
                 'id'=> null,
-                "name" => "Mulut & gigi",
-                "ordering" => null,
+                'name' => 'Mulut & gigi',
+                'ordering' => null,
                 'screening_has_forms' => [
                     [
                         'id' => null,
@@ -83,8 +83,8 @@ class ScreeningSeeder extends Seeder
             ],
             [
                 'id'=> null,
-                "name" => "Mata",
-                "ordering" => null,
+                'name' => 'Mata',
+                'ordering' => null,
                 'screening_has_forms' => [
                     [
                         'id' => null,
@@ -100,8 +100,8 @@ class ScreeningSeeder extends Seeder
             ],
             [
                 'id'=> null,
-                "name" => "Telinga",
-                "ordering" => null,
+                'name' => 'Telinga',
+                'ordering' => null,
                 'screening_has_forms' => [
                     [
                         'id' => null,
@@ -117,8 +117,8 @@ class ScreeningSeeder extends Seeder
             ],
             [
                 'id'=> null,
-                "name" => "Kekerasan anak & perempuan",
-                "ordering" => null,
+                'name' => 'Kekerasan anak & perempuan',
+                'ordering' => null,
                 'screening_has_forms' => [
                     [
                         'id' => null,
@@ -134,8 +134,8 @@ class ScreeningSeeder extends Seeder
             ],
             [
                 'id'=> null,
-                "name" => "Kesehatan Jiwa",
-                "ordering" => null,
+                'name' => 'Kesehatan Jiwa',
+                'ordering' => null,
                 'screening_has_forms' => [
                     [
                         'id' => null,
@@ -146,8 +146,8 @@ class ScreeningSeeder extends Seeder
             ],
             [
                 'id'=> null,
-                "name" => "Kebugaran",
-                "ordering" => null,
+                'name' => 'Kebugaran',
+                'ordering' => null,
                 'screening_has_forms' => [
                     [
                         'id' => null,
@@ -157,230 +157,230 @@ class ScreeningSeeder extends Seeder
                 ]
             ],
             [
-                "id" => null,
-                "name" => "ANC Terpadu",
-                "ordering" => null,
-                "screening_has_forms" => [
+                'id' => null,
+                'name' => 'ANC Terpadu',
+                'ordering' => null,
+                'screening_has_forms' => [
                     [
-                        "id" => null,
-                        "form_label" => "",
-                        "ordering" => 1
+                        'id' => null,
+                        'form_label' => '',
+                        'ordering' => 1
                     ]
                 ]
             ],
             [
-                "id" => null,
-                "name" => "Ibu Nifas",
-                "ordering" => null,
-                "screening_has_forms" => [
+                'id' => null,
+                'name' => 'Ibu Nifas',
+                'ordering' => null,
+                'screening_has_forms' => [
                     [
-                        "id" => null,
-                        "form_label" => "",
-                        "ordering" => 1
+                        'id' => null,
+                        'form_label' => '',
+                        'ordering' => 1
                     ]
                 ]
             ],
             [
-                "id" => null,
-                "name" => "Kesehatan Anak",
-                "ordering" => null,
-                "screening_has_forms" => [
+                'id' => null,
+                'name' => 'Kesehatan Anak',
+                'ordering' => null,
+                'screening_has_forms' => [
                     [
-                        "id" => null,
-                        "form_label" => "",
-                        "ordering" => 1
+                        'id' => null,
+                        'form_label' => '',
+                        'ordering' => 1
                     ]
                 ]
             ],
             [
-                "id" => null,
-                "name" => "HIV",
-                "ordering" => null,
-                "screening_has_forms" => [
+                'id' => null,
+                'name' => 'HIV',
+                'ordering' => null,
+                'screening_has_forms' => [
                     [
-                        "id" => null,
-                        "form_label" => "",
-                        "ordering" => 1
+                        'id' => null,
+                        'form_label' => '',
+                        'ordering' => 1
                     ]
                 ]
             ],
             [
-                "id" => null,
-                "name" => "Diabetes melitus",
-                "ordering" => null,
-                "screening_has_forms" => [
+                'id' => null,
+                'name' => 'Diabetes melitus',
+                'ordering' => null,
+                'screening_has_forms' => [
                     [
-                        "id" => null,
-                        "form_label" => "",
-                        "ordering" => 1
+                        'id' => null,
+                        'form_label' => '',
+                        'ordering' => 1
                     ]
                 ]
             ],
             [
-                "id" => null,
-                "name" => "Obesitas",
-                "ordering" => null,
-                "screening_has_forms" => [
+                'id' => null,
+                'name' => 'Obesitas',
+                'ordering' => null,
+                'screening_has_forms' => [
                     [
-                        "id" => null,
-                        "form_label" => "",
-                        "ordering" => 1
+                        'id' => null,
+                        'form_label' => '',
+                        'ordering' => 1
                     ]
                 ]
             ],
             [
-                "id" => null,
-                "name" => "Gizi",
-                "ordering" => null,
-                "screening_has_forms" => [
+                'id' => null,
+                'name' => 'Gizi',
+                'ordering' => null,
+                'screening_has_forms' => [
                     [
-                        "id" => null,
-                        "form_label" => "",
-                        "ordering" => 1
+                        'id' => null,
+                        'form_label' => '',
+                        'ordering' => 1
                     ]
                 ]
             ],
             [
-                "id" => null,
-                "name" => "Risiko Jantung & Stroke",
-                "ordering" => null,
-                "screening_has_forms" => [
+                'id' => null,
+                'name' => 'Risiko Jantung & Stroke',
+                'ordering' => null,
+                'screening_has_forms' => [
                     [
-                        "id" => null,
-                        "form_label" => "",
-                        "ordering" => 1
+                        'id' => null,
+                        'form_label' => '',
+                        'ordering' => 1
                     ]
                 ]
             ],
             [
-                "id" => null,
-                "name" => "Deteksi Kanker Leher Rahim & Payudara",
-                "ordering" => null,
-                "screening_has_forms" => [
+                'id' => null,
+                'name' => 'Deteksi Kanker Leher Rahim & Payudara',
+                'ordering' => null,
+                'screening_has_forms' => [
                     [
-                        "id" => null,
-                        "form_label" => "",
-                        "ordering" => 1
+                        'id' => null,
+                        'form_label' => '',
+                        'ordering' => 1
                     ]
                 ]
             ],
             [
-                "id" => null,
-                "name" => "Skrining PUMA",
-                "ordering" => null,
-                "screening_has_forms" => [
+                'id' => null,
+                'name' => 'Skrining PUMA',
+                'ordering' => null,
+                'screening_has_forms' => [
                     [
-                        "id" => null,
-                        "form_label" => "",
-                        "ordering" => 1
+                        'id' => null,
+                        'form_label' => '',
+                        'ordering' => 1
                     ]
                 ]
             ],
             [
-                "id" => null,
-                "name" => "Persalinan",
-                "ordering" => null,
-                "screening_has_forms" => [
+                'id' => null,
+                'name' => 'Persalinan',
+                'ordering' => null,
+                'screening_has_forms' => [
                     [
-                        "id" => null,
-                        "form_label" => "",
-                        "ordering" => 1
+                        'id' => null,
+                        'form_label' => '',
+                        'ordering' => 1
                     ]
                 ]
             ],
             [
-                "id" => null,
-                "name" => "Bayi baru Lahir",
-                "ordering" => null,
-                "screening_has_forms" => [
+                'id' => null,
+                'name' => 'Bayi baru Lahir',
+                'ordering' => null,
+                'screening_has_forms' => [
                     [
-                        "id" => null,
-                        "form_label" => "",
-                        "ordering" => 1
+                        'id' => null,
+                        'form_label' => '',
+                        'ordering' => 1
                     ]
                 ]
             ],
             [
-                "id" => null,
-                "name" => "TB Paru",
-                "ordering" => null,
-                "screening_has_forms" => [
+                'id' => null,
+                'name' => 'TB Paru',
+                'ordering' => null,
+                'screening_has_forms' => [
                     [
-                        "id" => null,
-                        "form_label" => "",
-                        "ordering" => 1
+                        'id' => null,
+                        'form_label' => '',
+                        'ordering' => 1
                     ]
                 ]
             ],
             [
-                "id" => null,
-                "name" => "Malaria",
-                "ordering" => null,
-                "screening_has_forms" => [
+                'id' => null,
+                'name' => 'Malaria',
+                'ordering' => null,
+                'screening_has_forms' => [
                     [
-                        "id" => null,
-                        "form_label" => "",
-                        "ordering" => 1
+                        'id' => null,
+                        'form_label' => '',
+                        'ordering' => 1
                     ]
                 ]
             ],
             [
-                "id" => null,
-                "name" => "Hipertensi",
-                "ordering" => null,
-                "screening_has_forms" => [
+                'id' => null,
+                'name' => 'Hipertensi',
+                'ordering' => null,
+                'screening_has_forms' => [
                     [
-                        "id" => null,
-                        "form_label" => "",
-                        "ordering" => 1
+                        'id' => null,
+                        'form_label' => '',
+                        'ordering' => 1
                     ]
                 ]
             ],
             [
-                "id" => null,
-                "name" => "Imunisasi",
-                "ordering" => null,
-                "screening_has_forms" => [
+                'id' => null,
+                'name' => 'Imunisasi',
+                'ordering' => null,
+                'screening_has_forms' => [
                     [
-                        "id" => null,
-                        "form_label" => "",
-                        "ordering" => 1
+                        'id' => null,
+                        'form_label' => '',
+                        'ordering' => 1
                     ]
                 ]
             ],
             [
-                "id" => null,
-                "name" => "Skrining ICOPE",
-                "ordering" => null,
-                "screening_has_forms" => [
+                'id' => null,
+                'name' => 'Skrining ICOPE',
+                'ordering' => null,
+                'screening_has_forms' => [
                     [
-                        "id" => null,
-                        "form_label" => "",
-                        "ordering" => 1
+                        'id' => null,
+                        'form_label' => '',
+                        'ordering' => 1
                     ]
                 ]
             ],
             [
-                "id" => null,
-                "name" => "Kespro Catin",
-                "ordering" => null,
-                "screening_has_forms" => [
+                'id' => null,
+                'name' => 'Kespro Catin',
+                'ordering' => null,
+                'screening_has_forms' => [
                     [
-                        "id" => null,
-                        "form_label" => "",
-                        "ordering" => 1
+                        'id' => null,
+                        'form_label' => '',
+                        'ordering' => 1
                     ]
                 ]
             ],
             [
-                "id" => null,
-                "name" => "Pasangan Usia Subur",
-                "ordering" => null,
-                "screening_has_forms" => [
+                'id' => null,
+                'name' => 'Pasangan Usia Subur',
+                'ordering' => null,
+                'screening_has_forms' => [
                     [
-                        "id" => null,
-                        "form_label" => "",
-                        "ordering" => 1
+                        'id' => null,
+                        'form_label' => '',
+                        'ordering' => 1
                     ]
                 ]
             ],
