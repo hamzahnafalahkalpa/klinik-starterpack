@@ -151,8 +151,13 @@ class ScreeningSeeder extends Seeder
                 'screening_has_forms' => [
                     [
                         'id' => null,
-                        'form_label' => '{{form_label}}',
+                        'form_label' => 'SingleTest',
                         'ordering' => 1
+                    ],
+                    [
+                        'id' => null,
+                        'form_label' => 'RocportTest',
+                        'ordering' => 2
                     ]
                 ]
             ],
