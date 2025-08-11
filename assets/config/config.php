@@ -69,7 +69,6 @@ return [
         'hanafalah/module-medic-service'        => ['repository' =>'micro-tenant/module-medic-service'],
         'hanafalah/module-medical-treatment'    => ['repository' =>'micro-tenant/module-medical-treatment'],
         'hanafalah/module-organization'         => ['repository' =>'micro-tenant/module-organization'],
-        'hanafalah/module-patient'              => ['repository' =>'micro-tenant/module-patient'],
         'hanafalah/module-payer'                => ['repository' =>'micro-tenant/module-payer'],
         'hanafalah/module-payment'              => ['repository' =>'micro-tenant/module-payment'],
         'hanafalah/module-people'               => ['repository' =>'micro-tenant/module-people'],
