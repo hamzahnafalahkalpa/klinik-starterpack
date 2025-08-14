@@ -3,6 +3,7 @@
 namespace Hanafalah\KlinikStarterpack\Commands;
 
 use Hanafalah\KlinikStarterpack\Concerns\HasComposer;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 
 class InstallMakeCommand extends EnvironmentCommand
@@ -34,6 +35,8 @@ class InstallMakeCommand extends EnvironmentCommand
      */
     public function handle()
     {
+        $dev_mode = config('micro-tenant.dev_mode');
+        config(['micro-tenant.dev_mode' => true]);
         $this->call('optimize:clear');
         
         if ($this->option('drop')) {
@@ -71,10 +74,18 @@ class InstallMakeCommand extends EnvironmentCommand
         $this->call('migrate');
         $this->call('db:seed');
         $this->call('up');
+        $this->info('Klinik Starterpack Seeding');
         $this->call('klinik-starterpack:seed');
+        $this->info('✔️  Klinik Starterpack Seeded');
+
+        $this->call('impersonate:cache');
+        $this->info('Klinik Migrating');
         $this->call('klinik:migrate');
-        $this->call('klinik:impersonate-migrate');
+        $this->info('✔️  Klinik Migrated');
+        
+        // $this->call('klinik:impersonate-migrate');
 
         $this->comment('hanafalah\\klinik-starterpack installed successfully.');
+        config(['micro-tenant.dev_mode' => $dev_mode]);
     }
 }

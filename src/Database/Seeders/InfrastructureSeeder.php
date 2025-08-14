@@ -3,10 +3,8 @@
 namespace Hanafalah\KlinikStarterpack\Database\Seeders;
 
 use Hanafalah\LaravelSupport\Concerns\Support\HasRequestData;
-use Hanafalah\ModuleWarehouse\Contracts\Data\BuildingData;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
-use Projects\Klinik\Contracts\Data\ModuleWarehouse\RoomData;
 
 class InfrastructureSeeder extends Seeder
 {

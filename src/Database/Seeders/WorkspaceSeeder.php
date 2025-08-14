@@ -130,7 +130,7 @@ class WorkspaceSeeder extends Seeder{
 
             $repositories['repositories'][Str::kebab($original)] = [
                 'type' => 'path',
-                'url'  => '../../../repositories/'.Str::afterLast($original,'/'),
+                'url'  => '../../repositories/'.Str::afterLast($original,'/'),
                 'options' => [
                     'symlink' => true
                 ]
@@ -154,8 +154,8 @@ class WorkspaceSeeder extends Seeder{
         }
 
         if (config('app.env') == 'local'){
-            file_put_contents(__DIR__.'/../../../tenant-repositories.json', json_encode($repositories, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
-            $this->updateComposer($composer, __DIR__.'/../../../tenant-repositories.json','repositories');
+            file_put_contents(__DIR__.'/../../tenant-repositories.json', json_encode($repositories, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+            $this->updateComposer($composer, __DIR__.'/../../tenant-repositories.json','repositories');
         }
 
         $composer = $group_tenant->path.'/'.Str::kebab($group_tenant->name).'/composer.json';
@@ -181,15 +181,21 @@ class WorkspaceSeeder extends Seeder{
         }
         
         if (config('app.env') == 'local'){
-            file_put_contents(__DIR__.'/../../../project-requirements.json', json_encode($requires, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
-            $this->updateComposer($composer, __DIR__.'/../../../project-requirements.json','require');
+            file_put_contents(__DIR__.'/../../project-requirements.json', json_encode($requires, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+            $this->updateComposer($composer, __DIR__.'/../../project-requirements.json','require');
         }
 
         shell_exec("cd $tenant_path/".Str::kebab($tenant->name)." && rm -rf composer.lock && composer install");
-        
+
         MicroTenant::tenantImpersonate($tenant);
         tenancy()->initialize($tenant->getKey());
         
+        Artisan::call('impersonate:cache',[
+            '--app_id'    => $project_tenant->getKey(),
+            '--group_id'  => $group_tenant->getKey(),
+            '--tenant_id' => $tenant->getKey()
+        ]);
+
         Artisan::call('impersonate:migrate',[
             '--app'       => true,
             '--app_id'    => $project_tenant->getKey(),
