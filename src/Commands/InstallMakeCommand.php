@@ -67,36 +67,13 @@ class InstallMakeCommand extends EnvironmentCommand
         $this->call('klinik-starterpack:install-submodule');
         $this->info('✔️  Submodule installed');
 
-        $username = env('DB_USERNAME');
-        $password = env('DB_PASSWORD');
-        $database = env('DB_DATABASE');
-
-        putenv("DB_USERNAME=root");
-        putenv("DB_PASSWORD=".env('DB_ROOT_PASSWORD'));
-    
-        config(['database.connections.mysql.username' => 'root']);
-        config(['database.connections.mysql.password' => env('DB_ROOT_PASSWORD')]);
-    
-        // Jalankan perintah CREATE USER
-        DB::statement(<<<SQL
-            DO \$\$
-            BEGIN
-            IF NOT EXISTS (
-                SELECT FROM pg_catalog.pg_roles WHERE rolname = '$username'
-            ) THEN
-                EXECUTE format('CREATE ROLE %I LOGIN PASSWORD %L', '$username', '$password');
-            END IF;
-            END
-            \$\$;
-        SQL);
-        DB::statement("GRANT ALL PRIVILEGES ON DATABASE \"$database\" TO \"$username\";");
-
         $this->call('down');
         $this->call('migrate');
         $this->call('db:seed');
         $this->call('up');
         $this->call('klinik-starterpack:seed');
         $this->call('klinik:migrate');
+        $this->call('klinik:impersonate-migrate');
 
         $this->comment('hanafalah\\klinik-starterpack installed successfully.');
     }

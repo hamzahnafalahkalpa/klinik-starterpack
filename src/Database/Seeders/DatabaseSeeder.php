@@ -74,7 +74,8 @@ class DatabaseSeeder extends Seeder
                 RadiologySeeder::class,
                 ProgramCategorySeeder::class,
                 ProgramOccupationSeeder::class,
-                MasterInformedConsentSeeder::class
+                MasterInformedConsentSeeder::class,
+                ScreeningSeeder::class
             ]);
         } catch (\Throwable $th) {
             throw $th;

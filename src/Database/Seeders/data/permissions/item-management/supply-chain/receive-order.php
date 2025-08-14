@@ -22,7 +22,22 @@ return [
             'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
-            'show_in_acl' => true
+            'show_in_data' => true,
+            'show_in_acl' => true,
+            'childs'       => [
+                [
+                    'name'       => 'Approval Penerimaan Barang',
+                    'alias'      => 'approval',
+                    'type'       => Type::PERMISSION->value,
+                    'guard_name' => 'api'
+                ],
+                [
+                    'name'       => 'Report Penerimaan Barang',
+                    'alias'      => 'report',
+                    'type'       => Type::PERMISSION->value,
+                    'guard_name' => 'api'
+                ]
+            ]
         ],
         [
             'name'       => 'Hapus Penerimaan Barang',

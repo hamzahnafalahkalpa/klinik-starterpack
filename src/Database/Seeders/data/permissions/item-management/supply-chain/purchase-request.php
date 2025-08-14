@@ -22,8 +22,22 @@ return [
             'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
+            'show_in_data' => true,
             'show_in_acl' => true,
-            'show_in_data' => true
+            'childs'      => [
+                [
+                    'name'       => 'Approval Permintaan',
+                    'alias'      => 'approval',
+                    'type'       => Type::PERMISSION->value,
+                    'guard_name' => 'api'
+                ],
+                [
+                    'name'       => 'Report Permintaan',
+                    'alias'      => 'report',
+                    'type'       => Type::PERMISSION->value,
+                    'guard_name' => 'api'
+                ]
+            ]
         ],
         [
             'name'       => 'Hapus Permintaan',

@@ -168,8 +168,23 @@ class ScreeningSeeder extends Seeder
                 'screening_has_forms' => [
                     [
                         'id' => null,
-                        'form_label' => '',
+                        'form_label' => 'ChildAndPregnancyHistory',
                         'ordering' => 1
+                    ],
+                    [
+                        'id' => null,
+                        'form_label' => 'ANCTerpadu',
+                        'ordering' => 2
+                    ],
+                    [
+                        'id' => null,
+                        'form_label' => 'TetanusImmunization',
+                        'ordering' => 3
+                    ],
+                    [
+                        'id' => null,
+                        'form_label' => 'TTDExamination',
+                        'ordering' => 4
                     ]
                 ]
             ],
@@ -180,8 +195,23 @@ class ScreeningSeeder extends Seeder
                 'screening_has_forms' => [
                     [
                         'id' => null,
-                        'form_label' => '',
+                        'form_label' => 'PostpartumObservation',
                         'ordering' => 1
+                    ],
+                    [
+                        'id' => null,
+                        'form_label' => 'FamilyPlanningService',
+                        'ordering' => 2
+                    ],
+                    [
+                        'id' => null,
+                        'form_label' => 'AdministrationVitaminA',
+                        'ordering' => 3
+                    ],
+                    [
+                        'id' => null,
+                        'form_label' => 'TTDExamination',
+                        'ordering' => 4
                     ]
                 ]
             ],
@@ -192,9 +222,24 @@ class ScreeningSeeder extends Seeder
                 'screening_has_forms' => [
                     [
                         'id' => null,
-                        'form_label' => '',
+                        'form_label' => 'AdministrationVitaminA',
                         'ordering' => 1
-                    ]
+                    ],
+                    [
+                        'id' => null,
+                        'form_label' => 'ChildGrowth',
+                        'ordering' => 2
+                    ],
+                    [
+                        'id' => null,
+                        'form_label' => 'HearingLossHistory',
+                        'ordering' => 3
+                    ],
+                    [
+                        'id' => null,
+                        'form_label' => 'ImmunizationHistory',
+                        'ordering' => 3
+                    ],
                 ]
             ],
             [
@@ -204,8 +249,13 @@ class ScreeningSeeder extends Seeder
                 'screening_has_forms' => [
                     [
                         'id' => null,
-                        'form_label' => '',
+                        'form_label' => 'HIV',
                         'ordering' => 1
+                    ],
+                    [
+                        'id' => null,
+                        'form_label' => 'HIVAntibodyTest',
+                        'ordering' => 2
                     ]
                 ]
             ],
@@ -216,19 +266,7 @@ class ScreeningSeeder extends Seeder
                 'screening_has_forms' => [
                     [
                         'id' => null,
-                        'form_label' => '',
-                        'ordering' => 1
-                    ]
-                ]
-            ],
-            [
-                'id' => null,
-                'name' => 'Obesitas',
-                'ordering' => null,
-                'screening_has_forms' => [
-                    [
-                        'id' => null,
-                        'form_label' => '',
+                        'form_label' => 'BloodSugarTest',
                         'ordering' => 1
                     ]
                 ]
@@ -240,35 +278,23 @@ class ScreeningSeeder extends Seeder
                 'screening_has_forms' => [
                     [
                         'id' => null,
-                        'form_label' => '',
+                        'form_label' => 'SNST',
                         'ordering' => 1
                     ]
                 ]
             ],
-            [
-                'id' => null,
-                'name' => 'Risiko Jantung & Stroke',
-                'ordering' => null,
-                'screening_has_forms' => [
-                    [
-                        'id' => null,
-                        'form_label' => '',
-                        'ordering' => 1
-                    ]
-                ]
-            ],
-            [
-                'id' => null,
-                'name' => 'Deteksi Kanker Leher Rahim & Payudara',
-                'ordering' => null,
-                'screening_has_forms' => [
-                    [
-                        'id' => null,
-                        'form_label' => '',
-                        'ordering' => 1
-                    ]
-                ]
-            ],
+            // [
+            //     'id' => null,
+            //     'name' => 'Deteksi Kanker Leher Rahim & Payudara',
+            //     'ordering' => null,
+            //     'screening_has_forms' => [
+            //         [
+            //             'id' => null,
+            //             'form_label' => '',
+            //             'ordering' => 1
+            //         ]
+            //     ]
+            // ],
             [
                 'id' => null,
                 'name' => 'Skrining PUMA',
@@ -276,7 +302,7 @@ class ScreeningSeeder extends Seeder
                 'screening_has_forms' => [
                     [
                         'id' => null,
-                        'form_label' => '',
+                        'form_label' => 'PUMA',
                         'ordering' => 1
                     ]
                 ]
@@ -288,7 +314,7 @@ class ScreeningSeeder extends Seeder
                 'screening_has_forms' => [
                     [
                         'id' => null,
-                        'form_label' => '',
+                        'form_label' => 'Partus',
                         'ordering' => 1
                     ]
                 ]
@@ -300,8 +326,18 @@ class ScreeningSeeder extends Seeder
                 'screening_has_forms' => [
                     [
                         'id' => null,
-                        'form_label' => '',
+                        'form_label' => 'NeonatalEsensial',
                         'ordering' => 1
+                    ],
+                    [
+                        'id' => null,
+                        'form_label' => 'NewBornCheckUp',
+                        'ordering' => 2
+                    ],
+                    [
+                        'id' => null,
+                        'form_label' => 'TTDExamination',
+                        'ordering' => 3
                     ]
                 ]
             ],
@@ -312,8 +348,18 @@ class ScreeningSeeder extends Seeder
                 'screening_has_forms' => [
                     [
                         'id' => null,
-                        'form_label' => '',
+                        'form_label' => 'TBContactHistory',
                         'ordering' => 1
+                    ],
+                    [
+                        'id' => null,
+                        'form_label' => 'TBRiskFactor',
+                        'ordering' => 2
+                    ],
+                    [
+                        'id' => null,
+                        'form_label' => 'TBContactHistory',
+                        'ordering' => 3
                     ]
                 ]
             ],
@@ -324,23 +370,23 @@ class ScreeningSeeder extends Seeder
                 'screening_has_forms' => [
                     [
                         'id' => null,
-                        'form_label' => '',
+                        'form_label' => 'Malaria',
                         'ordering' => 1
                     ]
                 ]
             ],
-            [
-                'id' => null,
-                'name' => 'Hipertensi',
-                'ordering' => null,
-                'screening_has_forms' => [
-                    [
-                        'id' => null,
-                        'form_label' => '',
-                        'ordering' => 1
-                    ]
-                ]
-            ],
+            // [
+            //     'id' => null,
+            //     'name' => 'Hipertensi',
+            //     'ordering' => null,
+            //     'screening_has_forms' => [
+            //         [
+            //             'id' => null,
+            //             'form_label' => '',
+            //             'ordering' => 1
+            //         ]
+            //     ]
+            // ],
             [
                 'id' => null,
                 'name' => 'Imunisasi',
@@ -348,7 +394,7 @@ class ScreeningSeeder extends Seeder
                 'screening_has_forms' => [
                     [
                         'id' => null,
-                        'form_label' => '',
+                        'form_label' => 'ImmunizationHistory',
                         'ordering' => 1
                     ]
                 ]
@@ -360,7 +406,12 @@ class ScreeningSeeder extends Seeder
                 'screening_has_forms' => [
                     [
                         'id' => null,
-                        'form_label' => '',
+                        'form_label' => 'HearingLossHistory',
+                        'ordering' => 1
+                    ],
+                    [
+                        'id' => null,
+                        'form_label' => 'VisualImpairmentTest',
                         'ordering' => 1
                     ]
                 ]
@@ -372,29 +423,42 @@ class ScreeningSeeder extends Seeder
                 'screening_has_forms' => [
                     [
                         'id' => null,
-                        'form_label' => '',
+                        'form_label' => 'TetanusImmunization',
                         'ordering' => 1
-                    ]
-                ]
-            ],
-            [
-                'id' => null,
-                'name' => 'Pasangan Usia Subur',
-                'ordering' => null,
-                'screening_has_forms' => [
+                    ],
+                    // [
+                    //     'id' => null,
+                    //     'form_label' => 'SRQ',
+                    //     'ordering' => 1
+                    // ]
                     [
                         'id' => null,
-                        'form_label' => '',
-                        'ordering' => 1
+                        'form_label' => 'HemoglobinTest',
+                        'ordering' => 2
                     ]
                 ]
-            ],
+            ]
+            // [
+            //     'id' => null,
+            //     'name' => 'Pasangan Usia Subur',
+            //     'ordering' => null,
+            //     'screening_has_forms' => [
+            //         [
+            //             'id' => null,
+            //             'form_label' => '',
+            //             'ordering' => 1
+            //         ]
+            //     ]
+            // ],
         ];
         foreach ($arr as $data) {
             $screening = app(config('database.models.Screening'))->where('name',$data['name'])->first();
             if (!isset($screening)) {
                 foreach ($data['screening_has_forms'] as &$screening_has_form) {
-                    $screening_has_form['form_id'] = app(config('database.models.Form'))->where('label',$screening_has_form['form_label'])->first()->id;
+                    $form_model = app(config('database.models.Form'))->where('label',$screening_has_form['form_label'])->first();
+                    if (!isset($form_model)) dd($screening_has_form);
+
+                    $screening_has_form['form_id'] = $form_model->getKey();
                     unset($screening_has_form['form_label']);
                 }
                 app(config('app.contracts.Screening'))->prepareStoreScreening($this->requestDTO(ScreeningData::class,$data));
