@@ -11,6 +11,7 @@ return [
     'ordering'   => 1,
     'childs'     => [
         include(__DIR__.'/pharmacy-department/dispense.php'),
+        include(__DIR__.'/pharmacy-department/frontline.php'),
         include(__DIR__.'/pharmacy-department/pharmacy-sale.php'),
     ]
 ];
