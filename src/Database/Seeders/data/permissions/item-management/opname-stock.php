@@ -4,7 +4,7 @@ use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
     'name'       => 'Stock Opname', 
-    'alias'      => 'api.opname-stock',
+    'alias'      => 'opname-stock',
     'icon'       => 'lsicon:management-stockout-filled',
     'type'       => Type::MENU->value,
     'show_in_acl' => true,
