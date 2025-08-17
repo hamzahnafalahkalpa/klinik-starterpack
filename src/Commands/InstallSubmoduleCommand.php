@@ -45,7 +45,7 @@ class InstallSubmoduleCommand extends EnvironmentCommand
              ->appSubmodule('group','group-initial-klinik')
              ->appSubmodule('tenant','tenant-klinik');
 
-        shell_exec("git submodule foreach 'git checkout main' && git pull || true");
+        shell_exec("git submodule foreach 'git checkout 1.x' && git pull || true");
     }
 
     private function appSubmodule(string $path, string $module_name): self{
