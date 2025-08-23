@@ -32,6 +32,56 @@ class PaymentMethodSeeder extends Seeder
                 'name' => 'CREDIT CARD',
                 'flag' => 'PaymentMethod',
                 'label' => 'NON TUNAI',
+                'form' => [
+                    'label' => 'CREDIT CARD',
+                    'name'  => 'Pembayaran Kredit',
+                    'dynamic_forms'  => [
+                        [
+                            'label'          => 'Nomor Kartu',
+                            'key'            => 'value',
+                            'type'           => 'INPUT',
+                            'component_name' => null,
+                            'default_value'  => null,
+                            'attribute'      => null,
+                            'rule'           => null,
+                            'options'        => [
+                            ]
+                        ],
+                        [
+                            'label'          => 'Tipe Kartu',
+                            'key'            => 'value',
+                            'type'           => 'INPUT',
+                            'component_name' => null,
+                            'default_value'  => null,
+                            'attribute'      => null,
+                            'rule'           => null,
+                            'options'        => [
+                            ]
+                        ],
+                        [
+                            'label'          => 'Tanggal Kadaluarsa',
+                            'key'            => 'value',
+                            'type'           => 'INPUT',
+                            'component_name' => null,
+                            'default_value'  => null,
+                            'attribute'      => null,
+                            'rule'           => null,
+                            'options'        => [
+                            ]
+                        ],
+                        [
+                            'label'          => 'Kode Transaksi',
+                            'key'            => 'value',
+                            'type'           => 'INPUT',
+                            'component_name' => null,
+                            'default_value'  => null,
+                            'attribute'      => null,
+                            'rule'           => null,
+                            'options'        => [
+                            ]
+                        ]
+                    ]
+                ]
             ],
             [
                 'name' => 'DEBIT CARD',
@@ -42,6 +92,23 @@ class PaymentMethodSeeder extends Seeder
                 'name' => 'E-MONEY',
                 'flag' => 'PaymentMethod',
                 'label' => 'NON TUNAI',
+                'form' => [
+                    'label' => 'E-MONEY',
+                    'name'  => 'Pembayaran E-Money',
+                    'dynamic_forms'  => [
+                        [
+                            'label'          => 'No Telpon',
+                            'key'            => 'value',
+                            'type'           => 'INPUT',
+                            'component_name' => null,
+                            'default_value'  => null,
+                            'attribute'      => null,
+                            'rule'           => null,
+                            'options'        => [
+                            ]
+                        ]
+                    ]
+                ]
             ],
             [
                 'name' => 'DITAGIHKAN',

@@ -11,25 +11,15 @@ return [
     'guard_name'     => 'api',
     'childs'         => [
         [
-            'name'        => 'Tambah Kunjungan',
-            'alias'       => 'store',
-            'type'        => Type::PERMISSION->value,
-            'guard_name'  => 'api',
-            'show_in_acl' => true
-        ],
-        [
-            'name'        => 'Ubah Kunjungan',
+            'name'        => 'Detail Kunjungan',
             'alias'       => 'update',
             'type'        => Type::PERMISSION->value,
             'guard_name'  => 'api',
             'show_in_acl' => true,
-            'show_in_data' => true
-        ],
-        [
-            'name'       => 'Hapus Kunjungan',
-            'alias'      => 'destroy',
-            'type'       => Type::PERMISSION->value,
-            'guard_name' => 'api'
+            'show_in_data' => true,
+            'childs'       => [
+                include __DIR__.'/visit-examination/examination.php'
+            ]
         ]
     ]
 ];

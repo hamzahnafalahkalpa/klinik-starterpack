@@ -36,7 +36,7 @@ class InstallMakeCommand extends EnvironmentCommand
     public function handle()
     {
         $dev_mode = config('micro-tenant.dev_mode');
-        config(['micro-tenant.dev_mode' => true]);
+        if (config('app.env') !== 'production') config(['micro-tenant.dev_mode' => true]);
         $this->call('optimize:clear');
         
         if ($this->option('drop')) {

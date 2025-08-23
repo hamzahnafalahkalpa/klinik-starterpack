@@ -28,24 +28,25 @@ class InstallSubmoduleCommand extends EnvironmentCommand
      */
     public function handle()
     {
-        foreach (config('klinik-starterpack.packages') as $package) {
-            $module      = $package['repository'];
-            $module_name = Str::afterLast("{$module}", '/');
-            if (!is_dir("repositories/{$module_name}")) {
-                shell_exec("git submodule add -f https://gitlab.com/{$module}.git repositories/{$module_name}");
+        if (app()->environment('local')) {
+            foreach (config('klinik-starterpack.packages') as $package) {
+                $module      = $package['repository'];
+                $module_name = Str::afterLast("{$module}", '/');
+                if (!is_dir("repositories/{$module_name}")) {
+                    shell_exec("git submodule add -f https://gitlab.com/{$module}.git repositories/{$module_name}");
+                }
             }
+            $this->updateComposer(base_path('composer.json'), __DIR__.'/../../repositories.json', 'repositories');
+            // shell_exec('rm -rf composer.lock');
+            // shell_exec('composer install');
+    
+            $this->appSubmodule('project','klinik')
+                 ->appSubmodule('group','group-initial-klinik')
+                 ->appSubmodule('tenant','tenant-klinik');
+    
+            shell_exec("git submodule foreach 'git checkout main' && git pull || true");
         }
 
-        $this->updateComposer(base_path('composer.json'), __DIR__.'/../../repositories.json', 'repositories');
-
-        // shell_exec('rm -rf composer.lock');
-        // shell_exec('composer install');
-
-        $this->appSubmodule('project','klinik')
-             ->appSubmodule('group','group-initial-klinik')
-             ->appSubmodule('tenant','tenant-klinik');
-
-        shell_exec("git submodule foreach 'git checkout main' && git pull || true");
     }
 
     private function appSubmodule(string $path, string $module_name): self{
