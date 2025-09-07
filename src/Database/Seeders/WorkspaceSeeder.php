@@ -92,7 +92,7 @@ class WorkspaceSeeder extends Seeder{
                 'reference_id'   => $workspace->getKey(),
                 'reference_type' => $workspace->getMorphClass(),
                 'domain'         => [
-                    'name' => 'localhost:8002'
+                    'name' => 'localhost:8004'
                 ],
                 'provider' => $tenant_namespace.'\\TenantKlinik\\Providers\\TenantKlinikServiceProvider',
                 'path'     => $generator_config['patterns']['tenant']['published_at'],

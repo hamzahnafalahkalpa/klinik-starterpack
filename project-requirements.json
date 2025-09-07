@@ -42,7 +42,6 @@
         "hanafalah/module-opname-stock": "dev-main as 1.0",
         "hanafalah/module-distribution": "dev-main as 1.0",
         "hanafalah/module-pharmacy": "dev-main as 1.0",
-        "hanafalah/module-rencana-anggaran": "dev-main as 1.0",
         "hanafalah/module-event": "dev-main as 1.0",
         "hanafalah/module-manufacture": "dev-main as 1.0",
         "hanafalah/module-handwriting": "dev-main as 1.0",
