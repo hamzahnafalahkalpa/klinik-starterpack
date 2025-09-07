@@ -7,6 +7,7 @@ return [
     'alias'       => 'treatment',
     'icon'        => 'medical-icon:i-physical-therapy',
     'type'        => Type::MODULE->value,
+    'show_in_acl' => true,
     'guard_name'  => 'api',
     'childs'      => [
         include __DIR__.'/treatment/sample.php',

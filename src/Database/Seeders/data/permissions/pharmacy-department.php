@@ -7,6 +7,7 @@ return [
     'alias'      => 'api.pharmacy-department',
     'icon'       => 'healthicons:pharmacy-24px',
     'type'       => Type::MENU->value,
+    'show_in_acl' => true,
     'guard_name' => 'api',
     'ordering'   => 1,
     'childs'     => [

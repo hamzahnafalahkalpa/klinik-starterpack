@@ -12,7 +12,10 @@ return [
     'ordering'    => 10,
     'childs'      => [
         include __DIR__.'/transaction/point-of-sale.php',
-        include __DIR__.'/transaction/payment-history.php',
+        include __DIR__.'/transaction/billing.php',
+        include __DIR__.'/transaction/invoice.php',
+        include __DIR__.'/transaction/refund.php',
+        include __DIR__.'/transaction/deposit.php',
     ]
 ];
 

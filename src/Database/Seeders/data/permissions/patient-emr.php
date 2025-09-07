@@ -7,6 +7,7 @@ return [
     'alias'      => 'api.patient-emr',
     'icon'       => 'fluent:patient-20-regular',
     'type'       => Type::MENU->value,
+    'show_in_acl' => true,
     'guard_name' => 'api',
     'ordering'   => 1,
     'childs'     => [

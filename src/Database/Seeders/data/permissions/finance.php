@@ -7,6 +7,7 @@ return [
     'alias'      => 'api.finance',
     'icon'       => 'mdi:finance',
     'type'       => Type::MENU->value,
+    'show_in_acl' => true,
     'guard_name' => 'api',
     'ordering'    => 2,
     'childs'     => [

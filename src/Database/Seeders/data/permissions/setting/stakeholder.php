@@ -7,6 +7,7 @@ return [
     'alias'       => 'stakeholder',
     'icon'        => 'streamline-ultimate:human-resources-workflow-bold',
     'type'        => Type::MODULE->value,
+    'show_in_acl' => true,
     'guard_name'  => 'api',
     'childs'      => [
         include __DIR__.'/stakeholder/marital-status.php',

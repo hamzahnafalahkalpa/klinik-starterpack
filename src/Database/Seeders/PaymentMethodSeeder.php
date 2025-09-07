@@ -27,6 +27,56 @@ class PaymentMethodSeeder extends Seeder
                 'name' => 'BANK TRANSFER',
                 'flag' => 'PaymentMethod',
                 'label' => 'NON TUNAI',
+                'form' => [
+                    'label' => 'BANK TRANSFER',
+                    'name'  => 'Pembayaran Bank',
+                    'dynamic_forms'  => [
+                        [
+                            'label'          => 'Nama Bank',
+                            'key'            => 'value',
+                            'type'           => 'INPUT',
+                            'component_name' => null,
+                            'default_value'  => null,
+                            'attribute'      => null,
+                            'rule'           => null,
+                            'options'        => [
+                            ]
+                        ],
+                        [
+                            'label'          => 'Nomor Rekening',
+                            'key'            => 'value',
+                            'type'           => 'INPUT',
+                            'component_name' => null,
+                            'default_value'  => null,
+                            'attribute'      => null,
+                            'rule'           => null,
+                            'options'        => [
+                            ]
+                        ],
+                        [
+                            'label'          => 'Atas Nama',
+                            'key'            => 'value',
+                            'type'           => 'INPUT',
+                            'component_name' => null,
+                            'default_value'  => null,
+                            'attribute'      => null,
+                            'rule'           => null,
+                            'options'        => [
+                            ]
+                        ],
+                        [
+                            'label'          => 'Kode Transaksi',
+                            'key'            => 'value',
+                            'type'           => 'INPUT',
+                            'component_name' => null,
+                            'default_value'  => null,
+                            'attribute'      => null,
+                            'rule'           => null,
+                            'options'        => [
+                            ]
+                        ]
+                    ]
+                ]
             ],
             [
                 'name' => 'CREDIT CARD',
@@ -109,12 +159,7 @@ class PaymentMethodSeeder extends Seeder
                         ]
                     ]
                 ]
-            ],
-            [
-                'name' => 'DITAGIHKAN',
-                'flag' => 'PaymentMethod',
-                'label' => 'BILLED',
-            ],
+            ]
         ];
         $paymentMethod = app(config('app.contracts.PaymentMethod'));
         foreach ($arr as $data) $paymentMethod->prepareStorePaymentMethod($this->requestDTO(PaymentMethodData::class,$data));

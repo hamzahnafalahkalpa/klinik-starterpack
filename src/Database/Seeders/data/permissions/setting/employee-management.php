@@ -7,6 +7,7 @@ return [
     'alias'       => 'employee-management',
     'icon'        => 'fluent:people-team-20-regular',
     'type'        => Type::MODULE->value,
+    'show_in_acl' => true,
     'guard_name'  => 'api',
     'childs'      => [
         include __DIR__.'/employee-management/employee-type.php',

@@ -7,6 +7,7 @@ return [
     'alias'       => 'item-management',
     'icon'        => 'fluent:tray-item-add-20-filled',
     'type'        => Type::MODULE->value,
+    'show_in_acl' => true,
     'guard_name'  => 'api',
     'childs'      => [
         include __DIR__.'/item-management/brand.php',

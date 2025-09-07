@@ -7,6 +7,7 @@ return [
     'alias'      => 'api.program-activity',
     'icon'       => 'fluent:patient-20-regular',
     'type'       => Type::MENU->value,
+    'show_in_acl' => true,
     'ordering'    => 4,
     'guard_name' => 'api',
     'childs'     => [
