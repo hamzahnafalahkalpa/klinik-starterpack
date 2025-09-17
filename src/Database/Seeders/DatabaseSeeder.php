@@ -15,6 +15,7 @@ use Hanafalah\ModulePeople\Database\Seeders\DatabaseSeeder as PeopleCollectionSe
 use Hanafalah\ModuleAnatomy\Database\Seeders\DatabaseSeeder as AnatomyCollectionSeeder;
 use Hanafalah\ModuleItem\Database\Seeders\DatabaseSeeder as ItemCollectionSeeder;
 use Hanafalah\ModuleInformedConsent\Seeders\MasterInformedConsentSeeder;
+use Hanafalah\PuskesmasAsset\Database\Seeders\DatabaseSeeder as PuskesmasAssetSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -32,50 +33,9 @@ class DatabaseSeeder extends Seeder
                 ApiAccessSeeder::class,
                 PermissionSeeder::class,
                 RoleSeeder::class,
-                PeopleCollectionSeeder::class,
-                ItemStuffSeeder::class,
-                PatientTypeSeeder::class,
-                PatientTypeServiceSeeder::class,
-                MedicServiceSeeder::class,
-                ServiceClusterSeeder::class,
-                PaymentMethodSeeder::class,
-                ProfessionSeeder::class,
-                OccupationSeeder::class,
-                FormSeeder::class,
-                ExaminationStuffSeeder::class,
-                MasterVaccineSeeder::class,
-                AnatomyCollectionSeeder::class,
-                RegionalSeeder::class,
                 EncodingSeeder::class,
-                EmployeeTypeSeeder::class,
-                EmployeeSeeder::class,
-                PatientOccupationSeeder::class,
-                FundingSeeder::class,
-                ModulePaymentSeeder::class,
-                DosageFormSeeder::class,
-                FreqUnitSeeder::class,
-                MedicalCompositionUnitSeeder::class,
-                CompositionUnitSeeder::class,
-                MedicalNetUnitSeeder::class,
-                MixUnitSeeder::class,
-                TherapeuticClassSeeder::class,
-                PackageFormSeeder::class,
-                TrademarkSeeder::class,
-                UsageLocationSeeder::class,
-                UsageRouteSeeder::class,
-                RoomItemCategorySeeder::class,
-                ItemCollectionSeeder::class,
-                ClassRoomSeeder::class,
-                BrandSeeder::class,
-                InfrastructureSeeder::class,
-                PurchaseLabelSeeder::class,
-                SampleSeeder::class,
-                ClinicalPathologySeeder::class,
-                RadiologySeeder::class,
-                ProgramCategorySeeder::class,
-                ProgramOccupationSeeder::class,
-                MasterInformedConsentSeeder::class,
-                ScreeningSeeder::class
+                MasterSeeder::class,
+                PuskesmasAssetSeeder::class
             ]);
         } catch (\Throwable $th) {
             throw $th;

@@ -21,7 +21,7 @@ class RegionalSeeder extends Seeder
             $first = $model->first();
             if (!isset($first)){
                 $sql = file_get_contents(__DIR__ . '/data/' . Str::lower(Str::plural($file)) . '.sql');
-                DB::unprepared($sql);
+                DB::connection($model->getConnectionName())->unprepared($sql);
             }
         }
     }

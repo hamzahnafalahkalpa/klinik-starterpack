@@ -14,7 +14,6 @@ class FundingSeeder extends Seeder
     public function run(): void
     {
         $fundingModel = app(config('database.models.Funding'));
-
         $fundings = [
             ['name' => 'Mandiri'],
             ['name' => 'APBN'],

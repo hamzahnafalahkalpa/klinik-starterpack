@@ -24,6 +24,11 @@ class PaymentMethodSeeder extends Seeder
                 'label' => 'TUNAI',
             ],
             [
+                'name' => 'Deposit',
+                'flag' => 'PaymentMethod',
+                'label' => 'DEPOSIT',
+            ],
+            [
                 'name' => 'BANK TRANSFER',
                 'flag' => 'PaymentMethod',
                 'label' => 'NON TUNAI',
