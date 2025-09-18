@@ -32,19 +32,55 @@ class PostgreSQLSchemaManager implements TenantDatabaseManager
 
     public function createDatabase(TenantWithDatabase $tenant): bool
     {
-        if ($tenant->flag == Tenant::FLAG_TENANT) {
-            return $this->database()->statement("CREATE DATABASE \"{$tenant->database()->getName()}\"");
+        if (isset($tenant->flag)){
+            switch ($tenant->flag) {
+                case Tenant::FLAG_TENANT:
+                    return $this->database()->statement("CREATE DATABASE \"{$tenant->database()->getName()}\"");
+                break;
+                case Tenant::FLAG_CLUSTER:
+                    return DB::connection($tenant->connection_name)->statement("CREATE SCHEMA \"{$tenant->database()->getName()}\"");
+                break;
+                default:
+                    return $this->database()->statement("CREATE SCHEMA \"{$tenant->database()->getName()}\"");
+                break;
+            }
         }else{
-            return $this->database()->statement("CREATE SCHEMA \"{$tenant->database()->getName()}\"");
+            switch ($this->connection) {
+                case 'tenant':
+                case 'central':
+                    return $this->database()->statement("CREATE DATABASE \"{$tenant->database()->getName()}\"");
+                break;
+                default:
+                    return $this->database()->statement("CREATE SCHEMA \"{$tenant->database()->getName()}\"");
+                break;
+            }
         }
     }
 
     public function deleteDatabase(TenantWithDatabase $tenant): bool
     {
-        if ($tenant->flag == Tenant::FLAG_TENANT) {
-            return $this->database()->statement("DROP DATABASE \"{$tenant->database()->getName()}\"");
+        if (isset($tenant->flag)){
+            switch ($tenant->flag) {
+                case Tenant::FLAG_TENANT:
+                    return $this->database()->statement("DROP DATABASE \"{$tenant->database()->getName()}\"");
+                break;
+                case Tenant::FLAG_CLUSTER:
+                    return DB::connection($tenant->connection_name)->statement("DROP SCHEMA \"{$tenant->database()->getName()}\" CASCADE");
+                break;
+                default:
+                    return $this->database()->statement("DROP SCHEMA \"{$tenant->database()->getName()}\" CASCADE");
+                break;
+            }
         }else{
-            return $this->database()->statement("DROP SCHEMA \"{$tenant->database()->getName()}\" CASCADE");
+            switch ($this->connection) {
+                case 'tenant':
+                case 'central':
+                    return $this->database()->statement("DROP DATABASE \"{$tenant->database()->getName()}\"");
+                break;
+                default:
+                    return $this->database()->statement("DROP SCHEMA \"{$tenant->database()->getName()}\" CASCADE");
+                break;
+            }
         }
     }
 

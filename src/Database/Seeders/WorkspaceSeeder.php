@@ -32,6 +32,8 @@ class WorkspaceSeeder extends Seeder{
         if (!isset($workspace)){
             $tenant_namespace  = 'GroupInitialKlinik';
 
+            $default = config('tenancy.database.central_connection');
+            config(['tenancy.database.central_connection' => 'central_app']);
             $tenant_schema  = app(config('app.contracts.Tenant'));
             $tenant_model   = app(config('database.models.Tenant'));
             $project_tenant = $tenant_schema->prepareStoreTenant($this->requestDTO(TenantData::class,[
@@ -46,6 +48,7 @@ class WorkspaceSeeder extends Seeder{
                 'config'         => $generator_config['patterns']['project']
             ]));
 
+            config(['tenancy.database.central_connection' => 'central_tenant']);
             $group_tenant = $tenant_schema->prepareStoreTenant($this->requestDTO(TenantData::class,[
                 'parent_id'      => $project_tenant->getKey(),
                 'name'           => 'Group Initial Klinik',
@@ -60,6 +63,7 @@ class WorkspaceSeeder extends Seeder{
             ]));
             $group_tenant->save();
 
+            config(['tenancy.database.central_connection' => $default]);
             $workspace = app(config('app.contracts.Workspace'))->prepareStoreWorkspace(WorkspaceData::from([
                 'uuid'    => '9e7ff0f6-7679-46c8-ac3e-71da818160dd',
                 'name'    => 'Klinik',
