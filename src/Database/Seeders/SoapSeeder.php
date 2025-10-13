@@ -25,7 +25,8 @@ class SoapSeeder extends Seeder
             $screening_has_form[] = [
                 'id' => null,
                 'form_id' => $form->getKey(),
-                'form_type' => $form->type
+                'form_type' => $form->type,
+                'ordering' => $form->ordering ?? 1
             ];
         }
         app(config('app.contracts.Soap'))->prepareStoreSoap($this->requestDTO(SoapData::class,$arr));
