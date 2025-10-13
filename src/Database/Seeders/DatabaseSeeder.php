@@ -33,7 +33,8 @@ class DatabaseSeeder extends Seeder
                 RoleSeeder::class,
                 EncodingSeeder::class,
                 MasterSeeder::class,
-                PuskesmasAssetSeeder::class
+                PuskesmasAssetSeeder::class,
+                SoapSeeder::class
             ]);
         } catch (\Throwable $th) {
             throw $th;
