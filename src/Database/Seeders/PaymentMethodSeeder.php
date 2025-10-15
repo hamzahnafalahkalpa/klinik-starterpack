@@ -3,6 +3,7 @@
 namespace Hanafalah\KlinikStarterpack\Database\Seeders;
 
 use Hanafalah\LaravelSupport\Concerns\Support\HasRequestData;
+use Hanafalah\ModuleExamination\Models\Form\Survey;
 use Hanafalah\ModulePayment\Contracts\Data\PaymentMethodData;
 use Illuminate\Database\Seeder;
 
@@ -39,8 +40,7 @@ class PaymentMethodSeeder extends Seeder
                         [
                             'label'          => 'Nama Bank',
                             'key'            => 'value',
-                            'type'           => 'INPUT',
-                            'component_name' => null,
+                            'component_name' => Survey::TYPE_INPUT_TEXT,
                             'default_value'  => null,
                             'attribute'      => null,
                             'rule'           => null,
@@ -50,7 +50,7 @@ class PaymentMethodSeeder extends Seeder
                         [
                             'label'          => 'Nomor Rekening',
                             'key'            => 'value',
-                            'type'           => 'INPUT',
+                            'component_name' => Survey::TYPE_INPUT_TEXT,
                             'component_name' => null,
                             'default_value'  => null,
                             'attribute'      => null,
@@ -61,7 +61,7 @@ class PaymentMethodSeeder extends Seeder
                         [
                             'label'          => 'Atas Nama',
                             'key'            => 'value',
-                            'type'           => 'INPUT',
+                            'component_name' => Survey::TYPE_INPUT_TEXT,
                             'component_name' => null,
                             'default_value'  => null,
                             'attribute'      => null,
@@ -72,8 +72,7 @@ class PaymentMethodSeeder extends Seeder
                         [
                             'label'          => 'Kode Transaksi',
                             'key'            => 'value',
-                            'type'           => 'INPUT',
-                            'component_name' => null,
+                            'component_name' => Survey::TYPE_INPUT_TEXT,
                             'default_value'  => null,
                             'attribute'      => null,
                             'rule'           => null,
@@ -94,8 +93,7 @@ class PaymentMethodSeeder extends Seeder
                         [
                             'label'          => 'Nomor Kartu',
                             'key'            => 'value',
-                            'type'           => 'INPUT',
-                            'component_name' => null,
+                            'component_name' => Survey::TYPE_INPUT_TEXT,
                             'default_value'  => null,
                             'attribute'      => null,
                             'rule'           => null,
@@ -105,8 +103,7 @@ class PaymentMethodSeeder extends Seeder
                         [
                             'label'          => 'Tipe Kartu',
                             'key'            => 'value',
-                            'type'           => 'INPUT',
-                            'component_name' => null,
+                            'component_name' => Survey::TYPE_INPUT_TEXT,
                             'default_value'  => null,
                             'attribute'      => null,
                             'rule'           => null,
@@ -116,8 +113,7 @@ class PaymentMethodSeeder extends Seeder
                         [
                             'label'          => 'Tanggal Kadaluarsa',
                             'key'            => 'value',
-                            'type'           => 'INPUT',
-                            'component_name' => null,
+                            'component_name' => Survey::TYPE_INPUT_TEXT,
                             'default_value'  => null,
                             'attribute'      => null,
                             'rule'           => null,
@@ -127,7 +123,7 @@ class PaymentMethodSeeder extends Seeder
                         [
                             'label'          => 'Kode Transaksi',
                             'key'            => 'value',
-                            'type'           => 'INPUT',
+                            'component_name' => Survey::TYPE_INPUT_TEXT,
                             'component_name' => null,
                             'default_value'  => null,
                             'attribute'      => null,
@@ -154,10 +150,12 @@ class PaymentMethodSeeder extends Seeder
                         [
                             'label'          => 'No Telpon',
                             'key'            => 'value',
-                            'type'           => 'INPUT',
+                            'component_name' => Survey::TYPE_INPUT_TEXT,
                             'component_name' => null,
                             'default_value'  => null,
-                            'attribute'      => null,
+                            'attribute'      => [
+                                'mode'       => 'number'
+                            ],
                             'rule'           => null,
                             'options'        => [
                             ]
