@@ -26,7 +26,8 @@ class SoapSeeder extends Seeder
                 'id' => null,
                 'form_id' => $form->getKey(),
                 'form_type' => $form->type,
-                'ordering' => $form->ordering ?? 1
+                'ordering' => $form->ordering ?? 1,
+                'examination_key' => $form->examination_key
             ];
         }
         app(config('app.contracts.Soap'))->prepareStoreSoap($this->requestDTO(SoapData::class,$arr));
