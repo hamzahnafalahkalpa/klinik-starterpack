@@ -58,6 +58,7 @@ class EmployeeSeeder extends Seeder
                     "family_relationship" => [ // Hubungan keluarga
                         "people_id" => null,
                         "family_role" => [
+                            "label" => "Anak",
                             "name" => "Anak"
                         ], // Contoh: Anak, Suami, Istri, dll.
                         "name" => "Fathan",
