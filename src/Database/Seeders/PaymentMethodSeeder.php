@@ -24,17 +24,17 @@ class PaymentMethodSeeder extends Seeder
                 'flag' => 'PaymentMethod',
                 'label' => 'TUNAI',
             ],
+            // [
+            //     'name' => 'Deposit',
+            //     'flag' => 'PaymentMethod',
+            //     'label' => 'DEPOSIT',
+            // ],
             [
-                'name' => 'Deposit',
-                'flag' => 'PaymentMethod',
-                'label' => 'DEPOSIT',
-            ],
-            [
-                'name' => 'BANK TRANSFER',
+                'name' => 'Bank Transfer',
                 'flag' => 'PaymentMethod',
                 'label' => 'NON TUNAI',
                 'form' => [
-                    'label' => 'BANK TRANSFER',
+                    'label' => 'Bank Transfer',
                     'name'  => 'Pembayaran Bank',
                     'dynamic_forms'  => [
                         [
@@ -83,11 +83,11 @@ class PaymentMethodSeeder extends Seeder
                 ]
             ],
             [
-                'name' => 'CREDIT CARD',
+                'name' => 'Debit/Credit Card',
                 'flag' => 'PaymentMethod',
                 'label' => 'NON TUNAI',
                 'form' => [
-                    'label' => 'CREDIT CARD',
+                    'label' => 'Debit/Credit Card',
                     'name'  => 'Pembayaran Kredit',
                     'dynamic_forms'  => [
                         [
@@ -134,18 +134,18 @@ class PaymentMethodSeeder extends Seeder
                     ]
                 ]
             ],
+            // [
+            //     'name' => 'DEBIT CARD',
+            //     'flag' => 'PaymentMethod',
+            //     'label' => 'NON TUNAI',
+            // ],
             [
-                'name' => 'DEBIT CARD',
-                'flag' => 'PaymentMethod',
-                'label' => 'NON TUNAI',
-            ],
-            [
-                'name' => 'E-MONEY',
+                'name' => 'QRIS',
                 'flag' => 'PaymentMethod',
                 'label' => 'NON TUNAI',
                 'form' => [
-                    'label' => 'E-MONEY',
-                    'name'  => 'Pembayaran E-Money',
+                    'label' => 'QRIS',
+                    'name'  => 'Pembayaran QRIS',
                     'dynamic_forms'  => [
                         [
                             'label'          => 'No Telpon',
