@@ -70,6 +70,10 @@ class WorkspaceSeeder extends Seeder{
                 'status'  => Status::ACTIVE->value,
                 'props'   => WorkspacePropsData::from([
                     'setting' => WorkspaceSettingData::from([
+                        'registration' => [
+                            'is_examination' => true,
+                            'direct_pos'     => true
+                        ],
                         'address' => AddressData::from([
                             'name'           => 'sangkuriang',
                             'province_id'    => null,
@@ -84,7 +88,61 @@ class WorkspaceSeeder extends Seeder{
                             'id' => null,
                             'name' => null
                         ]
-                    ])
+                    ]),
+                    'integration' => [
+                        "satu_sehat" => [
+                            "progress" => 0,
+                            "last_updated_at" => null,
+                            "from" => 0,
+                            "to" => 0,
+                            "syncs" => [
+                               "encounter" => [
+                                    "progress" => 0,
+                                    "last_updated_at" => null,
+                                    "from" => 0,
+                                    "to" => 0
+                                ],
+                                "condition" => [
+                                    "progress" => 0,
+                                    "last_updated_at" => null,
+                                    "from" => 0,
+                                    "to" => 0
+                                ], 
+                                "dispense" => [
+                                    "progress" => 0,
+                                    "last_updated_at" => null,
+                                    "from" => 0,
+                                    "to" => 0
+                                ]
+                            ]
+                        ],
+                        "bpjs" => [
+                            "progress" => 0,
+                            "last_updated_at" => null,
+                            "from" => 0,
+                            "to" => 0,
+                            "syncs" => [
+                               "encounter" => [
+                                    "progress" => 0,
+                                    "last_updated_at" => null,
+                                    "from" => 0,
+                                    "to" => 0
+                                ],
+                                "condition" => [
+                                    "progress" => 0,
+                                    "last_updated_at" => null,
+                                    "from" => 0,
+                                    "to" => 0
+                                ], 
+                                "dispense" => [
+                                    "progress" => 0,
+                                    "last_updated_at" => null,
+                                    "from" => 0,
+                                    "to" => 0
+                                ]
+                            ]
+                        ]
+                    ]
                 ])
             ]));
             
