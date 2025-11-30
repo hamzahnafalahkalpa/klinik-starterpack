@@ -13,6 +13,7 @@ class PurchaseLabelSeeder extends Seeder
      */
     public function run(): void
     {
+        echo "[DEBUG] Booting ".class_basename($this)."\n";
         $model = app(config('database.models.PurchaseLabel'));
 
         $datas = [
