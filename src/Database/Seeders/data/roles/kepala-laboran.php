@@ -1,7 +1,6 @@
 <?php
 
 return [
-    // 'api.lab-management.*',
-    // 'api.pathology-anatomy.*',
-    // 'api.patient-management.lab-waiting-list.*'
+    'api.patient-emr.index',
+    'api.patient-emr.visit-registration.*'
 ];

@@ -460,7 +460,7 @@ class ScreeningSeeder extends Seeder
                     $screening_has_form['form_id'] = $form_model->getKey();
                     unset($screening_has_form['form_label']);
                 }
-                app(config('app.contracts.Screening'))->prepareStoreScreening($this->requestDTO(ScreeningData::class,$data));
+                app(config('app.contracts.Screening'))->prepareStoreScreening($this->requestDTO(config('app.contracts.ScreeningData'),$data));
             }
         }
     }

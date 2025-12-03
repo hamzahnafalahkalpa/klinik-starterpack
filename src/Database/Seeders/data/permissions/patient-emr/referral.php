@@ -3,7 +3,7 @@
 use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
-    'name'            => 'Rujukan Pasien', 
+    'name'            => 'Daftar Rujukan Pasien', 
     'alias'           => 'referral',
     'icon'            => 'healthicons:outpatient-department',
     'show_in_acl'     => true,
@@ -11,20 +11,20 @@ return [
     'guard_name'      => 'api',
     'childs'          => [        
         [
-            'name'        => 'Kelola Rujukan', 
+            'name'        => 'Kelola Rujukan Pasien', 
             'alias'       => 'store',
             'type'        => Type::PERMISSION->value,
             'guard_name'  => 'api',
             'show_in_acl' => true
         ],
         [
-            'name'        => 'Ubah Rujukan', 
+            'name'        => 'Ubah Rujukan Pasien', 
             'alias'       => 'update',
             'type'        => Type::PERMISSION->value,
             'guard_name'  => 'api'
         ],
         [
-            'name'         => 'Detail Rujukan', 
+            'name'         => 'Detail Rujukan Pasien', 
             'alias'        => 'show',
             'type'         => Type::PERMISSION->value,
             'guard_name'   => 'api',
@@ -32,7 +32,7 @@ return [
             'show_in_acl'  => true
         ],
         [
-            'name'       => 'Hapus Rujukan', 
+            'name'       => 'Hapus Rujukan Pasien', 
             'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'

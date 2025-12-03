@@ -3,7 +3,7 @@
 use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
-    'name'        => 'Master Kegiatan',
+    'name'        => 'Daftar Kegiatan',
     'alias'       => 'activity',
     'icon'        => 'simple-icons:eventstore',
     'type'        => Type::MENU->value,

@@ -10,7 +10,7 @@ return [
     'show_in_acl' => true,
     'guard_name'  => 'api',
     'childs'      => [
-        include __DIR__.'/acl/role.php',
+        // include __DIR__.'/acl/role.php',
         include __DIR__.'/acl/permission.php'
     ]
 ];

@@ -23,7 +23,7 @@ class ProgramOccupationSeeder extends Seeder
         foreach ($this->occupations as $group) {
             $group['flag'] = 'ProgramOccupation';
             app(config('app.contracts.ProgramOccupation'))->prepareStoreProgramOccupation(
-                $this->requestDTO(ProgramOccupationData::class,$group)
+                $this->requestDTO(config('app.contracts.ProgramOccupationData'),$group)
             );
         }
     }

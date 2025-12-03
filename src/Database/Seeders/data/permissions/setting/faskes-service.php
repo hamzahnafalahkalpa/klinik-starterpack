@@ -18,6 +18,7 @@ return [
         include __DIR__.'/faskes-service/screening.php',
         include __DIR__.'/faskes-service/jasa.php',
         include __DIR__.'/faskes-service/service-label.php',
+        include __DIR__.'/faskes-service/treatment.php',
     ]
 ];
 

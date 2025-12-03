@@ -42,7 +42,7 @@ class PatientTypeServiceSeeder extends Seeder
             ]
         ];
         foreach ($arr as $data) {
-            app(config('app.contracts.PatientTypeService'))->prepareStorePatientTypeService($this->requestDTO(PatientTypeServiceData::class,$data));
+            app(config('app.contracts.PatientTypeService'))->prepareStorePatientTypeService($this->requestDTO(config('app.contracts.PatientTypeServiceData'),$data));
         }
     }
 }

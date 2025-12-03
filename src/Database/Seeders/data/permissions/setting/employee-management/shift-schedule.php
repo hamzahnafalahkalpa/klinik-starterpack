@@ -18,6 +18,14 @@ return [
             'show_in_acl' => true
         ],
         [
+            'name'        => 'Detail Jadwal Kerja',
+            'alias'       => 'show',
+            'type'        => Type::PERMISSION->value,
+            'guard_name'  => 'api',
+            'show_in_data' => true,
+            'show_in_acl' => true
+        ],
+        [
             'name'       => 'Ubah Jadwal Kerja',
             'alias'      => 'update',
             'type'       => Type::PERMISSION->value,

@@ -1,10 +1,7 @@
 <?php
 
 return [
-    // 'pharmacy-unit.*',
-    // 'inventory.*',
-    // 'medicine-management.*',
-    // 'patient-management.letter-queue.*',
-    // 'transaction.payment-history.*'
+    "api.item-management.*",
+    "api.pharmacy-department.*",
     "api.setting.supply-chain.*"
 ];

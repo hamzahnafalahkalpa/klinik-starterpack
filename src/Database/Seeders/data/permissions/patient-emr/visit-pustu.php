@@ -3,7 +3,7 @@
 use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
-    'name'            => 'Puskesmas Pembantu', 
+    'name'            => 'Daftar Pasien Pustu', 
     'alias'           => 'visit-pustu',
     'icon'            => 'iconoir:healthcare',
     'show_in_acl'     => true,

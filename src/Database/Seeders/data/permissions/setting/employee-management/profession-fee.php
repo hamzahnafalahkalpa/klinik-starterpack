@@ -17,6 +17,14 @@ return [
             'guard_name' => 'api'
         ],
         [
+            'name'        => 'Detail Upah Profesi',
+            'alias'       => 'detail',
+            'type'        => Type::PERMISSION->value,
+            'guard_name'  => 'api',
+            'show_in_data' => true,
+            'show_in_acl' => true
+        ],
+        [
             'name'       => 'Ubah Upah Profesi',
             'alias'      => 'ubah',
             'type'       => Type::PERMISSION->value,

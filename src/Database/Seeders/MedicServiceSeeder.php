@@ -62,7 +62,7 @@ class MedicServiceSeeder extends Seeder
             ['name' => 'Surveillance', 'flag' => 'MedicService','label' => Label::SURVEILLANCE->value],
         ];
         foreach ($arr as $data) {
-            app(config('app.contracts.MedicService'))->prepareStoreMedicService($this->requestDTO(MedicServiceData::class,$data));
+            app(config('app.contracts.MedicService'))->prepareStoreMedicService($this->requestDTO(config('app.contracts.MedicServiceData'),$data));
         }
     }
 }

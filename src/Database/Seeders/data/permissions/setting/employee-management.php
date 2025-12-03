@@ -3,7 +3,7 @@
 use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
-    'name'        => 'Kepegawaian', 
+    'name'        => 'Manajemen SDM', 
     'alias'       => 'employee-management',
     'icon'        => 'fluent:people-team-20-regular',
     'type'        => Type::MODULE->value,

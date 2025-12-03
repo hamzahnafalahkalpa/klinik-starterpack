@@ -39,7 +39,7 @@ class ProgramCategorySeeder extends Seeder
         foreach ($arr as $data) {
             $data['flag'] = 'ProgramCategory';
             app(config('app.contracts.ProgramCategory'))->prepareStoreProgramCategory(
-                $this->requestDTO(ProgramCategoryData::class,$data)
+                $this->requestDTO(config('app.contracts.ProgramCategoryData'),$data)
             );
         }
     }

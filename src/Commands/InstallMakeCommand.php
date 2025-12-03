@@ -39,19 +39,19 @@ class InstallMakeCommand extends EnvironmentCommand
         if (config('app.env') !== 'production') config(['micro-tenant.dev_mode' => true]);
         $this->call('optimize:clear');
         
-        if ($this->option('drop')) {
-            $this->comment('Drop database...');
-            try {
-                $default = config('database.default','pgsql');
-                DB::statement("DROP DATABASE IF EXISTS " . config('database.connections.'.$default.'.database'));
-            } catch (\Exception $e) {
-                $this->warn('Error when drop database: ' . $e->getMessage());
-            }
-        }
+        // if ($this->option('drop')) {
+        //     $this->comment('Drop database...');
+        //     try {
+        //         $default = config('database.default','pgsql');
+        //         DB::statement("DROP DATABASE IF EXISTS " . config('database.connections.'.$default.'.database'));
+        //     } catch (\Exception $e) {
+        //         $this->warn('Error when drop database: ' . $e->getMessage());
+        //     }
+        // }
         
-        $this->call('micro:install',[
-            "--skip-generate" => true
-        ]);
+        // $this->call('micro:install',[
+        //     "--skip-generate" => true
+        // ]);
 
         $provider = 'Hanafalah\KlinikStarterpack\KlinikStarterpackServiceProvider';
         $this->comment('Installing Module...');
@@ -67,21 +67,23 @@ class InstallMakeCommand extends EnvironmentCommand
         ]);
         $this->info('✔️  Created migrations');
 
-        $this->call('klinik-starterpack:install-submodule');
-        $this->info('✔️  Submodule installed');
+        // $this->call('klinik-starterpack:install-submodule');
+        // $this->info('✔️  Submodule installed');
 
-        $this->call('down');
+        $direct_access = config('micro-tenant.direct_provider_access');
+        config(['micro-tenant.direct_provider_access' => false]);
         $this->call('migrate');
         $this->call('db:seed');
-        $this->call('up');
+        config(['micro-tenant.direct_provider_access' => $direct_access]);
+
         $this->info('Klinik Starterpack Seeding');
         $this->call('klinik-starterpack:seed');
         $this->info('✔️  Klinik Starterpack Seeded');
 
-        $this->call('impersonate:cache');
-        $this->info('Klinik Migrating');
-        $this->call('klinik:migrate');
-        $this->info('✔️  Klinik Migrated');
+        // $this->call('impersonate:cache');
+        // $this->info('Klinik Migrating');
+        // $this->call('klinik:migrate');
+        // $this->info('✔️  Klinik Migrated');
         
         // $this->call('klinik:impersonate-migrate');
 

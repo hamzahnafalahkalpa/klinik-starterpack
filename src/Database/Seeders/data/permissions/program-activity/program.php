@@ -3,7 +3,7 @@
 use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
-    'name'        => 'Master Program',
+    'name'        => 'Daftar Program',
     'alias'       => 'program',
     'icon'        => 'fluent:task-list-square-sparkle-16-filled',
     'type'        => Type::MENU->value,

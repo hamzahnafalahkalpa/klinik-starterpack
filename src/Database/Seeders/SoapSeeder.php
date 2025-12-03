@@ -31,6 +31,6 @@ class SoapSeeder extends Seeder
                 'examination_key' => $form->examination_key
             ];
         }
-        app(config('app.contracts.Soap'))->prepareStoreSoap($this->requestDTO(SoapData::class,$arr));
+        app(config('app.contracts.Soap'))->prepareStoreSoap($this->requestDTO(config('app.contracts.SoapData'),$arr));
     }
 }

@@ -1,5 +1,5 @@
 <?php
 
 return [
-    // 'transaction.*'
+    'api.transaction.*'
 ];

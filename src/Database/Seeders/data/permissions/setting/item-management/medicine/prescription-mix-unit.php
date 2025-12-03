@@ -18,6 +18,14 @@ return [
             'show_in_acl' => true
         ],
         [
+            'name'        => 'Detail Unit Resep Racik', 
+            'alias'       => 'show',
+            'type'        => Type::PERMISSION->value,
+            'guard_name'  => 'api',
+            'show_in_data' => true,
+            'show_in_acl' => true
+        ],
+        [
             'name'       => 'Ubah Unit Resep Racik',
             'alias'      => 'update',
             'type'       => Type::PERMISSION->value,

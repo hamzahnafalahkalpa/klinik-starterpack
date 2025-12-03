@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'api.setting.finance.*',
+    'api.setting.finance.*'
 ];

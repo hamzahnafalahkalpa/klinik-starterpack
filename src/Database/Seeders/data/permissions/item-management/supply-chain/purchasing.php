@@ -3,7 +3,7 @@
 use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
-    'name'        => 'Purchasing',
+    'name'        => 'Pembelian Barang',
     'alias'       => 'purchasing',
     'icon'        => 'bxs:purchase-tag',
     'type'        => Type::MENU->value,
@@ -11,20 +11,20 @@ return [
     'guard_name'  => 'api',
     'childs'      => [
         [
-            'name'        => 'Tambah Purchasing',
+            'name'        => 'Tambah Pembelian Barang',
             'alias'       => 'store',
             'type'        => Type::PERMISSION->value,
             'guard_name'  => 'api',
             'show_in_acl' => true
         ],
         [
-            'name'       => 'Ubah Purchasing',
+            'name'       => 'Ubah Pembelian Barang',
             'alias'      => 'update',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
         ],
         [
-            'name'       => 'Detail Purchasing',
+            'name'       => 'Detail Pembelian Barang',
             'alias'      => 'show',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api',
@@ -32,13 +32,13 @@ return [
             'show_in_acl' => true,
             'childs'      => [
                 [
-                    'name'       => 'Approval Purchasing',
+                    'name'       => 'Approval Pembelian Barang',
                     'alias'      => 'approval',
                     'type'       => Type::PERMISSION->value,
                     'guard_name' => 'api'
                 ],
                 [
-                    'name'       => 'Report Purchasing',
+                    'name'       => 'Report Pembelian Barang',
                     'alias'      => 'report',
                     'type'       => Type::PERMISSION->value,
                     'guard_name' => 'api'

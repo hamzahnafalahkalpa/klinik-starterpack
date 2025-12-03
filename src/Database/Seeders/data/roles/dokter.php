@@ -1,8 +1,7 @@
 <?php
 
 return [
-    'api.patient-emr.emergency-waiting-list.*',
-    'api.patient-emr.mcu-waiting-list.*',
-    'api.patient-emr.outpatient-waiting-list.*',
-    'api.patient-emr.appointment.index',
+    'api.patient.*',
+    'api.patient-emr.index',
+    'api.patient-emr.visit-registration.*',
 ];

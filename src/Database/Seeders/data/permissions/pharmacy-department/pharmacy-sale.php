@@ -39,6 +39,7 @@ return [
             'alias'      => 'destroy',
             'type'       => Type::PERMISSION->value,
             'guard_name' => 'api'
-        ]
+        ],
+        include(__DIR__.'/pharmacy-sale/frontline.php')
     ]
 ];

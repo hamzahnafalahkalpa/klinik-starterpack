@@ -26,6 +26,12 @@ return [
             'childs'       => [
                 include(__DIR__.'/pharmacy-sale/visit-registration.php')
             ],
+        ],
+        [
+            'name'       => 'Hapus Antrian Resep Pasien', 
+            'alias'      => 'destroy',
+            'type'       => Type::PERMISSION->value,
+            'guard_name' => 'api'
         ]
     ]
 ];

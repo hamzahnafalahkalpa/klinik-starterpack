@@ -1,10 +1,8 @@
 <?php
 
 return [
-    'api.setting.acl.*',
-    'api.infrastructure.*',
-    'api.general-setting.*',
-    'api.infrastructure.*',
-    // 'api.report.*',
-    // 'api.treatment.*',
+    'api.item-management.*',
+    'api.finance.*',
+    'api.employee-management.*',
+    'api.setting.*'
 ];

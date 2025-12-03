@@ -1,8 +1,9 @@
 <?php
 
 return [
-    // 'patient-management.appointment.*',
-    // 'patient-management.outpatient-waiting-list.*',
-    // 'medicine-management.medicine.index',
-    // 'medicine-management.bmhp.index'
+    'api.patient.*',
+    'api.program-activity.*',
+    'api.patient-emr.index',
+    'api.patient-emr.visit-registration.*',
+    'api.setting.program-activity.*',
 ];

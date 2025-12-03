@@ -7,4 +7,6 @@ return [
     'api.employee-management.*',
     'api.setting.*',
     'api.patient-emr.*',
+    'api.transaction.*',
+    'api.billing-external.*'
 ];

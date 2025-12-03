@@ -1,6 +1,6 @@
 <?php
 
 return [
-    // 'api.radiology-management.*',
-    // 'api.patient-management.radiology-waiting-list.*'
+    'api.patient-emr.index',
+    'api.patient-emr.visit-registration.*'
 ];

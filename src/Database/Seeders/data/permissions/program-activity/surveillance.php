@@ -3,7 +3,7 @@
 use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
-    'name'        => 'Kunjungan dan Pengasawan',
+    'name'        => 'Daftar Kunjungan dan Pengawasan',
     'alias'       => 'surveillance',
     'icon'        => 'fluent:task-list-square-sparkle-16-filled',
     'type'        => Type::MENU->value,

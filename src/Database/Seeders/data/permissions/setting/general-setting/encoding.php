@@ -3,7 +3,7 @@
 use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
-    'name'        => 'Pengkodean Aplikasi',
+    'name'        => 'Pengkodean',
     'alias'       => 'encoding',
     'icon'        => 'streamline-ultimate:crypto-encryption-key-bold',
     'type'        => Type::MODULE->value,
@@ -11,10 +11,18 @@ return [
     'guard_name'  => 'api',
     'childs'      => [
         [
-            'name'        => 'Ubah Pengkodean Aplikasi',
+            'name'        => 'Ubah Pengkodean',
             'alias'       => 'store',
             'type'        => Type::PERMISSION->value,
             'guard_name'  => 'api',
+            'show_in_acl' => true
+        ],
+        [
+            'name'        => 'Lihat Pengkodean', 
+            'alias'       => 'show',
+            'type'        => Type::PERMISSION->value,
+            'guard_name'  => 'api',
+            'show_in_data' => true,
             'show_in_acl' => true
         ]
     ]

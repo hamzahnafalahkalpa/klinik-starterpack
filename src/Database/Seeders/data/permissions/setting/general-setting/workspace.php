@@ -3,7 +3,7 @@
 use Hanafalah\LaravelPermission\Enums\Permission\Type;
 
 return [
-    'name'        => 'Informasi Faskes',
+    'name'        => 'Faskes dan Wilayah Administratif',
     'alias'       => 'workspace',
     'icon'        => 'streamline-ultimate:crypto-encryption-key-bold',
     'type'        => Type::MODULE->value,
