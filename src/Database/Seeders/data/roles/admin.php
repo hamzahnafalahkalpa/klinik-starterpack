@@ -8,5 +8,6 @@ return [
     'api.setting.*',
     'api.patient-emr.*',
     'api.transaction.*',
-    'api.billing-external.*'
+    'api.billing-external.*',
+    'api.pws.*'
 ];
