@@ -86,6 +86,14 @@ class PostgreSQLSchemaManager implements TenantDatabaseManager
 
     public function databaseExists(string $name): bool
     {
+        // Check if it's a database first (for TENANT-level tenants with separate databases)
+        $databaseExists = (bool) $this->database()->select("SELECT datname FROM pg_database WHERE datname = '$name'");
+
+        if ($databaseExists) {
+            return true;
+        }
+
+        // If not a database, check if it's a schema (for APP/CENTRAL_TENANT level tenants)
         return (bool) $this->database()->select("SELECT schema_name FROM information_schema.schemata WHERE schema_name = '$name'");
     }
 
