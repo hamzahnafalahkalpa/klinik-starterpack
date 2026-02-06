@@ -93,55 +93,66 @@ class WorkspaceSeeder extends Seeder{
                     'integration' => [
                         "satu_sehat" => [
                             "progress" => 0,
-                            "last_updated_at" => null,
-                            "from" => 0,
-                            "to" => 0,
+                            "general" => [
+                                "ihs_number" => null
+                            ],
                             "syncs" => [
-                               "encounter" => [
+                                [
+                                    'flag' => 'patient',
+                                    'label' => 'Pasien',
+                                    "from" => null,
+                                    "to" => null,
                                     "progress" => 0,
-                                    "last_updated_at" => null,
-                                    "from" => 0,
-                                    "to" => 0
+                                    "last_updated_at" => null
                                 ],
-                                "condition" => [
+                                [
+                                    'flag' => 'encounter',
+                                    'label' => 'Kunjungan',
+                                    "from" => null,
+                                    "to" => null,
                                     "progress" => 0,
-                                    "last_updated_at" => null,
-                                    "from" => 0,
-                                    "to" => 0
-                                ], 
-                                "dispense" => [
+                                    "last_updated_at" => null
+                                ],
+                                [
+                                    'flag' => 'observation',
+                                    'label' => 'Observasi',
+                                    "from" => null,
+                                    "to" => null,
                                     "progress" => 0,
-                                    "last_updated_at" => null,
-                                    "from" => 0,
-                                    "to" => 0
+                                    "last_updated_at" => null
                                 ]
-                            ]
+                            ],
+                            'logs' => []
                         ],
                         "bpjs" => [
                             "progress" => 0,
-                            "last_updated_at" => null,
-                            "from" => 0,
-                            "to" => 0,
                             "syncs" => [
-                               "encounter" => [
+                                [
+                                    'flag' => 'patient',
+                                    'label' => 'Pasien',
+                                    "from" => null,
+                                    "to" => null,
                                     "progress" => 0,
-                                    "last_updated_at" => null,
-                                    "from" => 0,
-                                    "to" => 0
+                                    "last_updated_at" => null
                                 ],
-                                "condition" => [
+                                [
+                                    'flag' => 'encounter',
+                                    'label' => 'Kunjungan',
+                                    "from" => null,
+                                    "to" => null,
                                     "progress" => 0,
-                                    "last_updated_at" => null,
-                                    "from" => 0,
-                                    "to" => 0
-                                ], 
-                                "dispense" => [
+                                    "last_updated_at" => null
+                                ],
+                                [
+                                    'flag' => 'observation',
+                                    'label' => 'Observasi',
+                                    "from" => null,
+                                    "to" => null,
                                     "progress" => 0,
-                                    "last_updated_at" => null,
-                                    "from" => 0,
-                                    "to" => 0
+                                    "last_updated_at" => null
                                 ]
-                            ]
+                            ],
+                            'logs' => []
                         ]
                     ]
                 ])
